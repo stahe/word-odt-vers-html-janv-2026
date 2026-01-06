@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://stahe.github.io/python-flask-sept-2020/sitemap.xml
