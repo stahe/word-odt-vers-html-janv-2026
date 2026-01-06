@@ -12,11 +12,13 @@
         <meta name="author" content="Serge Tahé">
       
       
-        <link rel="canonical" href="https://stahe.github.io/word-odt-vers-html-janv-2026/index.html">
+        <link rel="canonical" href="https://stahe.github.io/word-odt-vers-html-janv-2026/construction-du-site-html.html">
       
       
+        <link rel="prev" href="utilisation-du-convertisseur.html">
       
-        <link rel="next" href="introduction.html">
+      
+        <link rel="next" href="examen-du-site-html-genere.html">
       
       
         
@@ -27,7 +29,7 @@
     
     
       
-        <title>Convertir un document Word ou ODT vers un site statique HTML à l'aide de l'IA Gemini</title>
+        <title>9. Construction du site HTML - Convertir un document Word ou ODT vers un site statique HTML à l'aide de l'IA Gemini</title>
       
     
     
@@ -89,6 +91,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#9-construction-du-site-html" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -121,7 +128,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Accueil
+              9. Construction du site HTML
             
           </span>
         </div>
@@ -266,17 +273,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
         
   
   
@@ -292,7 +292,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -517,10 +516,19 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="construction-du-site-html.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="construction-du-site-html.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -536,6 +544,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -614,10 +623,28 @@
   
 
 
-  <h1>Accueil</h1>
+<h1 id="9-construction-du-site-html">9. Construction du site HTML</h1>
+<p>Maintenant construisons le site HTML. Cela se fait avec le script [build]. Toujours dans le terminal, tapez la commande suivante :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>PS C:\Data\st-2025\GitHub Pages\word-odt-vers-html\v2&gt; python .\build.py
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>Démarrage de la construction du site MkDocs...
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>Construction réussie ! Le site est dans : C:\Data\st-2025\GitHub Pages\word-odt-vers-html\v2\site
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>Ouverture de C:\Data\st-2025\GitHub Pages\word-odt-vers-html\v2\site\index.html dans le navigateur…
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>ligne 1 : la commande [python build] crée le site HTML à partir du site MkDocs ;</li>
+<li>ligne 4 : le site est affiché dans un navigateur ;</li>
+</ul>
+<p>Le résultat est le même que pour le site MkDocs :</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000A8C00000499F42D567E.png" style="display:inline-block; margin:4px;width:16.002cm;height:6.974cm;" /></td></tr></table>
 
-<p>Convertir un document Word ou ODT vers un site statique HTML compatible MkDocs avec l’IA Gemini 3</p>
-<p><strong>Serge Tahé</strong>, janvier 2026</p>
+<ul>
+<li>En [1], on voit que c’est une page HTML qui est affichée ;</li>
+<li>En [2], la table des matières du document HTML ;</li>
+<li>En [3], la première page affichée est [Accueil]. Le contenu de cette page est le contenu du document ODT qui <strong>précède le premier chapitre de niveau Titre 1</strong> ;</li>
+</ul>
 
 
 

@@ -12,11 +12,13 @@
         <meta name="author" content="Serge Tahé">
       
       
-        <link rel="canonical" href="https://stahe.github.io/word-odt-vers-html-janv-2026/index.html">
+        <link rel="canonical" href="https://stahe.github.io/word-odt-vers-html-janv-2026/examen-du-site-html-genere.html">
       
       
+        <link rel="prev" href="construction-du-site-html.html">
       
-        <link rel="next" href="introduction.html">
+      
+        <link rel="next" href="heberger-le-site-html-sur-github.html">
       
       
         
@@ -27,7 +29,7 @@
     
     
       
-        <title>Convertir un document Word ou ODT vers un site statique HTML à l'aide de l'IA Gemini</title>
+        <title>10. Examen du site HTML généré - Convertir un document Word ou ODT vers un site statique HTML à l'aide de l'IA Gemini</title>
       
     
     
@@ -89,6 +91,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#10-examen-du-site-html-genere" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -121,7 +128,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Accueil
+              10. Examen du site HTML généré
             
           </span>
         </div>
@@ -266,17 +273,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
         
   
   
@@ -292,7 +292,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -544,10 +543,19 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="examen-du-site-html-genere.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="examen-du-site-html-genere.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -563,6 +571,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -614,10 +623,71 @@
   
 
 
-  <h1>Accueil</h1>
+<h1 id="10-examen-du-site-html-genere">10. Examen du site HTML généré</h1>
+<p>Nous allons examiner maintenant le rendu HTML de ce document ODT. On a déjà vu que le convertisseur respectait la table des matières.</p>
+<p>Maintenant regardons la barre supérieure du site :</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000ABB0000016D9B3C5647.png" style="display:inline-block; margin:4px;width:16.002cm;height:2.125cm;" /></td></tr></table>
 
-<p>Convertir un document Word ou ODT vers un site statique HTML compatible MkDocs avec l’IA Gemini 3</p>
-<p><strong>Serge Tahé</strong>, janvier 2026</p>
+<ul>
+<li>En [1], le nom du site défini dans [config.json] ;</li>
+<li>En [2], l’icône qui permet de passer au mode sombre ou clair ;</li>
+<li>En [3], l’icône qui est un lien sur le dépôt GitHub où sera exporté le site HTML. Aussi défini dans [config.json] ;</li>
+<li>En [4], l’icône qui permet de cacher / montrer la table des matières ;</li>
+</ul>
+<p>Regardons maintenant le bas de page :</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000B32000000A5B62D1439.png" style="display:inline-block; margin:4px;width:16.002cm;height:0.921cm;" /></td></tr></table>
+
+<p>C’est le bas de page défini dans le fichier [config.json].</p>
+<p>Regardons maintenant le chapitre [Exemples] qui regroupe les exemples que le convertisseur Gemini sait gérer :</p>
+<p><u><strong>Les listes</strong></u></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000674000004AED6FEE5B6.png" style="display:inline-block; margin:4px;width:15.3cm;height:11.09cm;" /></td></tr></table>
+
+<p><u><strong>Code Java</strong></u></p>
+<p><img src="images/10000000000004DC000003E004F6FD45.png" style="width:11.52cm;height:9.19cm;" alt="Image" /></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+
+<p><u><strong>Code C#</strong></u></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006B40000028B38CF4C86.png" style="display:inline-block; margin:4px;width:16.002cm;height:6.071cm;" /></td></tr></table>
+
+<p><u><strong>Code Python</strong></u></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000406000002F8EF7320F3.png" style="display:inline-block; margin:4px;width:9.541cm;height:7.04cm;" /></td></tr></table>
+
+<p><u><strong>Code PHP</strong></u></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004C100000374370D4A4E.png" style="display:inline-block; margin:4px;width:11.269cm;height:8.19cm;" /></td></tr></table>
+
+<p><u><strong>Code ECMASCRIPT 6</strong></u></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004B7000002E370EDC76C.png" style="display:inline-block; margin:4px;width:11.18cm;height:6.84cm;" /></td></tr></table>
+
+<p><u><strong>Code VBScript</strong></u></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005ED000002E7C3F5E960.png" style="display:inline-block; margin:4px;width:14.049cm;height:6.879cm;" /></td></tr></table>
+
+<p><u><strong>Code HTML</strong></u></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003FA0000046DD5849744.png" style="display:inline-block; margin:4px;width:9.43cm;height:10.49cm;" /></td></tr></table>
+
+<p><u><strong>Code XML</strong></u></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006F3000002CC26B163D3.png" style="display:inline-block; margin:4px;width:16.002cm;height:6.44cm;" /></td></tr></table>
+
+<p>Un résultat d’exécution avec une première ligne qui ne commence pas à 1 :</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000413000002A44C5BD5A7.png" style="display:inline-block; margin:4px;width:9.661cm;height:6.26cm;" /></td></tr></table>
+
+<p><u><strong>Les liens</strong></u></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000762000001981147AE19.png" style="display:inline-block; margin:4px;width:16.002cm;height:3.454cm;" /></td></tr></table>
+
+<p><u><strong>L’enrichissement de texte</strong></u></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006320000012EB42E3B36.png" style="display:inline-block; margin:4px;width:14.69cm;height:2.799cm;" /></td></tr></table>
+
+<p><u><strong>Les images</strong></u></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007A50000037C881C8857.png" style="display:inline-block; margin:4px;width:16.002cm;height:7.292cm;" /></td></tr></table>
+
+<p>Il faut noter que le convertisseur Gemini respecte les redimensionnements des images, faits dans le document ODT.</p>
+<p>C’est tout. Si votre document utilise d’autres particularités que celles évoquées précédemment, il est hautement probable que celles-ci ne seront pas prises en compte par le convertisseur Gemini. Que faire alors ? Vous pouvez faire part de votre nouvelle demande à Gemini en lui donnant le convertisseur actuel :</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005E7000001D28BC1B4B6.png" style="display:inline-block; margin:4px;width:14.079cm;height:4.309cm;" /></td></tr></table>
+
+<ul>
+<li>En [1], je joins le convertisseur de ce document ;</li>
+<li>En [2], je fais ma nouvelle demande ;</li>
+</ul>
+<p>Vous allez partir probablement pour de nombreuses itérations. Lorsqu’une version est stable, notez son numéro pour pouvoir le redonner à Gemini en cas de régression. Il est conseillé également de faire une copie de chaque version stable. Un inconvénient majeur de Gemini est qu’il régresse assez facilement. Il suffit de lui demander une nouvelle fonctionnalité pour qu’il casse le code qui marchait auparavant. D’où l’importance de noter le numéro de version des versions stables afin de pouvoir y revenir.</p>
 
 
 
