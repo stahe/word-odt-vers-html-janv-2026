@@ -625,139 +625,139 @@
 
 <h1 id="7-le-fichier-de-configuration-configjson">7. Le fichier de configuration [config.json]</h1>
 <p>Le fichier de configuration [config.json] rassemble les informations qui peuvent changer d’un document à l’autre. Il commence ainsi :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-0-10">10</a></span>
-<span class="normal"><a href="#__codelineno-0-11">11</a></span>
-<span class="normal"><a href="#__codelineno-0-12">12</a></span>
-<span class="normal"><a href="#__codelineno-0-13">13</a></span>
-<span class="normal"><a href="#__codelineno-0-14">14</a></span>
-<span class="normal"><a href="#__codelineno-0-15">15</a></span>
-<span class="normal"><a href="#__codelineno-0-16">16</a></span>
-<span class="normal"><a href="#__codelineno-0-17">17</a></span>
-<span class="normal"><a href="#__codelineno-0-18">18</a></span>
-<span class="normal"><a href="#__codelineno-0-19">19</a></span>
-<span class="normal"><a href="#__codelineno-0-20">20</a></span>
-<span class="normal"><a href="#__codelineno-0-21">21</a></span>
-<span class="normal"><a href="#__codelineno-0-22">22</a></span>
-<span class="normal"><a href="#__codelineno-0-23">23</a></span>
-<span class="normal"><a href="#__codelineno-0-24">24</a></span>
-<span class="normal"><a href="#__codelineno-0-25">25</a></span>
-<span class="normal"><a href="#__codelineno-0-26">26</a></span>
-<span class="normal"><a href="#__codelineno-0-27">27</a></span>
-<span class="normal"><a href="#__codelineno-0-28">28</a></span>
-<span class="normal"><a href="#__codelineno-0-29">29</a></span>
-<span class="normal"><a href="#__codelineno-0-30">30</a></span>
-<span class="normal"><a href="#__codelineno-0-31">31</a></span>
-<span class="normal"><a href="#__codelineno-0-32">32</a></span>
-<span class="normal"><a href="#__codelineno-0-33">33</a></span>
-<span class="normal"><a href="#__codelineno-0-34">34</a></span>
-<span class="normal"><a href="#__codelineno-0-35">35</a></span>
-<span class="normal"><a href="#__codelineno-0-36">36</a></span>
-<span class="normal"><a href="#__codelineno-0-37">37</a></span>
-<span class="normal"><a href="#__codelineno-0-38">38</a></span>
-<span class="normal"><a href="#__codelineno-0-39">39</a></span>
-<span class="normal"><a href="#__codelineno-0-40">40</a></span>
-<span class="normal"><a href="#__codelineno-0-41">41</a></span>
-<span class="normal"><a href="#__codelineno-0-42">42</a></span>
-<span class="normal"><a href="#__codelineno-0-43">43</a></span>
-<span class="normal"><a href="#__codelineno-0-44">44</a></span>
-<span class="normal"><a href="#__codelineno-0-45">45</a></span>
-<span class="normal"><a href="#__codelineno-0-46">46</a></span>
-<span class="normal"><a href="#__codelineno-0-47">47</a></span>
-<span class="normal"><a href="#__codelineno-0-48">48</a></span>
-<span class="normal"><a href="#__codelineno-0-49">49</a></span>
-<span class="normal"><a href="#__codelineno-0-50">50</a></span>
-<span class="normal"><a href="#__codelineno-0-51">51</a></span>
-<span class="normal"><a href="#__codelineno-0-52">52</a></span>
-<span class="normal"><a href="#__codelineno-0-53">53</a></span>
-<span class="normal"><a href="#__codelineno-0-54">54</a></span>
-<span class="normal"><a href="#__codelineno-0-55">55</a></span>
-<span class="normal"><a href="#__codelineno-0-56">56</a></span>
-<span class="normal"><a href="#__codelineno-0-57">57</a></span>
-<span class="normal"><a href="#__codelineno-0-58">58</a></span>
-<span class="normal"><a href="#__codelineno-0-59">59</a></span>
-<span class="normal"><a href="#__codelineno-0-60">60</a></span>
-<span class="normal"><a href="#__codelineno-0-61">61</a></span>
-<span class="normal"><a href="#__codelineno-0-62">62</a></span>
-<span class="normal"><a href="#__codelineno-0-63">63</a></span>
-<span class="normal"><a href="#__codelineno-0-64">64</a></span>
-<span class="normal"><a href="#__codelineno-0-65">65</a></span>
-<span class="normal"><a href="#__codelineno-0-66">66</a></span>
-<span class="normal"><a href="#__codelineno-0-67">67</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>&quot;mkdocs&quot;: {
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a>    &quot;site_name&quot;: &quot;Convertir un document Word ou ODT vers un site statique HTML à l&#39;aide de l&#39;IA Gemini&quot;,
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a>    &quot;site_url&quot;: &quot;https://stahe.github.io/word-odt-vers-html-janv-2026/&quot;,
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a>    &quot;site_description&quot;: &quot;Convertir un document Word ou ODT vers un site statique HTML à l&#39;aide de l&#39;IA Gemini&quot;,
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a>    &quot;site_author&quot;: &quot;Serge Tahé&quot;,
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a>    &quot;repo_url&quot;: &quot;https://github.com/stahe/word-odt-vers-html-janv-2026&quot;,
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a>    &quot;repo_name&quot;: &quot;GitHub&quot;,
-<a id="__codelineno-0-8" name="__codelineno-0-8"></a>    &quot;use_directory_urls&quot;: false,
-<a id="__codelineno-0-9" name="__codelineno-0-9"></a>    &quot;theme&quot;: {
-<a id="__codelineno-0-10" name="__codelineno-0-10"></a>      &quot;name&quot;: &quot;material&quot;,
-<a id="__codelineno-0-11" name="__codelineno-0-11"></a>      &quot;custom_dir&quot;: &quot;overrides&quot;,
-<a id="__codelineno-0-12" name="__codelineno-0-12"></a>      &quot;features&quot;: [
-<a id="__codelineno-0-13" name="__codelineno-0-13"></a>        &quot;navigation.sections&quot;,
-<a id="__codelineno-0-14" name="__codelineno-0-14"></a>        &quot;navigation.indexes&quot;,
-<a id="__codelineno-0-15" name="__codelineno-0-15"></a>        &quot;navigation.expand&quot;,
-<a id="__codelineno-0-16" name="__codelineno-0-16"></a>        &quot;toc.integrate&quot;,
-<a id="__codelineno-0-17" name="__codelineno-0-17"></a>        &quot;navigation.top&quot;
-<a id="__codelineno-0-18" name="__codelineno-0-18"></a>      ],
-<a id="__codelineno-0-19" name="__codelineno-0-19"></a>      &quot;palette&quot;: [
-<a id="__codelineno-0-20" name="__codelineno-0-20"></a>        {
-<a id="__codelineno-0-21" name="__codelineno-0-21"></a>          &quot;media&quot;: &quot;(prefers-color-scheme: light)&quot;,
-<a id="__codelineno-0-22" name="__codelineno-0-22"></a>          &quot;scheme&quot;: &quot;default&quot;,
-<a id="__codelineno-0-23" name="__codelineno-0-23"></a>          &quot;primary&quot;: &quot;teal&quot;,
-<a id="__codelineno-0-24" name="__codelineno-0-24"></a>          &quot;accent&quot;: &quot;purple&quot;,
-<a id="__codelineno-0-25" name="__codelineno-0-25"></a>          &quot;toggle&quot;: {
-<a id="__codelineno-0-26" name="__codelineno-0-26"></a>            &quot;icon&quot;: &quot;material/brightness-7&quot;,
-<a id="__codelineno-0-27" name="__codelineno-0-27"></a>            &quot;name&quot;: &quot;Passer au mode sombre&quot;
-<a id="__codelineno-0-28" name="__codelineno-0-28"></a>          }
-<a id="__codelineno-0-29" name="__codelineno-0-29"></a>        },
-<a id="__codelineno-0-30" name="__codelineno-0-30"></a>        {
-<a id="__codelineno-0-31" name="__codelineno-0-31"></a>          &quot;media&quot;: &quot;(prefers-color-scheme: dark)&quot;,
-<a id="__codelineno-0-32" name="__codelineno-0-32"></a>          &quot;scheme&quot;: &quot;slate&quot;,
-<a id="__codelineno-0-33" name="__codelineno-0-33"></a>          &quot;primary&quot;: &quot;teal&quot;,
-<a id="__codelineno-0-34" name="__codelineno-0-34"></a>          &quot;accent&quot;: &quot;purple&quot;,
-<a id="__codelineno-0-35" name="__codelineno-0-35"></a>          &quot;toggle&quot;: {
-<a id="__codelineno-0-36" name="__codelineno-0-36"></a>            &quot;icon&quot;: &quot;material/brightness-4&quot;,
-<a id="__codelineno-0-37" name="__codelineno-0-37"></a>            &quot;name&quot;: &quot;Passer au mode clair&quot;
-<a id="__codelineno-0-38" name="__codelineno-0-38"></a>          }
-<a id="__codelineno-0-39" name="__codelineno-0-39"></a>        }
-<a id="__codelineno-0-40" name="__codelineno-0-40"></a>      ]
-<a id="__codelineno-0-41" name="__codelineno-0-41"></a>    },
-<a id="__codelineno-0-42" name="__codelineno-0-42"></a>    &quot;markdown_extensions&quot;: [
-<a id="__codelineno-0-43" name="__codelineno-0-43"></a>      &quot;admonition&quot;,
-<a id="__codelineno-0-44" name="__codelineno-0-44"></a>      &quot;attr_list&quot;,
-<a id="__codelineno-0-45" name="__codelineno-0-45"></a>      &quot;pymdownx.superfences&quot;,
-<a id="__codelineno-0-46" name="__codelineno-0-46"></a>      &quot;pymdownx.mark&quot;,
-<a id="__codelineno-0-47" name="__codelineno-0-47"></a>      {
-<a id="__codelineno-0-48" name="__codelineno-0-48"></a>        &quot;pymdownx.highlight&quot;: {
-<a id="__codelineno-0-49" name="__codelineno-0-49"></a>          &quot;anchor_linenums&quot;: true,
-<a id="__codelineno-0-50" name="__codelineno-0-50"></a>          &quot;linenums&quot;: true
-<a id="__codelineno-0-51" name="__codelineno-0-51"></a>        }
-<a id="__codelineno-0-52" name="__codelineno-0-52"></a>      }
-<a id="__codelineno-0-53" name="__codelineno-0-53"></a>    ],
-<a id="__codelineno-0-54" name="__codelineno-0-54"></a>    &quot;extra_javascript&quot;: [
-<a id="__codelineno-0-55" name="__codelineno-0-55"></a>      &quot;javascripts/focus.js&quot;
-<a id="__codelineno-0-56" name="__codelineno-0-56"></a>    ],
-<a id="__codelineno-0-57" name="__codelineno-0-57"></a>    &quot;extra_css&quot;: [
-<a id="__codelineno-0-58" name="__codelineno-0-58"></a>      &quot;stylesheets/focus.css&quot;
-<a id="__codelineno-0-59" name="__codelineno-0-59"></a>    ]
-<a id="__codelineno-0-60" name="__codelineno-0-60"></a>  },
-<a id="__codelineno-0-61" name="__codelineno-0-61"></a>  &quot;footer&quot;: &quot;{% block footer %}\n  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">\&quot;md-footer-meta</span> <span class="na">md-typeset</span><span class="err">\&quot;</span><span class="p">&gt;</span>\n    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">\&quot;md-footer-meta__inner\&quot;</span><span class="p">&gt;</span>\n\n      <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>\n        <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">\&quot;https://tahe.developpez.com\&quot;</span> <span class="na">target</span><span class="o">=</span><span class="s">\&quot;_blank\&quot;</span><span class="p">&gt;</span>\n          https://tahe.developpez.com\n        <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>\n        <span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>\n        Ce cours-tutoriel écrit par <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Serge Tahé<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> est mis à disposition du public selon les termes de la\n        <span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;</span>Licence Creative Commons Attribution – Pas d’Utilisation Commerciale –\n        Partage dans les Mêmes Conditions 3.0 non transposé<span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;</span>.\n      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>\n\n    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>\n  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>\n{% endblock %}&quot;,
-<a id="__codelineno-0-62" name="__codelineno-0-62"></a>  &quot;extra&quot;: {
-<a id="__codelineno-0-63" name="__codelineno-0-63"></a>    &quot;analytics&quot;: {
-<a id="__codelineno-0-64" name="__codelineno-0-64"></a>      &quot;provider&quot;: &quot;google&quot;,
-<a id="__codelineno-0-65" name="__codelineno-0-65"></a>      &quot;property&quot;: &quot;G-XXXXXXXX&quot;
-<a id="__codelineno-0-66" name="__codelineno-0-66"></a>    }
-<a id="__codelineno-0-67" name="__codelineno-0-67"></a>  },
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-41"> 41</a></span>
+<span class="normal"><a href="#__codelineno-0-42"> 42</a></span>
+<span class="normal"><a href="#__codelineno-0-43"> 43</a></span>
+<span class="normal"><a href="#__codelineno-0-44"> 44</a></span>
+<span class="normal"><a href="#__codelineno-0-45"> 45</a></span>
+<span class="normal"><a href="#__codelineno-0-46"> 46</a></span>
+<span class="normal"><a href="#__codelineno-0-47"> 47</a></span>
+<span class="normal"><a href="#__codelineno-0-48"> 48</a></span>
+<span class="normal"><a href="#__codelineno-0-49"> 49</a></span>
+<span class="normal"><a href="#__codelineno-0-50"> 50</a></span>
+<span class="normal"><a href="#__codelineno-0-51"> 51</a></span>
+<span class="normal"><a href="#__codelineno-0-52"> 52</a></span>
+<span class="normal"><a href="#__codelineno-0-53"> 53</a></span>
+<span class="normal"><a href="#__codelineno-0-54"> 54</a></span>
+<span class="normal"><a href="#__codelineno-0-55"> 55</a></span>
+<span class="normal"><a href="#__codelineno-0-56"> 56</a></span>
+<span class="normal"><a href="#__codelineno-0-57"> 57</a></span>
+<span class="normal"><a href="#__codelineno-0-58"> 58</a></span>
+<span class="normal"><a href="#__codelineno-0-59"> 59</a></span>
+<span class="normal"><a href="#__codelineno-0-60"> 60</a></span>
+<span class="normal"><a href="#__codelineno-0-61"> 61</a></span>
+<span class="normal"><a href="#__codelineno-0-62"> 62</a></span>
+<span class="normal"><a href="#__codelineno-0-63"> 63</a></span>
+<span class="normal"><a href="#__codelineno-0-64"> 64</a></span>
+<span class="normal"><a href="#__codelineno-0-65"> 65</a></span>
+<span class="normal"><a href="#__codelineno-0-66"> 66</a></span>
+<span class="normal"><a href="#__codelineno-0-67"> 67</a></span>
+<span class="normal"><a href="#__codelineno-0-68"> 68</a></span>
+<span class="normal"><a href="#__codelineno-0-69"> 69</a></span>
+<span class="normal"><a href="#__codelineno-0-70"> 70</a></span>
+<span class="normal"><a href="#__codelineno-0-71"> 71</a></span>
+<span class="normal"><a href="#__codelineno-0-72"> 72</a></span>
+<span class="normal"><a href="#__codelineno-0-73"> 73</a></span>
+<span class="normal"><a href="#__codelineno-0-74"> 74</a></span>
+<span class="normal"><a href="#__codelineno-0-75"> 75</a></span>
+<span class="normal"><a href="#__codelineno-0-76"> 76</a></span>
+<span class="normal"><a href="#__codelineno-0-77"> 77</a></span>
+<span class="normal"><a href="#__codelineno-0-78"> 78</a></span>
+<span class="normal"><a href="#__codelineno-0-79"> 79</a></span>
+<span class="normal"><a href="#__codelineno-0-80"> 80</a></span>
+<span class="normal"><a href="#__codelineno-0-81"> 81</a></span>
+<span class="normal"><a href="#__codelineno-0-82"> 82</a></span>
+<span class="normal"><a href="#__codelineno-0-83"> 83</a></span>
+<span class="normal"><a href="#__codelineno-0-84"> 84</a></span>
+<span class="normal"><a href="#__codelineno-0-85"> 85</a></span>
+<span class="normal"><a href="#__codelineno-0-86"> 86</a></span>
+<span class="normal"><a href="#__codelineno-0-87"> 87</a></span>
+<span class="normal"><a href="#__codelineno-0-88"> 88</a></span>
+<span class="normal"><a href="#__codelineno-0-89"> 89</a></span>
+<span class="normal"><a href="#__codelineno-0-90"> 90</a></span>
+<span class="normal"><a href="#__codelineno-0-91"> 91</a></span>
+<span class="normal"><a href="#__codelineno-0-92"> 92</a></span>
+<span class="normal"><a href="#__codelineno-0-93"> 93</a></span>
+<span class="normal"><a href="#__codelineno-0-94"> 94</a></span>
+<span class="normal"><a href="#__codelineno-0-95"> 95</a></span>
+<span class="normal"><a href="#__codelineno-0-96"> 96</a></span>
+<span class="normal"><a href="#__codelineno-0-97"> 97</a></span>
+<span class="normal"><a href="#__codelineno-0-98"> 98</a></span>
+<span class="normal"><a href="#__codelineno-0-99"> 99</a></span>
+<span class="normal"><a href="#__codelineno-0-100">100</a></span>
+<span class="normal"><a href="#__codelineno-0-101">101</a></span>
+<span class="normal"><a href="#__codelineno-0-102">102</a></span>
+<span class="normal"><a href="#__codelineno-0-103">103</a></span>
+<span class="normal"><a href="#__codelineno-0-104">104</a></span>
+<span class="normal"><a href="#__codelineno-0-105">105</a></span>
+<span class="normal"><a href="#__codelineno-0-106">106</a></span>
+<span class="normal"><a href="#__codelineno-0-107">107</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-41" name="__codelineno-0-41"></a>&quot;mkdocs&quot;: {
+<a id="__codelineno-0-42" name="__codelineno-0-42"></a>    &quot;site_name&quot;: &quot;Convertir un document Word ou ODT vers un site statique HTML à l&#39;aide de l&#39;IA Gemini&quot;,
+<a id="__codelineno-0-43" name="__codelineno-0-43"></a>    &quot;site_url&quot;: &quot;https://stahe.github.io/word-odt-vers-html-janv-2026/&quot;,
+<a id="__codelineno-0-44" name="__codelineno-0-44"></a>    &quot;site_description&quot;: &quot;Convertir un document Word ou ODT vers un site statique HTML à l&#39;aide de l&#39;IA Gemini&quot;,
+<a id="__codelineno-0-45" name="__codelineno-0-45"></a>    &quot;site_author&quot;: &quot;Serge Tahé&quot;,
+<a id="__codelineno-0-46" name="__codelineno-0-46"></a>    &quot;repo_url&quot;: &quot;https://github.com/stahe/word-odt-vers-html-janv-2026&quot;,
+<a id="__codelineno-0-47" name="__codelineno-0-47"></a>    &quot;repo_name&quot;: &quot;GitHub&quot;,
+<a id="__codelineno-0-48" name="__codelineno-0-48"></a>    &quot;use_directory_urls&quot;: false,
+<a id="__codelineno-0-49" name="__codelineno-0-49"></a>    &quot;theme&quot;: {
+<a id="__codelineno-0-50" name="__codelineno-0-50"></a>      &quot;name&quot;: &quot;material&quot;,
+<a id="__codelineno-0-51" name="__codelineno-0-51"></a>      &quot;custom_dir&quot;: &quot;overrides&quot;,
+<a id="__codelineno-0-52" name="__codelineno-0-52"></a>      &quot;features&quot;: [
+<a id="__codelineno-0-53" name="__codelineno-0-53"></a>        &quot;navigation.sections&quot;,
+<a id="__codelineno-0-54" name="__codelineno-0-54"></a>        &quot;navigation.indexes&quot;,
+<a id="__codelineno-0-55" name="__codelineno-0-55"></a>        &quot;navigation.expand&quot;,
+<a id="__codelineno-0-56" name="__codelineno-0-56"></a>        &quot;toc.integrate&quot;,
+<a id="__codelineno-0-57" name="__codelineno-0-57"></a>        &quot;navigation.top&quot;
+<a id="__codelineno-0-58" name="__codelineno-0-58"></a>      ],
+<a id="__codelineno-0-59" name="__codelineno-0-59"></a>      &quot;palette&quot;: [
+<a id="__codelineno-0-60" name="__codelineno-0-60"></a>        {
+<a id="__codelineno-0-61" name="__codelineno-0-61"></a>          &quot;media&quot;: &quot;(prefers-color-scheme: light)&quot;,
+<a id="__codelineno-0-62" name="__codelineno-0-62"></a>          &quot;scheme&quot;: &quot;default&quot;,
+<a id="__codelineno-0-63" name="__codelineno-0-63"></a>          &quot;primary&quot;: &quot;teal&quot;,
+<a id="__codelineno-0-64" name="__codelineno-0-64"></a>          &quot;accent&quot;: &quot;purple&quot;,
+<a id="__codelineno-0-65" name="__codelineno-0-65"></a>          &quot;toggle&quot;: {
+<a id="__codelineno-0-66" name="__codelineno-0-66"></a>            &quot;icon&quot;: &quot;material/brightness-7&quot;,
+<a id="__codelineno-0-67" name="__codelineno-0-67"></a>            &quot;name&quot;: &quot;Passer au mode sombre&quot;
+<a id="__codelineno-0-68" name="__codelineno-0-68"></a>          }
+<a id="__codelineno-0-69" name="__codelineno-0-69"></a>        },
+<a id="__codelineno-0-70" name="__codelineno-0-70"></a>        {
+<a id="__codelineno-0-71" name="__codelineno-0-71"></a>          &quot;media&quot;: &quot;(prefers-color-scheme: dark)&quot;,
+<a id="__codelineno-0-72" name="__codelineno-0-72"></a>          &quot;scheme&quot;: &quot;slate&quot;,
+<a id="__codelineno-0-73" name="__codelineno-0-73"></a>          &quot;primary&quot;: &quot;teal&quot;,
+<a id="__codelineno-0-74" name="__codelineno-0-74"></a>          &quot;accent&quot;: &quot;purple&quot;,
+<a id="__codelineno-0-75" name="__codelineno-0-75"></a>          &quot;toggle&quot;: {
+<a id="__codelineno-0-76" name="__codelineno-0-76"></a>            &quot;icon&quot;: &quot;material/brightness-4&quot;,
+<a id="__codelineno-0-77" name="__codelineno-0-77"></a>            &quot;name&quot;: &quot;Passer au mode clair&quot;
+<a id="__codelineno-0-78" name="__codelineno-0-78"></a>          }
+<a id="__codelineno-0-79" name="__codelineno-0-79"></a>        }
+<a id="__codelineno-0-80" name="__codelineno-0-80"></a>      ]
+<a id="__codelineno-0-81" name="__codelineno-0-81"></a>    },
+<a id="__codelineno-0-82" name="__codelineno-0-82"></a>    &quot;markdown_extensions&quot;: [
+<a id="__codelineno-0-83" name="__codelineno-0-83"></a>      &quot;admonition&quot;,
+<a id="__codelineno-0-84" name="__codelineno-0-84"></a>      &quot;attr_list&quot;,
+<a id="__codelineno-0-85" name="__codelineno-0-85"></a>      &quot;pymdownx.superfences&quot;,
+<a id="__codelineno-0-86" name="__codelineno-0-86"></a>      &quot;pymdownx.mark&quot;,
+<a id="__codelineno-0-87" name="__codelineno-0-87"></a>      {
+<a id="__codelineno-0-88" name="__codelineno-0-88"></a>        &quot;pymdownx.highlight&quot;: {
+<a id="__codelineno-0-89" name="__codelineno-0-89"></a>          &quot;anchor_linenums&quot;: true,
+<a id="__codelineno-0-90" name="__codelineno-0-90"></a>          &quot;linenums&quot;: true
+<a id="__codelineno-0-91" name="__codelineno-0-91"></a>        }
+<a id="__codelineno-0-92" name="__codelineno-0-92"></a>      }
+<a id="__codelineno-0-93" name="__codelineno-0-93"></a>    ],
+<a id="__codelineno-0-94" name="__codelineno-0-94"></a>    &quot;extra_javascript&quot;: [
+<a id="__codelineno-0-95" name="__codelineno-0-95"></a>      &quot;javascripts/focus.js&quot;
+<a id="__codelineno-0-96" name="__codelineno-0-96"></a>    ],
+<a id="__codelineno-0-97" name="__codelineno-0-97"></a>    &quot;extra_css&quot;: [
+<a id="__codelineno-0-98" name="__codelineno-0-98"></a>      &quot;stylesheets/focus.css&quot;
+<a id="__codelineno-0-99" name="__codelineno-0-99"></a>    ]
+<a id="__codelineno-0-100" name="__codelineno-0-100"></a>  },
+<a id="__codelineno-0-101" name="__codelineno-0-101"></a>  &quot;footer&quot;: &quot;{% block footer %}\n  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">\&quot;md-footer-meta</span> <span class="na">md-typeset</span><span class="err">\&quot;</span><span class="p">&gt;</span>\n    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">\&quot;md-footer-meta__inner\&quot;</span><span class="p">&gt;</span>\n\n      <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>\n        <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">\&quot;https://tahe.developpez.com\&quot;</span> <span class="na">target</span><span class="o">=</span><span class="s">\&quot;_blank\&quot;</span><span class="p">&gt;</span>\n          https://tahe.developpez.com\n        <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>\n        <span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>\n        Ce cours-tutoriel écrit par <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Serge Tahé<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> est mis à disposition du public selon les termes de la\n        <span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;</span>Licence Creative Commons Attribution – Pas d’Utilisation Commerciale –\n        Partage dans les Mêmes Conditions 3.0 non transposé<span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;</span>.\n      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>\n\n    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>\n  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>\n{% endblock %}&quot;,
+<a id="__codelineno-0-102" name="__codelineno-0-102"></a>  &quot;extra&quot;: {
+<a id="__codelineno-0-103" name="__codelineno-0-103"></a>    &quot;analytics&quot;: {
+<a id="__codelineno-0-104" name="__codelineno-0-104"></a>      &quot;provider&quot;: &quot;google&quot;,
+<a id="__codelineno-0-105" name="__codelineno-0-105"></a>      &quot;property&quot;: &quot;G-XXXXXXXX&quot;
+<a id="__codelineno-0-106" name="__codelineno-0-106"></a>    }
+<a id="__codelineno-0-107" name="__codelineno-0-107"></a>  },
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>lignes 1-67 : configuration pour la génération du fichier [mkdocs.yml]. Ce fichier est utilisé par le script [build] qui convertit le site MkDocs produit par le script [convert] en site statique HTML. Ce fichier est produit par le script [convert] ;</li>
