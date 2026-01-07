@@ -18,6 +18,8 @@
         <link rel="prev" href="examen-du-site-html-genere.html">
       
       
+        <link rel="next" href="assurer-le-suivi-du-site-avec-google-analytics.html">
+      
       
         
       
@@ -601,6 +603,60 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="assurer-le-suivi-du-site-avec-google-analytics.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12. Assurer le suivi du site avec Google Analytics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="conclusion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13. Conclusion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -877,7 +933,7 @@
 <a id="__codelineno-4-8" name="__codelineno-4-8"></a>git push -u origin main
 <a id="__codelineno-4-9" name="__codelineno-4-9"></a>python -m mkdocs gh-deploy
 </code></pre></div></td></tr></table></div>
-<p>C’est la suite de commandes qui va exporter votre site HTML sur votre dépôt GitHub. Vous aurez à modifier la ligne 7 avec l’UTRL de votre propre dépôt GitHub, présente dans le fichier [config.json] :</p>
+<p>C’est la suite de commandes qui va exporter votre site HTML sur votre dépôt GitHub. Vous aurez à modifier la ligne 7 avec l’URL de votre propre dépôt GitHub, présente dans le fichier [config.json] :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>    &quot;repo_url&quot;: &quot;https://github.com/stahe/word-odt-vers-html-janv-2026&quot;,
 </code></pre></div></td></tr></table></div>
 <p>La suite de commandes de [deploy.txt] utilise un logiciel appelé Git. Vous devez l’installer [<a href="https://git-scm.com/install/windows"><u>Git - Install for Windows</u></a>].</p>
@@ -892,7 +948,7 @@
 <a id="__codelineno-6-4" name="__codelineno-6-4"></a># 3. On fait une exception (!) pour le seul fichier que vous voulez garder
 <a id="__codelineno-6-5" name="__codelineno-6-5"></a>!README.md
 </code></pre></div></td></tr></table></div>
-<p>Il est extrêment simple. On ignore tous les fichiers (ligne 2) sauf le fichier [README.md] (ligne 5). GitHub est fait pour héberger les projets de développement. C’est en général tout le projet de développement qui est exporté sur GitHub. Nous on cherche simplement à exporter un site HTML, pas un projet de développement. Le seul fichier qu’on veut exporter sur notre dépôt GitHub est le fichier [README.md] qui explique aux visiteurs ce que contient notre site HTML.</p>
+<p>Il est extrêmement simple. On ignore tous les fichiers (ligne 2) sauf le fichier [README.md] (ligne 5). GitHub est fait pour héberger les projets de développement. C’est en général tout le projet de développement qui est exporté sur GitHub. Nous on cherche simplement à exporter un site HTML, pas un projet de développement. Le seul fichier qu’on veut exporter sur notre dépôt GitHub est le fichier [README.md] qui explique aux visiteurs ce que contient notre site HTML.</p>
 <p>Maintenant, dans votre terminal, tapez la séquence de commandes suivantes dans l’ordre indiqué par [deploy.txt] en allant jusqu’à la commande 8. N’exécutez pas la commande 9 pour l’instant.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
@@ -988,7 +1044,7 @@
 <ul>
 <li>En [1], on voit que vous affichez un site web sur GitHub ;</li>
 </ul>
-<p>Il est extrêment facile de se tromper dans l’exécution des commandes de [deploy.txt]. Il est alors difficile de revenir en arrière car Git garde la mémoire de ce qu’on a fait (mal). Pour repartir de zéro, visualisez le dossier de travail :</p>
+<p>Il est extrêmement facile de se tromper dans l’exécution des commandes de [deploy.txt]. Il est alors difficile de revenir en arrière car Git garde la mémoire de ce qu’on a fait (mal). Pour repartir de zéro, visualisez le dossier de travail :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002A9000004D2B60F1371.png" style="display:inline-block; margin:4px;width:6.309cm;height:11.43cm;" /></td></tr></table>
 
 <ul>

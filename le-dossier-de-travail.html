@@ -603,6 +603,60 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="assurer-le-suivi-du-site-avec-google-analytics.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12. Assurer le suivi du site avec Google Analytics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="conclusion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13. Conclusion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -624,13 +678,13 @@
 
 
 <h1 id="6-le-dossier-de-travail">6. Le dossier de travail</h1>
-<p>Vous pouvez télécharger le dossier de travail <strong>ICI</strong>.</p>
+<p>Vous pouvez télécharger le dossier de travail <a href="https://stahe.github.io/word-odt-vers-html-janv-2026/word-odt-vers-html.rar"><u><strong>ICI</strong></u></a>.</p>
 <p>Le dossier de travail est le suivant :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001BF000002B34C21DF1F.png" style="display:inline-block; margin:4px;width:4.14cm;height:6.399cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <ul>
 <li>Nous allons ignorer pour l’instant les fichiers suivants [.gitignore, deploy.txt, google*.html, README.md, robots.txt]. Ce sont des fichiers qui nous serviront au déploiement sur GitHub du site HTML généré localement ;</li>
-<li>[prompt IA.txt] est le prompt Expert que j’ai demandé à Gemini de générer lorsque j’ai estimé que le convertisseur généré était satisfaisant. Le but est de proposer ce prompt à une autre IA pour éviter les 274 itérations de Gemini. L’expérience s’est révélée négative. Elle a été proposée à chatGPT et ClaudeAI. Quand j’ai vu que les IA commençaient à diverger, j’ai arrêté la discussion. En fait le prompt IA généré par Gemini ne les aidait pas beaucoup. Même le proposer à Gemini dans une autre session n’empêche pas Gemini de faire les mêmes erreurs rencontrées dans les 274 itérations. Ce que j’ai trouvé le plus efficace pour aider une IA à démarrer, c’est de lui fournir le script généré par Gemini. A partir de là, on peut commencer à demander à l’IA de nouvelles fonctionnalités pour le convertisseur ;</li>
+<li>[prompt IA.txt] est le prompt Expert que j’ai demandé à Gemini de générer lorsque j’ai estimé que le convertisseur généré était satisfaisant. Le but est de proposer ce prompt à une autre IA pour éviter les 277 itérations de Gemini. L’expérience s’est révélée négative. Elle a été proposée à chatGPT et ClaudeAI. Quand j’ai vu que les IA commençaient à diverger, j’ai arrêté la discussion. En fait le prompt IA généré par Gemini ne les aidait pas beaucoup. Même le proposer à Gemini dans une autre session n’empêche pas Gemini de faire les mêmes erreurs rencontrées dans les 277 itérations. Ce que j’ai trouvé le plus efficace pour aider une IA à démarrer, c’est de lui fournir le script généré par Gemini. A partir de là, on peut commencer à demander à l’IA de nouvelles fonctionnalités pour le convertisseur ;</li>
 <li>[prompt User.txt] est le prompt avec lequel j’ai commencé les itérations avec Gemini ;</li>
 <li>Le fichier [word-odt-vers-html.odt] est le document de cet article. Je l’ai d’abord écrit sous Word. Puis avec [<a href="https://fr.libreoffice.org/"><u><u>LibreOffice</u></u></a>], j’ai ouvert le fichier Word pour le sauvegarder au format ODT dans [word-odt-vers-html .odt]. Si vous avez produit un ODT via LibreOffice, vérifiez que celui-ci est bien lisible par Word. Ce dernier point est important. Il est courant d’inclure des dessins dans un document ODT. Or Word ne comprend pas ces dessins, ni le convertisseur généré par Gemini ;</li>
 </ul>
@@ -642,7 +696,7 @@
 </ul>
 </li>
 </ul>
-<p>A aucun moment nous ne regarderons le code Python généré. On considèrera les deux scripts comme deux boîtes noires. A auncun moment je n’ai modifié du code à la main. J’ai toujours demandé à Gemini de corriger lui-même son script. C’est pourquoi il n’est pas nécessaire de connaître Python pour utiliser le convertisseur.</p>
+<p>A aucun moment nous ne regarderons le code Python généré. On considérera les deux scripts comme deux boîtes noires. A aucun moment je n’ai modifié du code à la main. J’ai toujours demandé à Gemini de corriger lui-même son script. C’est pourquoi il n’est pas nécessaire de connaître Python pour utiliser le convertisseur.</p>
 <ul>
 <li>[config.json] est un fichier de configuration pour le script [convert]. Au départ [convert] n’avait pas de fichier de configuration. Puis en changeant de documents à convertir, je me suis aperçu peu à peu qu’il y avait des éléments que je demandais à Gemini de générer (par exemple le nom du site qui change pour chaque document) qui seraient mieux placés dans un fichier de configuration que l’utilisateur pourrait modifier lui-même. Je l’ai construit lui aussi par itérations avec Gemini ;</li>
 </ul>
