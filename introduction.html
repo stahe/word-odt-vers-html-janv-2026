@@ -18,7 +18,7 @@
         <link rel="prev" href="index.html">
       
       
-        <link rel="next" href="les-exemples.html">
+        <link rel="next" href="les-exemples-de-ce-document.html">
       
       
         
@@ -340,14 +340,14 @@
   
   
     <li class="md-nav__item">
-      <a href="les-exemples.html" class="md-nav__link">
+      <a href="les-exemples-de-ce-document.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    2. Les exemples
+    2. Les exemples de ce document
   
 
     
@@ -367,14 +367,14 @@
   
   
     <li class="md-nav__item">
-      <a href="ce-qui-existe.html" class="md-nav__link">
+      <a href="ce-qui-existe-sur-internet.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    3. Ce qui existe
+    3. Ce qui existe sur internet
   
 
     
@@ -394,14 +394,14 @@
   
   
     <li class="md-nav__item">
-      <a href="le-prompt-initial.html" class="md-nav__link">
+      <a href="le-prompt-initial-a-gemini-3.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. Le prompt initial
+    4. Le prompt initial à Gemini 3
   
 
     
@@ -421,14 +421,14 @@
   
   
     <li class="md-nav__item">
-      <a href="creer-un-environnement-de-travail.html" class="md-nav__link">
+      <a href="creer-un-environnement-de-travail-python.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    5. Créer un environnement de travail
+    5. Créer un environnement de travail Python
   
 
     
@@ -448,14 +448,14 @@
   
   
     <li class="md-nav__item">
-      <a href="le-dossier-de-travail.html" class="md-nav__link">
+      <a href="le-dossier-de-travail-du-convertisseur-gemini-3.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6. Le dossier de travail
+    6. Le dossier de travail du convertisseur Gemini 3
   
 
     
@@ -475,14 +475,14 @@
   
   
     <li class="md-nav__item">
-      <a href="le-fichier-de-configuration-configjson.html" class="md-nav__link">
+      <a href="le-fichier-de-configuration-du-convertisseur-gemini-3.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    7. Le fichier de configuration [config.json]
+    7. Le fichier de configuration du convertisseur Gemini 3
   
 
     
@@ -502,14 +502,14 @@
   
   
     <li class="md-nav__item">
-      <a href="utilisation-du-convertisseur.html" class="md-nav__link">
+      <a href="utilisation-du-convertisseur-gemini-3.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    8. Utilisation du convertisseur
+    8. Utilisation du convertisseur Gemini 3
   
 
     
@@ -529,14 +529,14 @@
   
   
     <li class="md-nav__item">
-      <a href="construction-du-site-html.html" class="md-nav__link">
+      <a href="construction-du-site-html-statique.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    9. Construction du site HTML
+    9. Construction du site HTML statique
   
 
     
@@ -610,14 +610,14 @@
   
   
     <li class="md-nav__item">
-      <a href="assurer-le-suivi-du-site-avec-google-analytics.html" class="md-nav__link">
+      <a href="assurer-le-suivi-du-site-avec-google-analytics-et-google-search-console.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    12. Assurer le suivi du site avec Google Analytics
+    12. Assurer le suivi du site avec Google Analytics et Google Search Console
   
 
     
@@ -678,9 +678,14 @@
 
 
 <h1 id="1-introduction">1. Introduction</h1>
-<p>On se propose dans cet article de mettre à disposition du lecteur un convertisseur Python de documents Word ou ODT vers un site statique HTML. Ce convertisseur a été construit par l’IA <a href="https://gemini.google.com/app?hl=fr"><u><u>Gemini 3</u></u></a>. Il a fallu 277 itérations à Gemini pour produire le convertisseur de ce document. Cela a représenté un débogage de plusieurs jours entre elle et moi. Il a fallu d’abord plusieurs dizaines d’itérations pour obtenir une première version à peu près correcte. Puis régulièrement j’ajoutais un nouveau problème posé par de nouveaux documents ODT. Et là, Gemini a souvent régressé. C’est-à-dire que ce qui marchait à l’étape N ne marchait plus aux étapes suivantes. J’ai alors procédé ainsi : dès que Gemini produisait un convertisseur qui résolvait un de mes problèmes, j’en faisais une version de référence et je le disais à Gemini. Puis lorsque je le voyais régresser trop longtemps je lui demandais de revenir à la dernière version de référence connue. C’est comme ça que peu à peu, on a construit ensemble ce convertisseur : moi en lui exprimant ce que je voulais, essentiellement en lui signalant les anomalies que je trouvais dans le site HTML produit, lui en produisant le code demandé.</p>
+<p>On se propose dans cet article de mettre à disposition du lecteur un convertisseur Python de documents Word ou ODT vers un site statique HTML. Ce convertisseur a été construit par l’IA <a href="https://gemini.google.com/app?hl=fr"><u><u>Gemini 3</u></u></a>. Il a fallu 277 itérations à Gemini pour produire le convertisseur de ce document. Cela a représenté un débogage de plusieurs semaines entre elle et moi. Il a fallu d’abord plusieurs dizaines d’itérations pour obtenir une première version à peu près correcte. Puis régulièrement j’ajoutais un nouveau problème posé par de nouveaux documents ODT. Et là, Gemini a souvent régressé. C’est-à-dire que ce qui marchait à l’étape N ne marchait plus aux étapes suivantes. J’ai alors procédé ainsi : dès que Gemini produisait un convertisseur qui résolvait un de mes problèmes, j’en faisais une version de référence et je le disais à Gemini. Puis lorsque je le voyais régresser trop longtemps je lui demandais de revenir à la dernière version de référence connue. C’est comme ça que peu à peu, on a construit ensemble ce convertisseur : moi en lui exprimant ce que je voulais, essentiellement en lui signalant les anomalies que je trouvais dans le site HTML produit, lui en produisant le code demandé.</p>
 <p>J’ai utilisé  <a href="https://gemini.google.com/app?hl=fr"><u><u>Gemini 3</u></u></a> avec une licence pro à 22 euros /mois. Si vous partez d’un document Word, ouvrez-le avec <a href="https://fr.libreoffice.org/download/telecharger-libreoffice/"><u>LibreOffice</u></a> et sauvegardez-le au format ODT. N’utilisez pas l’option de Word qui permet de sauvegarder un document Word au format ODT. Pourquoi ? Parce que Word et LibreOffice ne génère pas le même XML pour un document ODT et que le convertisseur de Gemini a été entraîné sur des documents générés par LibreOffice.</p>
-<p>Gemini va générer deux scripts Python. Je n’ai jamais regardé le code généré. Je voulais les considérer comme des boîtes noires. Il n’y a pas besoin d’être un développeur Python pour suivre ce tutoriel ni même un développeur tout court.</p>
+<p>Gemini va générer deux scripts Python :</p>
+<ul>
+<li>[convert] pour convertir le document ODT de <a href="https://fr.libreoffice.org/download/telecharger-libreoffice/"><u>LibreOffice</u></a> en site <a href="https://www.mkdocs.org/"><u>MkDocs</u></a> ;</li>
+<li>[build] pour convertir le site MkDocs en site HTML statique ; </li>
+</ul>
+<p>Je n’ai jamais regardé le code généré. Je voulais les considérer comme des boîtes noires. Il n’y a pas besoin d’être un développeur Python pour suivre ce tutoriel ni même un développeur tout court.</p>
 <p>Je voudrais faire un article court. Les interactions entre une IA et un utilisateur sont présentés dans l’article [<a href="https://stahe.github.io/python-ia-sept-2025/"><u><u>Générer un script Python avec des outils d’IA</u></u></a>] que j’appellerais désormais [<a href="https://stahe.github.io/python-ia-sept-2025/"><u><u>ref1</u></u></a>]. Les interactions avec Gemini ne seront présentées qu’à la marge. De toute façon il était impossible de présenter les 277 itérations.</p>
 
 
