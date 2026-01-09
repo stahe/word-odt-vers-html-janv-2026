@@ -692,6 +692,33 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000B32000000A5B62D1439.png" style="display:inline-block; margin:4px;width:16.002cm;height:0.921cm;" /></td></tr></table>
 
 <p>C’est le bas de page défini dans le fichier [config.json].</p>
+<p><u><strong>Le contenu de la page d’accueil</strong></u></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000069E0000033B2FB163BE.png" style="display:inline-block; margin:4px;width:16.002cm;height:7.812cm;" /></td></tr></table>
+
+<p>Le convertisseur Gemini 3 met dans la page Accueil tout ce qui précède, dans le document ODT, le premier titre de niveau, de style ‘Titre 1’ donc. Si vous y mettez des images comme ci-dessus, il va les afficher. Vous pouvez donc imaginer donner une couverture à votre site comme avec un livre réel. En [1], c’est le titre principal du document. Son rendu est contrôlé par le lignes suivantes du fichier de configuration [config.json] :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span>
+<span class="normal"><a href="#__codelineno-0-6">6</a></span>
+<span class="normal"><a href="#__codelineno-0-7">7</a></span>
+<span class="normal"><a href="#__codelineno-0-8">8</a></span>
+<span class="normal"><a href="#__codelineno-0-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>  &quot;document_title&quot;: {
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>    &quot;style_names&quot;: [
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>      &quot;Titre principal&quot;,
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>      &quot;Title&quot;,
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a>      &quot;Titre&quot;,
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a>      &quot;P1&quot;
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a>    ],
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a>    &quot;css&quot;: &quot;font-size: 28px; font-weight: bold; margin-bottom: 1em; line-height: 1.2; color: #2c3e50;&quot;
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a>  },
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>lignes [2-7] : la liste des styles possibles pour le titre de votre document. Quand je regarde ce document, le style LibreOffice de mon titre est ‘Titre principal’. Or le convertisseur Gemini ne le trouvait pas. Il a fait des logs des styles qu’il rencontrait et cela a affiché [P1]. C’est un gros souci avec LibreOffice : les noms affichés des styles ne correspondant pas aux noms internes utilisés par LibreOffice. Ils ne sont là que pour s’adapter à la langue de l’utilisateur. Donc lignes [2-7], seule le ligne 6 est utile ;</li>
+<li>ligne 8 : une fois que le titre principal a été détecté, vous pouvez paramétrer son rendu. Moi je voulais je voulais une police de taille 28 (font-size: 28px;) et du gras (font-weight: bold) ;</li>
+</ul>
+<p>Avec les images et le style du titre, vous pouvez faire une page d’accueil attirante.</p>
 <p>Regardons maintenant le chapitre [Exemples] qui regroupe les exemples que le convertisseur Gemini sait gérer :</p>
 <p><u><strong>Les listes</strong></u></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000674000004AED6FEE5B6.png" style="display:inline-block; margin:4px;width:15.3cm;height:11.09cm;" /></td></tr></table>
@@ -741,6 +768,10 @@
 <li>En [1-3], les astérisques du texte ont été préservées ;</li>
 <li>En [4], le code MarkDown a été préservé ;</li>
 </ul>
+<p><u><strong>Les tableaux</strong></u></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007170000051043CE2588.png" style="display:inline-block; margin:4px;width:16.002cm;height:11.425cm;" /></td></tr></table>
+
+<p>Ce tableau qui avait différentes sortes de contenus à été correctement rendu par le convertisseur Gemini.</p>
 <p>C’est tout. Si votre document utilise d’autres particularités que celles évoquées précédemment, il est hautement probable que celles-ci ne seront pas prises en compte par le convertisseur Gemini. Que faire alors ? Vous pouvez faire part de votre nouvelle demande à Gemini en lui donnant le convertisseur actuel :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005E7000001D28BC1B4B6.png" style="display:inline-block; margin:4px;width:14.079cm;height:4.309cm;" /></td></tr></table>
 
