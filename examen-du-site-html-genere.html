@@ -695,7 +695,7 @@
 <p><u><strong>Le contenu de la page d’accueil</strong></u></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000069E0000033B2FB163BE.png" style="display:inline-block; margin:4px;width:16.002cm;height:7.812cm;" /></td></tr></table>
 
-<p>Le convertisseur Gemini 3 met dans la page Accueil tout ce qui précède, dans le document ODT, le premier titre de niveau, de style ‘Titre 1’ donc. Si vous y mettez des images comme ci-dessus, il va les afficher. Vous pouvez donc imaginer donner une couverture à votre site comme avec un livre réel. En [1], c’est le titre principal du document. Son rendu est contrôlé par le lignes suivantes du fichier de configuration [config.json] :</p>
+<p>Le convertisseur Gemini 3 met dans la page Accueil tout ce qui précède, dans le document ODT, le premier titre de niveau 1, de style ‘Titre 1’ donc. Si vous y mettez des images comme ci-dessus, il va les afficher. Vous pouvez donc imaginer donner une couverture à votre site comme avec un livre réel. En [1], c’est le titre principal du document. Son rendu est contrôlé par le lignes suivantes du fichier de configuration [config.json] :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
 <span class="normal"><a href="#__codelineno-0-3">3</a></span>
@@ -715,8 +715,8 @@
 <a id="__codelineno-0-9" name="__codelineno-0-9"></a>  },
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>lignes [2-7] : la liste des styles possibles pour le titre de votre document. Quand je regarde ce document, le style LibreOffice de mon titre est ‘Titre principal’. Or le convertisseur Gemini ne le trouvait pas. Il a fait des logs des styles qu’il rencontrait et cela a affiché [P1]. C’est un gros souci avec LibreOffice : les noms affichés des styles ne correspondant pas aux noms internes utilisés par LibreOffice. Ils ne sont là que pour s’adapter à la langue de l’utilisateur. Donc lignes [2-7], seule le ligne 6 est utile ;</li>
-<li>ligne 8 : une fois que le titre principal a été détecté, vous pouvez paramétrer son rendu. Moi je voulais je voulais une police de taille 28 (font-size: 28px;) et du gras (font-weight: bold) ;</li>
+<li>lignes [2-7] : la liste des styles possibles pour le titre de votre document. Quand je regarde ce document, le style LibreOffice de mon titre est ‘Titre principal’. Or le convertisseur Gemini ne le trouvait pas. Il a fait des logs des styles qu’il rencontrait et cela a affiché [P1]. C’est un gros souci avec LibreOffice : les noms affichés des styles ne correspondent pas aux noms internes utilisés par LibreOffice. Ils ne sont là que pour s’adapter à la langue de l’utilisateur. Donc lignes [2-7], seule le ligne 6 est utile ;</li>
+<li>ligne 8 : une fois que le titre principal a été détecté, vous pouvez paramétrer son rendu. Moi je voulais une police de taille 28 (font-size: 28px;) et du gras (font-weight: bold) ;</li>
 </ul>
 <p>Avec les images et le style du titre, vous pouvez faire une page d’accueil attirante.</p>
 <p>Le titre principal de votre document n’aura peut-être pas un des styles définis aux lignes [3-6]. Pour trouver le style de votre titre principal, utilisez la ligne suivante du fichier [config.json]</p>
@@ -798,8 +798,6 @@
 
 <p><u><strong>Code Java</strong></u></p>
 <p><img src="images/10000000000004DC000003E004F6FD45.png" style="width:11.52cm;height:9.19cm;" alt="Image" /></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
-
 <p><u><strong>Code C#</strong></u></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006B40000028B38CF4C86.png" style="display:inline-block; margin:4px;width:16.002cm;height:6.071cm;" /></td></tr></table>
 

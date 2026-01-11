@@ -678,7 +678,7 @@
 
 
 <h1 id="12-assurer-le-suivi-du-site-avec-google-analytics-et-google-search-console">12. Assurer le suivi du site avec Google Analytics et Google Search Console</h1>
-<p>Si vous hébergez votre site sur GitHub vous serez probablement intéressé par connaître le nombre de visiteurs du site. Il vous faut pour ça un marqueur Google Analytics (GA). Nous demandons à ChatGPT comment créer un marqueur GA :</p>
+<p>Si vous hébergez votre site sur GitHub vous serez probablement intéressé par connaître le nombre de visiteurs du site. Il vous faut pour ça un marqueur Google Analytics (GA). Nous demandons à <a href="https://chatgpt.com/"><u>ChatGPT</u></a> comment créer un marqueur GA :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000079C000004059469F85D.png" style="display:inline-block; margin:4px;width:16.002cm;height:8.453cm;" /></td></tr></table>
 
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005C70000026FED90F828.png" style="display:inline-block; margin:4px;width:13.7cm;height:5.77cm;" /></td></tr></table>
@@ -776,7 +776,7 @@
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>    &quot;site_url&quot;: &quot;https://stahe.github.io/word-odt-vers-html-janv-2026/&quot;,
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>en [2], passez à l’étape suivante ;</li>
+<li>en [6], passez à l’étape suivante ;</li>
 </ul>
 <p>Normalement à cette étape, Google Search Console vous propose un fichir [googlexxxxx.html] que vous devez télécharger. Je n’ai pas eu cet écran car j’avais déjà ce fichier dans le site déployé. C’est l’un des deux fichiers déclarés dans [config.json]</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
@@ -795,14 +795,14 @@
 <a id="__codelineno-3-2" name="__codelineno-3-2"></a>python .\build.py
 <a id="__codelineno-3-3" name="__codelineno-3-3"></a>python -m mkdocs gh-deploy
 </code></pre></div></td></tr></table></div>
-<p>Ceci fait, retournez dans [Google Serach Console] et sélectionnez la propriété que vous avez créée précédemment :</p>
+<p>Ceci fait, retournez dans [Google Search Console] et sélectionnez la propriété que vous avez créée précédemment :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002C20000016916F02C28.png" style="display:inline-block; margin:4px;width:6.541cm;height:3.341cm;" /></td></tr></table>
 
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000ABE00000265099D5418.png" style="display:inline-block; margin:4px;width:16.002cm;height:3.57cm;" /></td></tr></table>
 
 <ul>
 <li>En [1], sélectionnez l’option [Sitemaps] ;</li>
-<li>en [2], tapez [sitemap.xml] ;</li>
+<li>En [2], tapez [sitemap.xml] ;</li>
 <li>En [3], validez l’URL ;</li>
 </ul>
 <p>Le fichier [sitemap.xml] est un fichier que Mkdocs a mis à la racine du site HTML exporté sur GitHub. Vous pouvez vérifier sa présence en tapant directement son URL :</p>
