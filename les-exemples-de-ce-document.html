@@ -434,10 +434,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#25-les-images" class="md-nav__link">
+  <a href="#25-un-titre-peut-etre-egalement-enrichi" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.5. Les images
+        2.5. Un titre peut être également enrichi.
       
     </span>
   </a>
@@ -445,10 +445,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#26-les-caracteres-a-proteger" class="md-nav__link">
+  <a href="#26-les-images" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.6. Les caractères à protéger
+        2.6. Les images
       
     </span>
   </a>
@@ -456,10 +456,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#27-les-tableaux" class="md-nav__link">
+  <a href="#27-les-caracteres-a-proteger" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.7. Les tableaux
+        2.7. Les caractères à protéger
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#28-les-tableaux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.8. Les tableaux
       
     </span>
   </a>
@@ -796,7 +807,7 @@
 <h2 id="21-les-listes">2.1. Les listes</h2>
 <p>Le convertisseur Gemini sait gérer les listes à puces et les listes numérotées :</p>
 <p><u><strong>Listes à puces</strong></u></p>
-<ul>
+<ol>
 <li>Élément 1 ;</li>
 <li>Élément 2 :</li>
 <li>Élément 3 ;<ul>
@@ -805,7 +816,7 @@
 </ul>
 </li>
 <li>Élément 4 ;</li>
-</ul>
+</ol>
 <p><u><strong>Listes numérotées</strong></u></p>
 <ol>
 <li>Élément 1 ;</li>
@@ -1958,22 +1969,24 @@
 <p><img src="images/10000000000005BE0000037C26698115.png" style="width:13.61cm;height:8.26cm;" alt="Image" /></p>
 <p>J’ai suivi cette démarche et ça a marché. Moi j’utilisais la méthode via l’icône de liste (Personnaliser). Donc on peut être amené à modifier certains éléments du document ODT pour obtenir ce qu’on veut.</p>
 <h2 id="23-les-liens">2.3. Les liens</h2>
-<p>Le convertisseur Gemini sait conserver les liens externes du document ODT. Par exemple <a href="https://gemini.google.com/app?hl=fr"><u><u>Gemini 3</u></u></a> ou [<a href="https://stahe.github.io/python-ia-sept-2025/"><u><u>Générer un script Python avec des outils d’IA</u></u></a>].</p>
-<p>Il sait gérer un lien vers un chapitre <a href="#_Les_exemples"><u><u>Lien vers un chapitre</u></u></a></p>
+<p>Le convertisseur Gemini sait conserver les liens externes du document ODT. Par exemple <a href="https://gemini.google.com/app?hl=fr"><u>Gemini 3</u></a> ou [<a href="https://stahe.github.io/python-ia-sept-2025/"><u>Générer un script Python avec des outils d’IA</u></a>].</p>
+<p>Il sait gérer un lien vers un chapitre <a href="#_Les_exemples"><u>Lien vers un chapitre</u></a></p>
 <p>Il ne sait pas gérer un lien vers une ancre (renvoi) : 2.1. </p>
 <h2 id="24-lenrichissement-de-texte">2.4. L’enrichissement de texte</h2>
 <p>Le convertisseur sait gérer le gras, l’italique, le souligné et le surlignage. Il respecte la couleur du surlignage. </p>
 <p>Un texte avec des mots en <strong>gras</strong>, en <em>italiques</em>, <u>soulignés</u> ou <mark style="background-color: #c0c0c0">surlignés</mark> ou <mark style="background-color: #dee6ef">surlignés</mark> ou <mark style="background-color: #ff972f">surlignés</mark>.</p>
-<h2 id="25-les-images">2.5. Les images</h2>
+<p>C’est vrai également pour les liens : [<a href="https://stahe.github.io/python-ia-sept-2025/"><u><mark style="background-color: #fff5ce">Générer</mark></u><u> un script </u><u><strong>Python</strong></u><u> avec des </u><u><em>outils</em></u><u> d’IA</u></a>].</p>
+<h2 id="25-un-titre-peut-etre-egalement-enrichi">2.5. Un <strong>titre</strong> peut être <u>également</u> <em>enrichi</em>.</h2>
+<h2 id="26-les-images">2.6. Les images</h2>
 <p>Le convertisseur Gemini sait gérer les images et les tableaux d’images :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000041D0000017D721E4B11.png" style="display:inline-block; margin:4px;width:9.29cm;height:3.36cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000021A000000A4CC322650.png" style="display:inline-block; margin:4px;width:4.74cm;height:1.45cm;" /></td></tr></table>
 
 <p><img src="images/10000000000006E80000018162B1E953.png" style="width:16.002cm;height:3.478cm;" alt="Image" /></p>
 <p>Dans les documents ODT il est fréquent d’avoir des dessins. Malgré des dizaines de tentatives, Gemini n’a pas réussi à générer un script qui générerait l’image (comme une copie d’écran) du dessin. Ainsi ci-dessus, l’image 5 est la copie d’écran d’un dessin d’un document ODT.</p>
-<h2 id="26-les-caracteres-a-proteger">2.6. Les caractères à protéger</h2>
+<h2 id="27-les-caracteres-a-proteger">2.7. Les caractères à protéger</h2>
 <p>Un site MkDocs a des pages dont le contenu n’est pas du HTML mais du MarkDown. Si le document ODT contient des caractères qui existent en MarkDown, ils risquent d’être interprétés par MkDocs et donc ne pas avoir le rendu attendu. Voici deux exemples :</p>
 <p>L’astérisque * a une signification MarkDown. La ligne suivante peut être alors mal interprétée :</p>
-<p>L&#x27;impôt I est alors égal à <strong>0.15*R – 2072.5*nbParts</strong>.</p>
+<p>L&#x27;impôt I est alors égal à <strong>0.15<em>R – 2072.5</em>nbParts</strong>.</p>
 <p>Un autre exemple est lorsque vous voulez insérer un bloc de code MarkDown dans votre document comme celui-ci :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -2057,7 +2070,7 @@
     ```
     ````
 </code></pre></div></td></tr></table></div>
-<h2 id="27-les-tableaux">2.7. Les tableaux</h2>
+<h2 id="28-les-tableaux">2.8. Les tableaux</h2>
 <p>Un tableau peut contenir différents contenus :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">1</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">2</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000C8000000E930F662D2.png" style="display:inline-block; margin:4px;width:2.646cm;height:3.083cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
@@ -2157,7 +2170,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.indexes", "toc.integrate", "navigation.top"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.indexes", "navigation.expand", "toc.integrate", "navigation.top"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="assets/javascripts/bundle.e71a0d61.min.js"></script>
