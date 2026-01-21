@@ -677,7 +677,7 @@
   
 
 
-<h1 id="10-examen-du-site-html-genere">10. Examen du site HTML généré</h1>
+<h1 id="10-examen-du-site-html-genere">10. <span style="color: #0f4761">Examen du site HTML généré</span></h1>
 <p>Nous allons examiner maintenant le rendu HTML de ce document ODT. On a déjà vu que le convertisseur respectait la table des matières.</p>
 <p>Maintenant regardons la barre supérieure du site :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000ABB0000016D9B3C5647.png" style="display:inline-block; margin:4px;width:16.002cm;height:2.125cm;" /></td></tr></table>
@@ -785,10 +785,9 @@
 <li>ligne 3, le style que je cherchais ;</li>
 </ul>
 <p>C’est pour cette raison que le débogueur affiche les lignes :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
-<span class="normal"><a href="#__codelineno-4-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>    10. [DEBUG PRE-H1] Style=&#39;P4&#39; (Clean=&#39;p4&#39;) | Texte=&#39;Introduction au langage PHP7 par l’exemp...&#39;
-<a id="__codelineno-4-2" name="__codelineno-4-2"></a>    11. &gt;&gt;&gt; TITRE DOCUMENT DETECTÉ : Introduction au langage PHP7 par l’exemple
-</code></pre></div></td></tr></table></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>    10. [DEBUG PRE-H1] Style=&#39;P4&#39; (Clean=&#39;p4&#39;) | Texte=&#39;Introduction au langage PHP7 par l’exemp...&#39;
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    11. &gt;&gt;&gt; TITRE DOCUMENT DETECTÉ : Introduction au langage PHP7 par l’exemple
+</code></pre></div>
 <p>Il a rencontré le style ‘P4’ et affiche alors que le titre du document a été trouvé. Lorsque celui-ci a été trouvé, vous pouvez mettre la clé [debug] à [false] dans [config.json] :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>  &quot;debug&quot;: false
 </code></pre></div></td></tr></table></div>

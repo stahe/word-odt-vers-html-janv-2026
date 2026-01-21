@@ -802,9 +802,9 @@
   
 
 
-<h1 id="2-les-exemples-de-ce-document">2. Les exemples de ce document</h1>
+<h1 id="2-les-exemples-de-ce-document">2. <span style="color: #0f4761">Les exemples de ce document</span></h1>
 <p>Je vais présenter maintenant des exemples des particularités de mes documents ODT que le convertisseur Gemini gère correctement. C’est ce propre document que nous proposerons à la conversion HTML au script de Gemini. Nous verrons ce qu’il en fait.</p>
-<h2 id="21-les-listes">2.1. Les listes</h2>
+<h2 id="21-les-listes">2.1. <span style="color: #0f4761">Les listes</span></h2>
 <p>Le convertisseur Gemini sait gérer les listes à puces et les listes numérotées :</p>
 <p><u><strong>Listes à puces</strong></u></p>
 <ol>
@@ -823,7 +823,7 @@
 <li>Élément 2 ;</li>
 <li>Élément 3 ;</li>
 </ol>
-<h2 id="22-les-blocs-de-code">2.2. Les blocs de code</h2>
+<h2 id="22-les-blocs-de-code">2.2. <span style="color: #0f4761">Les blocs de code</span></h2>
 <p>Mes cours contiennent beaucoup de blocs de code. Le convertisseur Gemini sait à peu près les gérer à l’aide de mots clés du langage mis dans un fichier de configuration. Lorsqu’il reconnaît un langage il insère un marqueur (fence) pour MkDocs afin qu’il adapte la coloration syntaxique du code au langage utilisé dans le bloc de code.</p>
 <p><u><strong>Java</strong></u></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
@@ -1968,67 +1968,39 @@
 <p>Ce cas a nécessité des dizaines d’itérations. Le convertisseur ne trouvait jamais le numéro de la première ligne de code. Finalement j’ai demandé à Gemini comment formater le bloc de code pour qu’il le reconnaisse. Voici ce qu’il m’a répondu :</p>
 <p><img src="images/10000000000005BE0000037C26698115.png" style="width:13.61cm;height:8.26cm;" alt="Image" /></p>
 <p>J’ai suivi cette démarche et ça a marché. Moi j’utilisais la méthode via l’icône de liste (Personnaliser). Donc on peut être amené à modifier certains éléments du document ODT pour obtenir ce qu’on veut.</p>
-<h2 id="23-les-liens">2.3. Les liens</h2>
-<p>Le convertisseur Gemini sait conserver les liens externes du document ODT. Par exemple <a href="https://gemini.google.com/app?hl=fr"><u>Gemini 3</u></a> ou [<a href="https://stahe.github.io/python-ia-sept-2025/"><u>Générer un script Python avec des outils d’IA</u></a>].</p>
-<p>Il sait gérer un lien vers un chapitre <a href="#_Les_exemples"><u>Lien vers un chapitre</u></a></p>
+<p>Enfin le convertisseur sait gérer les blocs de code non numérotés.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>liste[0]=un
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>liste[1]=0
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>liste[2]=100
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>liste[0]=8
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>liste[1]=5
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>somme=13
+</code></pre></div>
+<h2 id="23-les-liens">2.3. <span style="color: #0f4761">Les liens</span></h2>
+<p>Le convertisseur Gemini sait conserver les liens externes du document ODT. Par exemple <a href="https://gemini.google.com/app?hl=fr"><u><span style="color: #467886">Gemini 3</span></u></a> ou [<a href="https://stahe.github.io/python-ia-sept-2025/"><u><span style="color: #467886">Générer un script Python avec des outils d’IA</span></u></a>].</p>
+<p>Il sait gérer un lien vers un chapitre <a href="#_Les_exemples"><u><span style="color: #467886">Lien vers un chapitre</span></u></a></p>
 <p>Il ne sait pas gérer un lien vers une ancre (renvoi) : 2.1. </p>
-<h2 id="24-lenrichissement-de-texte">2.4. L’enrichissement de texte</h2>
+<h2 id="24-lenrichissement-de-texte">2.4. <span style="color: #0f4761">L’enrichissement de texte</span></h2>
 <p>Le convertisseur sait gérer le gras, l’italique, le souligné et le surlignage. Il respecte la couleur du surlignage. </p>
 <p>Un texte avec des mots en <strong>gras</strong>, en <em>italiques</em>, <u>soulignés</u> ou <mark style="background-color: #c0c0c0">surlignés</mark> ou <mark style="background-color: #dee6ef">surlignés</mark> ou <mark style="background-color: #ff972f">surlignés</mark>.</p>
-<p>C’est vrai également pour les liens : [<a href="https://stahe.github.io/python-ia-sept-2025/"><u><mark style="background-color: #fff5ce">Générer</mark></u><u> un script </u><u><strong>Python</strong></u><u> avec des </u><u><em>outils</em></u><u> d’IA</u></a>].</p>
-<h2 id="25-un-titre-peut-etre-egalement-enrichi">2.5. Un <strong>titre</strong> peut être <u>également</u> <em>enrichi</em>.</h2>
-<h2 id="26-les-images">2.6. Les images</h2>
+<p>C’est vrai également pour les liens : [<a href="https://stahe.github.io/python-ia-sept-2025/"><u><span style="color: #467886"><mark style="background-color: #fff5ce">Générer</mark></span></u><u><span style="color: #467886"> un script </span></u><u><span style="color: #467886"><strong>Python</strong></span></u><u><span style="color: #467886"> avec des </span></u><u><span style="color: #467886"><em>outils</em></span></u><u><span style="color: #467886"> d’IA</span></u></a>].</p>
+<p>Le <strong><span style="color: #ff4000">convertisseur</span></strong> <strong><span style="color: #2a6099">gère</span></strong> également la <strong><span style="color: #ffbf00">couleur</span></strong> des <strong><span style="color: #1e6a39">caractères</span></strong>.</p>
+<hr style="border:0; border-top:0.06pt solid #000000; margin:0.75em 0;" data-odt-border="top" />
+<p>Il gère également les bordures supérieure et inférieure des paragraphes.</p>
+<hr style="border:0; border-top:0.06pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />
+<h2 id="25-un-titre-peut-etre-egalement-enrichi">2.5. <span style="color: #0f4761">Un <strong>titre</strong> peut être <u>également</u> <em>enrichi</em>.</span></h2>
+<h2 id="26-les-images">2.6. <span style="color: #0f4761">Les images</span></h2>
 <p>Le convertisseur Gemini sait gérer les images et les tableaux d’images :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000041D0000017D721E4B11.png" style="display:inline-block; margin:4px;width:9.29cm;height:3.36cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000021A000000A4CC322650.png" style="display:inline-block; margin:4px;width:4.74cm;height:1.45cm;" /></td></tr></table>
 
 <p><img src="images/10000000000006E80000018162B1E953.png" style="width:16.002cm;height:3.478cm;" alt="Image" /></p>
 <p>Dans les documents ODT il est fréquent d’avoir des dessins. Malgré des dizaines de tentatives, Gemini n’a pas réussi à générer un script qui générerait l’image (comme une copie d’écran) du dessin. Ainsi ci-dessus, l’image 5 est la copie d’écran d’un dessin d’un document ODT.</p>
-<h2 id="27-les-caracteres-a-proteger">2.7. Les caractères à protéger</h2>
+<h2 id="27-les-caracteres-a-proteger">2.7. <span style="color: #0f4761">Les caractères à protéger</span></h2>
 <p>Un site MkDocs a des pages dont le contenu n’est pas du HTML mais du MarkDown. Si le document ODT contient des caractères qui existent en MarkDown, ils risquent d’être interprétés par MkDocs et donc ne pas avoir le rendu attendu. Voici deux exemples :</p>
 <p>L’astérisque * a une signification MarkDown. La ligne suivante peut être alors mal interprétée :</p>
 <p>L&#x27;impôt I est alors égal à <strong>0.15<em>R – 2072.5</em>nbParts</strong>.</p>
 <p>Un autre exemple est lorsque vous voulez insérer un bloc de code MarkDown dans votre document comme celui-ci :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span></pre></div></td><td class="code"><div><pre><span></span><code>    ````text linenums=&quot;1&quot;
+<div class="highlight"><pre><span></span><code>    ````text linenums=&quot;1&quot;
     # Convertisseur Word/ODT vers Site HTML (MkDocs)
 
     🔗 **[Voir le site de démonstration généré](https://stahe.github.io/word-odt-vers-html-janv-2026/)**
@@ -2069,49 +2041,32 @@
 
     ```
     ````
-</code></pre></div></td></tr></table></div>
-<h2 id="28-les-tableaux">2.8. Les tableaux</h2>
+</code></pre></div>
+<h2 id="28-les-tableaux">2.8. <span style="color: #0f4761">Les tableaux</span></h2>
 <p>Un tableau peut contenir différents contenus :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">1</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">2</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000C8000000E930F662D2.png" style="display:inline-block; margin:4px;width:2.646cm;height:3.083cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
-<span class="normal"><a href="#__codelineno-10-2">2</a></span>
-<span class="normal"><a href="#__codelineno-10-3">3</a></span>
-<span class="normal"><a href="#__codelineno-10-4">4</a></span>
-<span class="normal"><a href="#__codelineno-10-5">5</a></span>
-<span class="normal"><a href="#__codelineno-10-6">6</a></span>
-<span class="normal"><a href="#__codelineno-10-7">7</a></span>
-<span class="normal"><a href="#__codelineno-10-8">8</a></span>
-<span class="normal"><a href="#__codelineno-10-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">istia.st.spring.core</span><span class="p">;</span>
-<a id="__codelineno-10-2" name="__codelineno-10-2"></a>
-<a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
-<a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.List</span><span class="p">;</span>
-<a id="__codelineno-10-5" name="__codelineno-10-5"></a>
-<a id="__codelineno-10-6" name="__codelineno-10-6"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.context.ApplicationContext</span><span class="p">;</span>
-<a id="__codelineno-10-7" name="__codelineno-10-7"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.context.support.ClassPathXmlApplicationContext</span><span class="p">;</span>
-<a id="__codelineno-10-8" name="__codelineno-10-8"></a>
-<a id="__codelineno-10-9" name="__codelineno-10-9"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Demo01</span><span class="w"> </span><span class="p">{</span>
-</code></pre></div></td></tr></table></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">istia.st.spring.core</span><span class="p">;</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.List</span><span class="p">;</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.context.ApplicationContext</span><span class="p">;</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.context.support.ClassPathXmlApplicationContext</span><span class="p">;</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Demo01</span><span class="w"> </span><span class="p">{</span>
+</code></pre></div>
 </div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">3</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">4</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000C8000000E90F858128.png" style="display:inline-block; margin:4px;width:2.646cm;height:3.083cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-11-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-11-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-11-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-11-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-11-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-11-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-11-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-11-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-11-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="c1"># ----------------------------------</span>
-<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="k">def</span><span class="w"> </span><span class="nf">affiche</span><span class="p">(</span><span class="n">chaine</span><span class="p">):</span>
-<a id="__codelineno-11-3" name="__codelineno-11-3"></a>    <span class="c1"># affiche chaine</span>
-<a id="__codelineno-11-4" name="__codelineno-11-4"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;chaine=</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">chaine</span><span class="p">)</span>
-<a id="__codelineno-11-5" name="__codelineno-11-5"></a>
-<a id="__codelineno-11-6" name="__codelineno-11-6"></a>
-<a id="__codelineno-11-7" name="__codelineno-11-7"></a><span class="c1"># ----------------------------------</span>
-<a id="__codelineno-11-8" name="__codelineno-11-8"></a><span class="k">def</span><span class="w"> </span><span class="nf">affiche_type</span><span class="p">(</span><span class="n">variable</span><span class="p">):</span>
-<a id="__codelineno-11-9" name="__codelineno-11-9"></a>    <span class="c1"># affiche le type de variable</span>
-<a id="__codelineno-11-10" name="__codelineno-11-10"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;type[</span><span class="si">%s</span><span class="s2">]=</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">variable</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">variable</span><span class="p">)))</span>
-</code></pre></div></td></tr></table></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1"># ----------------------------------</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="k">def</span><span class="w"> </span><span class="nf">affiche</span><span class="p">(</span><span class="n">chaine</span><span class="p">):</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>    <span class="c1"># affiche chaine</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;chaine=</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">chaine</span><span class="p">)</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="c1"># ----------------------------------</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="k">def</span><span class="w"> </span><span class="nf">affiche_type</span><span class="p">(</span><span class="n">variable</span><span class="p">):</span>
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>    <span class="c1"># affiche le type de variable</span>
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;type[</span><span class="si">%s</span><span class="s2">]=</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">variable</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">variable</span><span class="p">)))</span>
+</code></pre></div>
 </div></td></tr></table>
 
 

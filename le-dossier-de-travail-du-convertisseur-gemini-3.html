@@ -677,7 +677,7 @@
   
 
 
-<h1 id="6-le-dossier-de-travail-du-convertisseur-gemini-3">6. Le dossier de travail du convertisseur Gemini 3</h1>
+<h1 id="6-le-dossier-de-travail-du-convertisseur-gemini-3">6. <span style="color: #0f4761">Le dossier de travail du convertisseur Gemini 3</span></h1>
 <p>Vous pouvez télécharger le dossier de travail |<a href="https://stahe.github.io/word-odt-vers-html-janv-2026/word-odt-vers-html-janv-2026.zip">ICI</a>|.</p>
 <p>Le dossier de travail est le suivant :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001BF000002B34C21DF1F.png" style="display:inline-block; margin:4px;width:4.14cm;height:6.399cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
@@ -686,12 +686,12 @@
 <li>Nous allons ignorer pour l’instant les fichiers suivants [.gitignore, deploy.txt, google*.html, README.md, robots.txt]. Ce sont des fichiers qui nous serviront au déploiement sur GitHub du site HTML généré localement ;</li>
 <li>[prompt IA.txt] est le prompt Expert que j’ai demandé à Gemini de générer lorsque j’ai estimé que le convertisseur généré était satisfaisant. Le but est de proposer ce prompt à une autre IA pour éviter les 288 itérations de Gemini. L’expérience s’est révélée négative. Elle a été proposée à chatGPT et ClaudeAI. Quand j’ai vu que les IA commençaient à diverger, j’ai arrêté la discussion. En fait le prompt IA généré par Gemini ne les aidait pas beaucoup. Même le proposer à Gemini dans une autre session n’empêche pas Gemini de faire les mêmes erreurs rencontrées dans les 288 itérations. Ce que j’ai trouvé le plus efficace pour aider une IA à démarrer, c’est de lui fournir le script généré par Gemini. A partir de là, on peut commencer à demander à l’IA de nouvelles fonctionnalités pour le convertisseur ;</li>
 <li>[prompt User.txt] est le prompt avec lequel j’ai commencé les itérations avec Gemini ;</li>
-<li>Le fichier [word-odt-vers-html.odt] est le document de cet article. Je l’ai d’abord écrit sous Word. Puis avec [<a href="https://fr.libreoffice.org/"><u>LibreOffice</u></a>], j’ai ouvert le fichier Word pour le sauvegarder au format ODT dans [word-odt-vers-html .odt]. Si vous avez produit un ODT via LibreOffice, vérifiez que celui-ci est bien lisible par Word. Ce dernier point est important. Il est courant d’inclure des dessins dans un document ODT. Or Word ne comprend pas ces dessins, ni le convertisseur généré par Gemini ;</li>
+<li>Le fichier [word-odt-vers-html.odt] est le document de cet article. Je l’ai d’abord écrit sous Word. Puis avec [<a href="https://fr.libreoffice.org/"><u><span style="color: #467886">LibreOffice</span></u></a>], j’ai ouvert le fichier Word pour le sauvegarder au format ODT dans [word-odt-vers-html .odt]. Si vous avez produit un ODT via LibreOffice, vérifiez que celui-ci est bien lisible par Word. Ce dernier point est important. Il est courant d’inclure des dessins dans un document ODT. Or Word ne comprend pas ces dessins, ni le convertisseur généré par Gemini ;</li>
 </ol>
 <p>Si votre document n’est pas parfaitement lisible aussi bien par Word que par LibreOffice, il est très probable que le convertisseur échouera à le convertir.</p>
 <ol>
 <li>Les scripts [convert.py] et [build.py] sont les deux scripts Python générés par Gemini ;<ul>
-<li>[convert] convertit un document ODT en site [<a href="https://www.mkdocs.org/"><u>MkDocs</u></a>]. Un site MkDocs est un site statique dont les pages sont écrites selon la syntaxe [<a href="https://www.markdownlang.com/fr/"><u>MarkDown</u></a>]. [MkDocs] fournit un serveur capable d’afficher les sites MkDocs ;</li>
+<li>[convert] convertit un document ODT en site [<a href="https://www.mkdocs.org/"><u><span style="color: #467886">MkDocs</span></u></a>]. Un site MkDocs est un site statique dont les pages sont écrites selon la syntaxe [<a href="https://www.markdownlang.com/fr/"><u><span style="color: #467886">MarkDown</span></u></a>]. [MkDocs] fournit un serveur capable d’afficher les sites MkDocs ;</li>
 <li>[build] convertit le site MkDocs en site statique HTML standard. A la fin de cette conversion, il ouvre un navigateur pour afficher la racine du site ;</li>
 </ul>
 </li>
