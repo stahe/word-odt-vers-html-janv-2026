@@ -8,11 +8,12 @@
 
 On se propose dans ce projet de mettre à disposition du lecteur un convertisseur Python de documents Word ou ODT vers un site statique HTML.
 
-Lorsque le document ODT convient, le convertisseur produit un site HTML via **MkDocs** qui a l'aspect professionnel des sites produits par Pandoc.
+Lorsque le document ODT convient, le convertisseur produit un site HTML via **MkDocs** de très bonne qualité.
 
 ## 🤖 Contexte de création
 
-Ce convertisseur a été entièrement construit par l’IA **Gemini 3** (avec un abonnement pro). Il est le résultat d'itérations successives pour gérer finement la structure des documents ODT (OpenDocument Text).
+Ce convertisseur a été initialement construit par l’IA **Gemini 3**. Il est le résultat d'itérations successives pour gérer finement la structure des documents ODT (OpenDocument Text).
+Il a été amélioré ensuite par l'IA **ChatGPT 5.2**.
 
 ## ✨ Fonctionnalités
 
