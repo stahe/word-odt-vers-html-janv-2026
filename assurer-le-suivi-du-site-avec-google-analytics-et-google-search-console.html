@@ -694,7 +694,7 @@
 <li>En [2], notez le marqueur de votre site ;</li>
 </ul>
 <p>Mettez ce marqueur dans le fichier de configuration [config.json] :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
 <span class="normal"><a href="#__codelineno-0-3">3</a></span>
 <span class="normal"><a href="#__codelineno-0-4">4</a></span>
@@ -706,7 +706,7 @@
 <a id="__codelineno-0-5" name="__codelineno-0-5"></a>    }
 <a id="__codelineno-0-6" name="__codelineno-0-6"></a>  },
 </code></pre></div></td></tr></table></div>
-<p>Ligne 4, inscrivez votre marqueur. MkDocs le mettra automatiquement dans toutes vos pages HTML lorsqu’il va générer le site HTML. Vous n’avez donc pas besoin de suivre les autres instructions de ChatGPT qui montrent comment installer le marqueur GA dans vos pages HTML.</p>
+Ligne 4, inscrivez votre marqueur. MkDocs le mettra automatiquement dans toutes vos pages HTML lorsqu’il va générer le site HTML. Vous n’avez donc pas besoin de suivre les autres instructions de ChatGPT qui montrent comment installer le marqueur GA dans vos pages HTML.</p>
 <p>On va demander à ChatGPT des instructions précises pour vérifier que le marqueur fonctionne :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000069900000387AE83B2C5.png" style="display:inline-block; margin:4px;width:16.002cm;height:8.555cm;" /></td></tr></table>
 
@@ -779,7 +779,7 @@
 <li>en [6], passez à l’étape suivante ;</li>
 </ul>
 <p>Normalement à cette étape, Google Search Console vous propose un fichir [googlexxxxx.html] que vous devez télécharger. Je n’ai pas eu cet écran car j’avais déjà ce fichier dans le site déployé. C’est l’un des deux fichiers déclarés dans [config.json]</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span>
 <span class="normal"><a href="#__codelineno-2-3">3</a></span>
 <span class="normal"><a href="#__codelineno-2-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>  &quot;files_to_copy&quot;: [
@@ -787,15 +787,15 @@
 <a id="__codelineno-2-3" name="__codelineno-2-3"></a>    &quot;robots.txt&quot;
 <a id="__codelineno-2-4" name="__codelineno-2-4"></a>  ]
 </code></pre></div></td></tr></table></div>
-<p>Mettez le fichier [googlexxxxx.html] à la racine de votre dossier de travail et inscrivez son nom à la ligne 2 ci-dessus du fichier [config.json]. Le script [convert] s’occupe de mettre les deux fichiers ci-dessus à la racine du site MkDocs qu’il génère. Le script [build] lui les mettra à la racine du site HTML généré.</p>
+Mettez le fichier [googlexxxxx.html] à la racine de votre dossier de travail et inscrivez son nom à la ligne 2 ci-dessus du fichier [config.json]. Le script [convert] s’occupe de mettre les deux fichiers ci-dessus à la racine du site MkDocs qu’il génère. Le script [build] lui les mettra à la racine du site HTML généré.</p>
 <p>Lorsque vous avez copié le fichier [googlexxxxx.html] à la racine de votre dossier de travail, redéployez votre site web sur GitHub en tapant les trois commandes suivantes dans votre terminal Python :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
 <span class="normal"><a href="#__codelineno-3-2">2</a></span>
 <span class="normal"><a href="#__codelineno-3-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>python .\convert.py .\word-odt-vers-HTML.odt config.json
 <a id="__codelineno-3-2" name="__codelineno-3-2"></a>python .\build.py
 <a id="__codelineno-3-3" name="__codelineno-3-3"></a>python -m mkdocs gh-deploy
 </code></pre></div></td></tr></table></div>
-<p>Ceci fait, retournez dans [Google Search Console] et sélectionnez la propriété que vous avez créée précédemment :</p>
+Ceci fait, retournez dans [Google Search Console] et sélectionnez la propriété que vous avez créée précédemment :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002C20000016916F02C28.png" style="display:inline-block; margin:4px;width:6.541cm;height:3.341cm;" /></td></tr></table>
 
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000ABE00000265099D5418.png" style="display:inline-block; margin:4px;width:16.002cm;height:3.57cm;" /></td></tr></table>

@@ -720,9 +720,9 @@
 </ul>
 <p>Avec les images et le style du titre, vous pouvez faire une page d’accueil attirante.</p>
 <p>Le titre principal de votre document n’aura peut-être pas un des styles définis aux lignes [3-6]. Pour trouver le style de votre titre principal, utilisez la ligne suivante du fichier [config.json]</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>  &quot;debug&quot;: true
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>  &quot;debug&quot;: true
 </code></pre></div></td></tr></table></div>
-<p>Avec la valeur [true], le style des paragraphes qui précèdent le premier titre de niveau 1, donc les paragraphes de la page d’accueil, va être affiché lors de l’exécution du convertisseur Gemini. Ainsi pour un autre document que celui-ci, j’ai obtenu les logs suivants :</p>
+Avec la valeur [true], le style des paragraphes qui précèdent le premier titre de niveau 1, donc les paragraphes de la page d’accueil, va être affiché lors de l’exécution du convertisseur Gemini. Ainsi pour un autre document que celui-ci, j’ai obtenu les logs suivants :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
@@ -785,13 +785,13 @@
 <li>ligne 3, le style que je cherchais ;</li>
 </ul>
 <p>C’est pour cette raison que le débogueur affiche les lignes :</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>    10. [DEBUG PRE-H1] Style=&#39;P4&#39; (Clean=&#39;p4&#39;) | Texte=&#39;Introduction au langage PHP7 par l’exemp...&#39;
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>    10. [DEBUG PRE-H1] Style=&#39;P4&#39; (Clean=&#39;p4&#39;) | Texte=&#39;Introduction au langage PHP7 par l’exemp...&#39;
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    11. &gt;&gt;&gt; TITRE DOCUMENT DETECTÉ : Introduction au langage PHP7 par l’exemple
 </code></pre></div>
-<p>Il a rencontré le style ‘P4’ et affiche alors que le titre du document a été trouvé. Lorsque celui-ci a été trouvé, vous pouvez mettre la clé [debug] à [false] dans [config.json] :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>  &quot;debug&quot;: false
+Il a rencontré le style ‘P4’ et affiche alors que le titre du document a été trouvé. Lorsque celui-ci a été trouvé, vous pouvez mettre la clé [debug] à [false] dans [config.json] :</p>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>  &quot;debug&quot;: false
 </code></pre></div></td></tr></table></div>
-<p>Regardons maintenant le chapitre [Exemples] qui regroupe les exemples que le convertisseur Gemini sait gérer :</p>
+Regardons maintenant le chapitre [Exemples] qui regroupe les exemples que le convertisseur Gemini sait gérer :</p>
 <p><u><strong>Les listes</strong></u></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000674000004AED6FEE5B6.png" style="display:inline-block; margin:4px;width:15.3cm;height:11.09cm;" /></td></tr></table>
 
