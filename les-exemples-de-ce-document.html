@@ -662,14 +662,14 @@
   
   
     <li class="md-nav__item">
-      <a href="le-dossier-de-travail-du-convertisseur-gemini-3.html" class="md-nav__link">
+      <a href="le-dossier-de-travail-du-convertisseur.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6. Le dossier de travail du convertisseur Gemini 3
+    6. Le dossier de travail du convertisseur
   
 
     
@@ -689,14 +689,14 @@
   
   
     <li class="md-nav__item">
-      <a href="le-fichier-de-configuration-du-convertisseur-gemini-3.html" class="md-nav__link">
+      <a href="le-fichier-de-configuration-des-convertisseurs.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    7. Le fichier de configuration du convertisseur Gemini 3
+    7. Le fichier de configuration des convertisseurs
   
 
     
@@ -716,14 +716,41 @@
   
   
     <li class="md-nav__item">
-      <a href="utilisation-du-convertisseur-gemini-3.html" class="md-nav__link">
+      <a href="utilisation-du-convertisseur-odt---html.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    8. Utilisation du convertisseur Gemini 3
+    8. Utilisation du convertisseur ODT → HTML
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="utilisation-du-convertisseur-docx---html.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Utilisation du convertisseur DOCX → HTML
   
 
     
@@ -750,7 +777,7 @@
   <span class="md-ellipsis">
     
   
-    9. Construction du site HTML statique
+    10. Construction du site HTML statique
   
 
     
@@ -777,7 +804,7 @@
   <span class="md-ellipsis">
     
   
-    10. Examen du site HTML généré
+    11. Examen du site HTML généré
   
 
     
@@ -804,7 +831,7 @@
   <span class="md-ellipsis">
     
   
-    11. Héberger le site HTML sur GitHub
+    12. Héberger le site HTML sur GitHub
   
 
     
@@ -831,7 +858,7 @@
   <span class="md-ellipsis">
     
   
-    12. Assurer le suivi du site avec Google Analytics et Google Search Console
+    13. Assurer le suivi du site avec Google Analytics et Google Search Console
   
 
     
@@ -858,7 +885,7 @@
   <span class="md-ellipsis">
     
   
-    13. Conclusion
+    14. Conclusion
   
 
     
@@ -891,9 +918,9 @@
 <p><a id="lesexemples"></a>
 <a id="refheadingtoc223723852299455"></a></p>
 <h1 id="2-les-exemples-de-ce-document">2. <span style="color: #0f4761">Les exemples de ce document</span></h1>
-<p>Je vais présenter maintenant des exemples des particularités de mes documents ODT que le convertisseur Gemini gère correctement. C’est ce propre document que nous proposerons à la conversion HTML au script de Gemini. Nous verrons ce qu’il en fait.</p>
+<p>Je vais présenter maintenant des exemples des particularités de mes documents ODT / DOCX que le convertisseur Gemini / ChatGPT gère correctement. C’est ce propre document que nous proposerons à la conversion HTML au script de Gemini / ChatGPT. Nous verrons ce qu’il en fait.</p>
 <h2 id="21-les-listes">2.1. <span style="color: #0f4761">Les listes</span></h2>
-<p>Le convertisseur Gemini sait gérer les listes à puces et les listes numérotées même si elles sont imbriquées :</p>
+<p>Le convertisseur Gemini / ChatGPT sait gérer les listes à puces et les listes numérotées même si elles sont imbriquées :</p>
 <p><a id="listeapuces"></a></p>
 <h3 id="211-listes-a-puces">2.1.1. <span style="color: #0f4761">Listes à puces</span></h3>
 <ul>
@@ -971,7 +998,7 @@
 </ol>
 <h2 id="22-les-blocs-de-code">2.2. <span style="color: #0f4761">Les blocs de code</span></h2>
 <p>Mes cours contiennent beaucoup de blocs de code. Ce sont souvent des codes enrichis (gras, couleurs des mots clés) par les IDE (Eclipse, PyCharm, WebStorm, Netbeans). Ces codes enrichis sont rendus à l’identique par le convertisseur.</p>
-<p>Quand le code n’est pas enrichi (code venant du Bloc-Notes ou Notepad ou …), le convertisseur Gemini le reconnaît (Java, C#, XML, HTML, …) à l’aide de mots clés du langage mis dans un fichier de configuration. Lorsqu’il reconnaît un langage il insère un marqueur (fence) pour MkDocs afin que celui-ci adapte la coloration syntaxique du code au langage utilisé dans le bloc de code.</p>
+<p>Quand le code n’est pas enrichi (code venant du Bloc-Notes ou Notepad ou …), le convertisseur Gemini / ChatGPT le reconnaît (Java, C#, XML, HTML, …) à l’aide de mots clés du langage mis dans un fichier de configuration. Lorsqu’il reconnaît un langage il insère un marqueur (fence) pour MkDocs afin que celui-ci adapte la coloration syntaxique du code au langage utilisé dans le bloc de code.</p>
 <p><a id="refnumpara1839234194115174"></a></p>
 <h3 id="221-blocs-de-code-enrichi-eclipse-visual-studio">2.2.1. <span style="color: #0f4761">Blocs de code enrichi (Eclipse, Visual Studio, ...)</span></h3>
 <p>Voici des blocs de code enrichis par différents IDE :</p>
@@ -1227,7 +1254,7 @@
 </code></pre></div></td></tr></table></div>
 <p>Ce cas a nécessité des dizaines d’itérations. Le convertisseur ne trouvait jamais le numéro de la première ligne de code. Finalement j’ai demandé à Gemini comment formater le bloc de code pour qu’il le reconnaisse. Voici ce qu’il m’a répondu :</p>
 <p><img src="images/10000000000005BE0000037C26698115.png" style="width:13.61cm;height:8.26cm;" alt="Image" /></p>
-<p>J’ai suivi cette démarche et ça a marché. Moi j’utilisais la méthode via l’icône de liste (Personnaliser). Donc on peut être amené à modifier certains éléments du document ODT pour obtenir ce qu’on veut.</p>
+<p>J’ai suivi cette démarche et ça a marché. Moi j’utilisais la méthode via l’icône de liste (Personnaliser). Donc on peut être amené à modifier certains éléments du Document ODT / DOCX pour obtenir ce qu’on veut.</p>
 <p>Le convertisseur sait gérer les blocs de code non numérotés.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>liste[0]=un
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>liste[1]=0
@@ -1716,7 +1743,7 @@
 <a id="__codelineno-9-61" name="__codelineno-9-61"></a>                <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="23-les-liens">2.3. <span style="color: #0f4761">Les liens</span></h2>
-<p>Le convertisseur Gemini sait conserver les liens externes du document ODT. Par exemple <a href="https://gemini.google.com/app?hl=fr"><u><span style="color: #467886">Gemini 3</span></u></a> ou [<a href="https://stahe.github.io/python-ia-sept-2025/"><u><span style="color: #467886">Générer un script Python avec des outils d’IA</span></u></a>].</p>
+<p>Le convertisseur Gemini / ChatGPT sait conserver les liens externes du Document ODT / DOCX. Par exemple <a href="https://gemini.google.com/app?hl=fr"><u><span style="color: #467886">Gemini 3</span></u></a> ou [<a href="https://stahe.github.io/python-ia-sept-2025/"><u><span style="color: #467886">Générer un script Python avec des outils d’IA</span></u></a>].</p>
 <p>Il sait gérer un lien vers un chapitre <a href="#_Les_exemples"><u><span style="color: #467886">Lien vers un chapitre</span></u></a></p>
 <p>Un renvoi vers un chapitre : <a href="#listeapuces">2.1.1</a>. </p>
 <p>Un renvoi vers un repère de texte qui précède : <a href="introduction.html#gemini-3">Gemini 3</a></p>
@@ -1732,13 +1759,13 @@
 
 <h2 id="25-un-titre-peut-etre-egalement-enrichi">2.5. <span style="color: #0f4761">Un <strong>titre</strong> peut être <u>également</u> <em>enrichi</em>.</span></h2>
 <h2 id="26-les-images">2.6. <span style="color: #0f4761">Les images</span></h2>
-<p>Le convertisseur Gemini sait gérer les images et les tableaux d’images :</p>
+<p>Le convertisseur Gemini / ChatGPT sait gérer les images et les tableaux d’images :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000041D0000017D721E4B11.png" style="display:inline-block; margin:4px;width:9.29cm;height:3.36cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000021A000000A4CC322650.png" style="display:inline-block; margin:4px;width:4.74cm;height:1.45cm;" /></td></tr></table>
 
 <p><img src="images/10000000000006E80000018162B1E953.png" style="width:16.002cm;height:3.478cm;" alt="Image" /></p>
 <p>Dans les documents ODT il est fréquent d’avoir des dessins. Malgré des dizaines de tentatives, Gemini n’a pas réussi à générer un script qui générerait l’image (comme une copie d’écran) du dessin. Ainsi ci-dessus, l’image 5 est la copie d’écran d’un dessin d’un document ODT.</p>
 <h2 id="27-les-caracteres-a-proteger">2.7. <span style="color: #0f4761">Les caractères à protéger</span></h2>
-<p>Un site MkDocs<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> a des pages dont le contenu n’est pas du HTML mais du MarkDown. Si le document ODT contient des caractères qui existent en MarkDown, ils risquent d’être interprétés par MkDocs et donc ne pas avoir le rendu attendu. Voici deux exemples :</p>
+<p>Un site MkDocs<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> a des pages dont le contenu n’est pas du HTML mais du MarkDown. Si le Document ODT / DOCX contient des caractères qui existent en MarkDown, ils risquent d’être interprétés par MkDocs et donc ne pas avoir le rendu attendu. Voici deux exemples :</p>
 <p>L’astérisque * a une signification MarkDown. La ligne suivante peut être alors mal interprétée :</p>
 <p>L&#x27;impôt I est alors égal à <strong>0.15*R – 2072.5*nbParts</strong>.</p>
 <p>Un autre exemple est lorsque vous voulez insérer un bloc de code MarkDown dans votre document comme celui-ci :</p>
@@ -1790,7 +1817,7 @@
 <a id="__codelineno-10-8" name="__codelineno-10-8"></a>
 <a id="__codelineno-10-9" name="__codelineno-10-9"></a>On se propose dans ce projet de mettre à disposition du lecteur un convertisseur Python de documents Word ou ODT vers un site statique HTML.
 <a id="__codelineno-10-10" name="__codelineno-10-10"></a>
-<a id="__codelineno-10-11" name="__codelineno-10-11"></a>Lorsque le document ODT convient, le convertisseur produit un site HTML via <span class="gs">**MkDocs**</span> qui a l&#39;aspect professionnel des sites produits par Pandoc.
+<a id="__codelineno-10-11" name="__codelineno-10-11"></a>Lorsque le Document ODT / DOCX convient, le convertisseur produit un site HTML via <span class="gs">**MkDocs**</span> qui a l&#39;aspect professionnel des sites produits par Pandoc.
 <a id="__codelineno-10-12" name="__codelineno-10-12"></a>
 <a id="__codelineno-10-13" name="__codelineno-10-13"></a><span class="gu">## 🤖 Contexte de création</span>
 <a id="__codelineno-10-14" name="__codelineno-10-14"></a>
@@ -1850,7 +1877,7 @@
 </code></pre></div></td></tr></table>
 
 <h2 id="29-les-notes-de-bas-de-page">2.9. <span style="color: #0f4761">Les notes de bas de page</span></h2>
-<p>Le convertisseur Gemini<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup> gère les notes de bas de page. Voici une autre note<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup> de bas de page.</p>
+<p>Le convertisseur Gemini<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup> / ChatGPT gère les notes de bas de page. Voici une autre note<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup> de bas de page.</p>
 <hr />
 <div class="footnote">
 <hr />
