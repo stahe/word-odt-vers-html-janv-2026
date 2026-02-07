@@ -8,24 +8,26 @@
 
 On se propose dans ce projet de mettre à disposition du lecteur un convertisseur Python de documents Word ou ODT vers un site statique HTML.
 
-Lorsque le document ODT convient, le convertisseur produit un site HTML via **MkDocs** de très bonne qualité.
+Lorsque le document ODT ou DOCX convient, le convertisseur produit un site HTML via **MkDocs** de très bonne qualité.
 
 ## 🤖 Contexte de création
 
 Ce convertisseur a été initialement construit par l’IA **Gemini 3**. Il est le résultat d'itérations successives pour gérer finement la structure des documents ODT (OpenDocument Text).
-Il a été amélioré ensuite par l'IA **ChatGPT 5.2**.
+Il a été amélioré ensuite par l'IA **ChatGPT 5.2** qui a produit le convertisseur pour les documents Word.
 
 ## ✨ Fonctionnalités
 
 Le script `convert.py` effectue les actions suivantes :
 
-* **Conversion ODT vers Markdown** : Analyse le fichier `.odt` (XML) pour en extraire la structure.
+* **Conversion ODT / DOCX vers Markdown** : Analyse le fichier source pour en extraire la structure.
 * **Gestion des Titres** : Génère automatiquement la Table des Matières (TOC) et la navigation latérale.
 * **Blocs de Code** : Détection automatique des langages, coloration syntaxique et **gestion précise de la numérotation des lignes** (attributs `start-value`).
-* **Listes** : Support des listes à puces et numérotées avec indentation correcte.
+* **Listes** : Support des listes à puces et numérotées imbriquées et mixtes avec indentation correcte.
 * **Mise en forme** : Support du *gras*, *italique*, *souligné* et du *surlignage* (avec respect des couleurs d'origine).
 * **Images** : Extraction et intégration automatique des images contenues dans le document.
-* **Configuration** : Personnalisation via un fichier `config.json` (Bas de page, Google Analytics, etc.).
+* **Liens** : Les hyperliens ou renvois du document source donnent lieu à des hyperliens dans le document HTML.
+* **Bas de page** : Les notes de bas de page sont gérées.
+* **Configuration** : Personnalisation via un fichier `config.py` (Bas de page, Google Analytics, etc.).
 
 ## 🚀 Installation
 
@@ -44,16 +46,16 @@ pip install odfpy unidecode mkdocs mkdocs-material
 Assurez-vous d'avoir les fichiers suivants :
 
 * `convert.py` : Le script de conversion.
-* `config.json` : Votre fichier de configuration.
-* `votre-document.odt` : Le document source.
+* `config.py` : Votre fichier de configuration.
+* `votre-document.odt/docx` : Le document source.
 
 ## 💻 Utilisation
 
 1. **Conversion**
-Lancez le script en indiquant le fichier ODT source et le fichier de configuration :
+Lancez le script en indiquant le fichier ODT / DOCX source et le fichier de configuration :
 ```bash
-python convert.py votre-document.odt config.json
-
+python convert_odt_v356.py votre-document.odt config.py
+python convert_docx_v18.py votre-document.docx config.py
 ```
 
 
@@ -61,7 +63,7 @@ python convert.py votre-document.odt config.json
 2. **Prévisualisation**
 Pour voir le site en local :
 ```bash
-mkdocs serve
+python -m mkdocs serve
 
 ```
 
@@ -69,15 +71,15 @@ mkdocs serve
 3. **Génération**
 Pour construire le site statique (dossier `site/`) :
 ```bash
-mkdocs build
+python build
 
 ```
 
 
 
-## ⚙️ Configuration (`config.json`)
+## ⚙️ Configuration (`config.py`)
 
-Le fichier `config.json` permet de contrôler l'apparence du site :
+Le fichier `config.py` permet de contrôler l'apparence du site :
 
 * **mkdocs** : Paramètres généraux du site (titre, description, thème Material).
 * **footer** : Code HTML complet pour personnaliser le pied de page.
