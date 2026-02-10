@@ -812,14 +812,25 @@
 <a id="__codelineno-2-4" name="__codelineno-2-4"></a>  ]
 </code></pre></div></td></tr></table></div>
 <p>Mettez le fichier [googlexxxxx.html] à la racine de votre dossier de travail et inscrivez son nom à la ligne 2 ci-dessus du fichier [config.py]. Le script [convert] s’occupe de mettre les deux fichiers ci-dessus à la racine du site MkDocs qu’il génère. Le script [build] lui les mettra à la racine du site HTML généré.</p>
-<p>Lorsque vous avez copié le fichier [googlexxxxx.html] à la racine de votre dossier de travail, redéployez votre site web sur GitHub en tapant les trois commandes suivantes dans votre terminal Python :</p>
+<p>Lorsque vous avez copié le fichier [googlexxxxx.html] à la racine de votre dossier de travail, vérifiez le contenu du fichier [robots.txt] :</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002990000020922B87B41.png" style="display:inline-block; margin:4px;width:8.798cm;height:6.893cm;" /></td></tr></table>
+
+<p>Le contenu du fichier [robots.txt] est le suivant :</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line">User-agent: *</span>
+<span class="odt-code-line">Allow: /</span>
+<span class="odt-code-line">Sitemap: https://stahe.github.io/<span style="background-color:#fff5ce">word-odt-vers-html-janv-2026</span>/sitemap.xml</span>
+</code></pre></div>
+
+<p>En ligne 3, vérifiez bien que  l’URL est celle de votre site, la même que dans le fichier [config.py].</p>
+<p>Redéployez votre site web sur GitHub en tapant les trois commandes suivantes dans votre terminal Python :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
 <span class="normal"><a href="#__codelineno-3-2">2</a></span>
 <span class="normal"><a href="#__codelineno-3-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>python .\convert.py .\word-odt-vers-HTML.odt config.py
 <a id="__codelineno-3-2" name="__codelineno-3-2"></a>python .\build.py
 <a id="__codelineno-3-3" name="__codelineno-3-3"></a>python -m mkdocs gh-deploy
 </code></pre></div></td></tr></table></div>
-<p>Ceci fait, retournez dans [Google Search Console] et sélectionnez la propriété que vous avez créée précédemment :</p>
+<p>Ceci fait, retournez dans [Google Search Console] et sélectionnez la propriété que vous avez créée précédemment.</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002C20000016916F02C28.png" style="display:inline-block; margin:4px;width:6.541cm;height:3.341cm;" /></td></tr></table>
 
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000ABE00000265099D5418.png" style="display:inline-block; margin:4px;width:16.002cm;height:3.57cm;" /></td></tr></table>

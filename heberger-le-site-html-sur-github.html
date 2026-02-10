@@ -963,6 +963,23 @@
 <p>C’est la suite de commandes qui va exporter votre site HTML sur votre dépôt GitHub. Vous aurez à modifier la ligne 7 avec l’URL de votre propre dépôt GitHub, présente dans le fichier [config.py] :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>    &quot;repo_url&quot;: &quot;https://github.com/stahe/word-odt-vers-html-janv-2026&quot;,
 </code></pre></div></td></tr></table></div>
+<p>Vous devez vérifier également une autre URL présente dans le fichier [robots.txt] :</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002990000020922B87B41.png" style="display:inline-block; margin:4px;width:8.798cm;height:6.893cm;" /></td></tr></table>
+
+<p>Le contenu du fichier [robots.txt] est le suivant :</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line">User-agent: *</span>
+<span class="odt-code-line">Allow: /</span>
+<span class="odt-code-line">Sitemap: https://stahe.github.io/<span style="background-color:#fff5ce">word-odt-vers-html-janv-2026</span>/sitemap.xml</span>
+</code></pre></div>
+
+<p>En ligne 3, mettez l’URL de votre site, la même que dans le fichier [config.py] :</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-markdown">
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#000000">      </span><span style="color:#008000"># URL de publication du site (ex: GitHub Pages)</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#a31515">&quot;site_url&quot;</span><span style="color:#000000">: </span><span style="color:#a31515">&quot;https://stahe.github.io/word-odt-vers-html-janv-2026/&quot;</span><span style="color:#000000">,</span></span>
+</code></pre></div>
+
+<p>Le fichier [robots.txt] n’est pas utilisé lors de la construction locale du site, mais il le sera lorsqu’il sera hébergé sur GitHub.</p>
 <p>La suite de commandes de [deploy.txt] utilise un logiciel appelé Git. Vous devez l’installer [<a href="https://git-scm.com/install/windows">Git - Install for Windows</a>].</p>
 <p>Ceci fait, vérifiez le fichier s’appelant [.gitignore] dans votre dossier de travail. Il indique à Git les fichiers qu’il doit ignorer. Mon fichier [.gitignore] est le suivant :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
@@ -1038,7 +1055,7 @@
 <li>En [1], on voit que vous affichez un site web sur GitHub ;</li>
 </ul>
 <p>Il est extrêmement facile de se tromper dans l’exécution des commandes de [deploy.txt]. Il est alors difficile de revenir en arrière car Git garde la mémoire de ce qu’on a fait (mal). Pour repartir de zéro, visualisez le dossier de travail :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/200000080000114A0000229F21BE2FD5.svm" style="display:inline-block; margin:4px;width:4.431cm;height:8.86cm;" /><img src="images/10000001000001500000029FFA5123BA.png" style="display:inline-block; margin:4px;width:4.431cm;height:8.86cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000011A000002A20980080A.png" style="display:inline-block; margin:4px;width:3.731cm;height:8.916cm;" /></td></tr></table>
 
 <ul>
 <li>En [1], supprimez le dossier [.git] ;</li>
@@ -1060,7 +1077,7 @@
 <a id="__codelineno-6-4" name="__codelineno-6-4"></a>git push -u origin main
 <a id="__codelineno-6-5" name="__codelineno-6-5"></a>python -m mkdocs gh-deploy
 </code></pre></div></td></tr></table></div>
-<p>Si vous avez seulement modifié le README, seules les commandes 1, 3, 4 sont nécessaires. La commande 4 est inutile si vous avez déjà déployé le site HTML et qu’il n’a pas bougé depuis.</p>
+<p>Si vous avez seulement modifié le README, seules les commandes 1, 3, 4 sont nécessaires. La commande 5 est inutile si vous avez déjà déployé le site HTML et qu’il n’a pas bougé depuis.</p>
 <p>Que faire si vous voulez repartir de zéro parce que les choses sont parties en vrille ? Vous pouvez supprimer votre dépôt GitHub et refaire toutes les opérations du chapitre <a href="#refheadingtoc55961226647236">12</a>. L’option de suppression d’un dépôt GitHub est bien cachée :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000077A0000020CE87A763A.png" style="display:inline-block; margin:4px;width:16.002cm;height:4.38cm;" /></td></tr></table>
 
