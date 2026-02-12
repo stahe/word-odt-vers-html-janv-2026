@@ -98,3 +98,238 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+// --- Copy-to-clipboard for code blocks (ODT converter) ---
+(function() {
+  var COPY_LABEL = "Copier";
+  var COPIED_LABEL = "Copié";
+  var ONLY_RECOGNIZED = true;
+  var MIN_LINES = 0;
+  var PYGMENTS_HEURISTIC = true;
+
+  // Languages considered "not recognized" (plain text)
+  var EXCLUDED = { "text":1, "plaintext":1, "plain":1, "txt":1, "none":1 };
+
+  function fallbackCopyText(text) {
+    var ta = document.createElement("textarea");
+    ta.value = text;
+    ta.style.position = "fixed";
+    ta.style.left = "-9999px";
+    ta.style.top = "0";
+    document.body.appendChild(ta);
+    ta.focus();
+    ta.select();
+    try { document.execCommand("copy"); } catch (e) {}
+    document.body.removeChild(ta);
+  }
+
+  function copyText(text) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      return navigator.clipboard.writeText(text).catch(function () {
+        fallbackCopyText(text);
+      });
+    }
+    fallbackCopyText(text);
+    return Promise.resolve();
+  }
+
+  function setButtonState(btn) {
+    if (!btn) return;
+    btn.textContent = COPIED_LABEL;
+    btn.classList.add("is-copied");
+    window.setTimeout(function () {
+      btn.textContent = COPY_LABEL;
+      btn.classList.remove("is-copied");
+    }, 1200);
+  }
+
+  function getLangFromClass(el) {
+    if (!el || !el.classList) return "";
+    for (var i = 0; i < el.classList.length; i++) {
+      var c = el.classList[i];
+      if (c.indexOf("language-") === 0) return c.substring(9);
+    }
+    return "";
+  }
+
+  function detectLanguage(el) {
+    if (!el) return "";
+    // try code, pre, container, ancestors
+    var code = el.querySelector ? (el.querySelector("code") || null) : null;
+    var pre = el.querySelector ? (el.querySelector("pre") || null) : null;
+
+    var lang = "";
+    if (code) lang = getLangFromClass(code);
+    if (!lang && pre) lang = getLangFromClass(pre);
+    if (!lang) lang = getLangFromClass(el);
+
+    if (!lang) {
+      // ancestors
+      var cur = el;
+      for (var k = 0; k < 4 && cur; k++) {
+        lang = getLangFromClass(cur);
+        if (lang) break;
+        cur = cur.parentElement;
+      }
+    }
+    if (!lang) {
+      // data attributes
+      var attr = (code && (code.getAttribute("data-language") || code.getAttribute("data-lang"))) ||
+                 (pre && (pre.getAttribute("data-language") || pre.getAttribute("data-lang"))) ||
+                 (el.getAttribute && (el.getAttribute("data-language") || el.getAttribute("data-lang")));
+      if (attr) lang = attr;
+    if (!lang && PYGMENTS_HEURISTIC) {
+      // Heuristic: if the block contains Pygments token spans, syntax highlighting is active
+      // even if no explicit language-xxx class is present.
+      var hasTok = el.querySelector && el.querySelector("span.k,span.kt,span.kn,span.kd,span.kc,span.nb,span.nc,span.nn,span.nf,span.nt,span.na,span.s,span.s1,span.s2,span.mi,span.mf,span.c,span.c1,span.cp,span.o");
+      if (hasTok) lang = "pygments";
+    }
+    }
+    return (lang || "").toLowerCase();
+  }
+
+  function countLinesFromText(text) {
+    if (!text) return 0;
+    // normalize trailing newline
+    text = text.replace(/\s+$/,"");
+    if (!text) return 0;
+    return text.split("\n").length;
+  }
+
+  function extractCodeFromRich(container) {
+    // Prefer explicit content spans to avoid line numbers
+    var parts = container.querySelectorAll(".odt-code-line-content");
+    if (parts && parts.length) {
+      var lines = [];
+      parts.forEach(function (sp) {
+        lines.push(sp.textContent || "");
+      });
+      return lines.join("\n");
+    }
+    // Fallback: remove known line-number nodes then read text
+    var code = container.querySelector("pre code") || container.querySelector("code") || container.querySelector("pre");
+    if (!code) return "";
+    var clone = code.cloneNode(true);
+    clone.querySelectorAll(".odt-code-lineno,.lineno,.linenos,.linenodiv,td.linenos,span.linenos,.hljs-ln-numbers").forEach(function (n) {
+      n.remove();
+    });
+    return (clone.textContent || "").replace(/\s+$/,"");
+  }
+
+  function extractCodeGeneric(scope) {
+    // Handle common "table with line numbers" layouts by preferring the code cell
+    var table = scope.closest ? scope.closest("table.highlighttable") : null;
+    if (table) {
+      var codeCell = table.querySelector("td.code pre, td.code code, td.code");
+      if (codeCell) {
+        return (codeCell.textContent || "").replace(/\s+$/,"");
+      }
+    }
+
+    var pre = scope.tagName && scope.tagName.toLowerCase() === "pre" ? scope : (scope.querySelector ? (scope.querySelector("pre") || scope) : scope);
+    var code = pre && pre.querySelector ? (pre.querySelector("code") || pre) : pre;
+    if (!code) return "";
+
+    var clone = code.cloneNode(true);
+    clone.querySelectorAll(".odt-code-lineno,.lineno,.linenos,.linenodiv,td.linenos,span.linenos,.hljs-ln-numbers").forEach(function (n) {
+      n.remove();
+    });
+    return (clone.textContent || "").replace(/\s+$/,"");
+  }
+
+  function shouldAddButton(container, codeText) {
+    if (!container) return false;
+    if (container.querySelector && container.querySelector(".odt-code-copy-btn")) return false;
+
+    var lang = detectLanguage(container);
+    if (ONLY_RECOGNIZED) {
+      if (!lang || EXCLUDED[lang]) return false;
+    }
+    if (MIN_LINES && MIN_LINES > 0) {
+      var n = countLinesFromText(codeText);
+      if (n < MIN_LINES) return false;
+    }
+    return true;
+  }
+
+  function ensureButton(container, extractor) {
+    if (!container) return;
+    // Compute text first (needed for min-lines decision)
+    var text = extractor(container);
+    if (!shouldAddButton(container, text)) return;
+
+    container.classList.add("odt-code-copy-container");
+
+    var btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "odt-code-copy-btn";
+    btn.textContent = COPY_LABEL;
+
+    btn.addEventListener("click", function (ev) {
+      ev.preventDefault();
+      ev.stopPropagation();
+      var t = extractor(container);
+      copyText(t).then(function () {
+        setButtonState(btn);
+      });
+    });
+
+    container.appendChild(btn);
+  }
+
+  function initCopy(root) {
+    var scope = root || document;
+
+    // Rich code blocks generated by the converter
+    scope.querySelectorAll(".odt-code-rich").forEach(function (block) {
+      ensureButton(block, extractCodeFromRich);
+    });
+
+    // Pygments highlight tables: attach only on td.code (prevents double buttons)
+    scope.querySelectorAll("table.highlighttable").forEach(function (tbl) {
+      var cell = tbl.querySelector("td.code");
+      if (cell) {
+        ensureButton(cell, function () { return extractCodeGeneric(cell); });
+      }
+    });
+
+    // Other code blocks: add a button on the nearest wrapper around <pre>
+    scope.querySelectorAll("pre").forEach(function (pre) {
+      if (pre.closest && pre.closest(".odt-code-rich")) return;
+      if (pre.closest && pre.closest("table.highlighttable")) return;
+
+      var container = pre.parentElement;
+      if (container && (container.classList.contains("highlight") || container.classList.contains("codehilite"))) {
+        ensureButton(container, function () { return extractCodeGeneric(container); });
+      } else {
+        ensureButton(pre, function () { return extractCodeGeneric(pre); });
+      }
+    });
+  }
+
+  function boot() {
+    try { initCopy(document); } catch (e) {}
+  }
+
+  // Initial load
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", boot);
+  } else {
+    boot();
+  }
+
+  // MkDocs Material instant navigation support
+  if (window.document$ && typeof window.document$.subscribe === "function") {
+    window.document$.subscribe(function () {
+      window.setTimeout(boot, 0);
+    });
+  } else {
+    // Fallback: observe content swaps
+    var target = document.querySelector(".md-content");
+    if (target && window.MutationObserver) {
+      var mo = new MutationObserver(function () {
+        window.setTimeout(boot, 0);
+      });
+      mo.observe(target, { childList: true, subtree: true });
+    }
+  }
+})();

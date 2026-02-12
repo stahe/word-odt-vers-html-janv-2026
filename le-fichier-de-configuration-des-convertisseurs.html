@@ -330,14 +330,14 @@
   
   
     <li class="md-nav__item">
-      <a href="les-exemples-de-ce-document.html" class="md-nav__link">
+      <a href="les-exemples-de-ce-document----.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    2. Les exemples de ce document
+    2. Les exemples de ce document    
   
 
     
@@ -981,6 +981,109 @@
 <li>ligne 198 : [debug] à True autorise les logs des styles des paragraphes qui précèdent le premier titre de niveau 1 du Document ODT / DOCX. Ce sont dans ces logs qu’on trouvera le style exact du paragraphe devant servir de titre dans la page d’accueil du site ;</li>
 </ul>
 <p>Au final, lorsqu’on passe d’un Document ODT / DOCX à l’autre, on modifiera les lignes [6-20, 127-129, 201] et certaines lignes des chaînes clés des langages. Le reste ne change pas.</p>
+<p>D’autres éléments ont été ajoutés au fichier de configuration dans les dernières versions du convertisseur :</p>
+<p><u><strong>Bouton [copier]</strong></u></p>
+<p>Sur les blocs de code contenant un langage reconnu, il y a un bouton [Copier] :</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007C200000267454E322A.png" style="display:inline-block; margin:4px;width:16.002cm;height:4.955cm;" class="odt-zoomable" data-zoom-src="images/10000000000007C200000267454E322A.png" /></td></tr></table>
+
+<p>Ce bouton permet de copier le bloc de code dans le presse-papier. Les numéros de ligne ne sont pas inclus. Le comportement de ce bouton est contrôlé par les lignes suivantes du fichier de configuration [config.py] :</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># ---------------------------------------------------------------------</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># Bouton [Copier] dans les blocs de code (copie dans le presse-papier)</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># ---------------------------------------------------------------------</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># Active/désactive l&#x27;ajout du bouton [Copier] (True = activé)</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#a31515">&quot;copy_button&quot;</span><span style="color:#000000">: </span><span style="color:#0000ff">True</span><span style="color:#000000">,</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># Libellé du bouton avant copie</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#a31515">&quot;copy_label&quot;</span><span style="color:#000000">: </span><span style="color:#a31515">&quot;Copier&quot;</span><span style="color:#000000">,</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># Libellé temporaire après une copie réussie</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#a31515">&quot;copy_copied_label&quot;</span><span style="color:#000000">: </span><span style="color:#a31515">&quot;Copié&quot;</span><span style="color:#000000">,</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># Si True, le bouton n&#x27;apparaît que si le langage du bloc est &quot;reconnu&quot;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># (par ex. language-java / language-python, etc.)</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#a31515">&quot;copy_only_recognized_language&quot;</span><span style="color:#000000">: </span><span style="color:#0000ff">True</span><span style="color:#000000">,</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># Seuil minimum de lignes pour afficher le bouton :</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># - 0  =&gt; pas de seuil (tous les blocs &quot;langage reconnu&quot; auront le bouton)</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># - &gt;0 =&gt; le bloc doit avoir au moins ce nombre de lignes</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#a31515">&quot;copy_min_lines&quot;</span><span style="color:#000000">: 0,</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># Si True, on autorise aussi le bouton sur les blocs Pygments &quot;colorés&quot;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># même si la classe language-xxx n&#x27;est pas explicitement présente.</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># Utile pour certains rendus de code (highlighttable) où la coloration existe</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># mais où le langage n&#x27;apparaît pas dans une classe CSS.</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#a31515">&quot;copy_allow_pygments_heuristic&quot;</span><span style="color:#000000">: </span><span style="color:#0000ff">True</span><span style="color:#000000">,</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># Apparence du bouton [Copier] (CSS inline : uniquement des déclarations,</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># sans accolades). Permet de personnaliser facilement le look.</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># ---------------------------------------------------------------------</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># Style &quot;Material-like&quot; pour le bouton [Copier]</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># (CSS inline : uniquement des déclarations, sans accolades)</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># ---------------------------------------------------------------------</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#a31515">&quot;copy_style&quot;</span><span style="color:#000000">: {</span></span>
+<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#008000"># Conteneur du bloc de code : nécessaire pour positionner le bouton</span></span>
+<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#a31515">&quot;container&quot;</span><span style="color:#000000">: </span><span style="color:#a31515">&quot;position: relative;&quot;</span><span style="color:#000000">,</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#008000"># Style normal du bouton</span></span>
+<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#a31515">&quot;btn&quot;</span><span style="color:#000000">: (</span></span>
+<span class="odt-code-line"><span style="color:#000000">                </span><span style="color:#a31515">&quot;position:absolute; top:.5rem; right:.5rem; &quot;</span></span>
+<span class="odt-code-line"><span style="color:#000000">                </span><span style="color:#a31515">&quot;display:inline-flex; align-items:center; justify-content:center; &quot;</span></span>
+<span class="odt-code-line"><span style="color:#000000">                </span><span style="color:#a31515">&quot;gap:.35rem; &quot;</span></span>
+<span class="odt-code-line"><span style="color:#000000">                </span><span style="color:#a31515">&quot;padding:.25rem .6rem; &quot;</span></span>
+<span class="odt-code-line"><span style="color:#000000">                </span><span style="color:#a31515">&quot;font-size:.72rem; font-weight:600; letter-spacing:.01em; &quot;</span></span>
+<span class="odt-code-line"><span style="color:#000000">                </span><span style="color:#a31515">&quot;line-height:1.2; &quot;</span></span>
+<span class="odt-code-line"><span style="color:#000000">                </span><span style="color:#a31515">&quot;border-radius:999px; &quot;</span></span>
+<span class="odt-code-line"><span style="color:#000000">                </span><span style="color:#a31515">&quot;border:1px solid rgba(0,150,136,.45); &quot;</span></span>
+<span class="odt-code-line"><span style="color:#000000">                </span><span style="color:#a31515">&quot;background:rgba(0,150,136,.12); &quot;</span></span>
+<span class="odt-code-line"><span style="color:#000000">                </span><span style="color:#a31515">&quot;color:rgb(0,150,136); &quot;</span></span>
+<span class="odt-code-line"><span style="color:#000000">                </span><span style="color:#a31515">&quot;box-shadow:0 1px 2px rgba(0,0,0,.10); &quot;</span></span>
+<span class="odt-code-line"><span style="color:#000000">                </span><span style="color:#a31515">&quot;backdrop-filter:saturate(180%) blur(6px); &quot;</span></span>
+<span class="odt-code-line"><span style="color:#000000">                </span><span style="color:#a31515">&quot;cursor:pointer; user-select:none; &quot;</span></span>
+<span class="odt-code-line"><span style="color:#000000">                </span><span style="color:#a31515">&quot;transition:transform .08s ease, box-shadow .12s ease, background .12s ease;&quot;</span></span>
+<span class="odt-code-line"><span style="color:#000000">                </span><span style="color:#a31515">&quot;z-index:5;&quot;</span></span>
+<span class="odt-code-line">            ),</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#008000"># Survol : un peu plus “élevé” (comme Material)</span></span>
+<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#a31515">&quot;btn_hover&quot;</span><span style="color:#000000">: (</span></span>
+<span class="odt-code-line"><span style="color:#000000">                </span><span style="color:#a31515">&quot;background:rgba(0,150,136,.20); &quot;</span></span>
+<span class="odt-code-line"><span style="color:#000000">                </span><span style="color:#a31515">&quot;box-shadow:0 3px 10px rgba(0,0,0,.18); &quot;</span></span>
+<span class="odt-code-line"><span style="color:#000000">                </span><span style="color:#a31515">&quot;transform:translateY(-1px);&quot;</span></span>
+<span class="odt-code-line">            ),</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#008000"># État “copié” : léger fade</span></span>
+<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#a31515">&quot;btn_copied&quot;</span><span style="color:#000000">: </span><span style="color:#a31515">&quot;opacity:.85;&quot;</span></span>
+<span class="odt-code-line">        },</span>
+<span class="odt-code-line">    },</span>
+</code></pre></div>
+
+<p>Le lecteur suivra les commentaires pour contrôler le bouton.</p>
+<p><u><strong>Les images</strong></u></p>
+<p>De même le comportement des images cliquables est contrôlé par le lignes suivantes du fichier de configuration :</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-markdown">
+<span class="odt-code-line"><span style="color:#000000">   </span><span style="color:#008000"># -------------------------------------------------------------------------</span></span>
+<span class="odt-code-line"><span style="color:#000000">   </span><span style="color:#008000"># Images : paramètres d&#x27;ombre (zoom / lightbox)</span></span>
+<span class="odt-code-line"><span style="color:#000000">   </span><span style="color:#008000"># -------------------------------------------------------------------------</span></span>
+<span class="odt-code-line"><span style="color:#000000">   </span><span style="color:#a31515">&quot;images&quot;</span><span style="color:#000000">: {</span></span>
+<span class="odt-code-line"><span style="color:#000000">       </span><span style="color:#a31515">&quot;shadow&quot;</span><span style="color:#000000">: {</span></span>
+<span class="odt-code-line"><span style="color:#000000">           </span><span style="color:#008000"># Active/désactive l&#x27;ombre autour des images</span></span>
+<span class="odt-code-line"><span style="color:#000000">           </span><span style="color:#a31515">&quot;enabled&quot;</span><span style="color:#000000">: </span><span style="color:#0000ff">True</span><span style="color:#000000">,</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">           </span><span style="color:#008000"># Rayon d&#x27;arrondi appliqué aux images (ex: &quot;0px&quot;, &quot;4px&quot;, &quot;8px&quot;, ...)</span></span>
+<span class="odt-code-line"><span style="color:#000000">           </span><span style="color:#a31515">&quot;border_radius&quot;</span><span style="color:#000000">: </span><span style="color:#a31515">&quot;8px&quot;</span><span style="color:#000000">,</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">           </span><span style="color:#008000"># Ombre par défaut sur les images &quot;zoomables&quot;</span></span>
+<span class="odt-code-line"><span style="color:#000000">           </span><span style="color:#a31515">&quot;zoomable&quot;</span><span style="color:#000000">: </span><span style="color:#a31515">&quot;0 8px 24px rgba(0,0,0,.28), 0 18px 60px rgba(0,0,0,.20)&quot;</span><span style="color:#000000">,</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">           </span><span style="color:#008000"># Ombre au survol (hover) des images &quot;zoomables&quot;</span></span>
+<span class="odt-code-line"><span style="color:#000000">           </span><span style="color:#a31515">&quot;zoomable_hover&quot;</span><span style="color:#000000">: </span><span style="color:#a31515">&quot;0 12px 30px rgba(0,0,0,.32), 0 26px 80px rgba(0,0,0,.22)&quot;</span><span style="color:#000000">,</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">           </span><span style="color:#008000"># Ombre lorsque l&#x27;image est affichée en grand (lightbox)</span></span>
+<span class="odt-code-line"><span style="color:#000000">           </span><span style="color:#a31515">&quot;lightbox&quot;</span><span style="color:#000000">: </span><span style="color:#a31515">&quot;0 24px 80px rgba(0,0,0,.65)&quot;</span><span style="color:#000000">,</span></span>
+<span class="odt-code-line">       }<span style="color:#000000"></span></span>
+<span class="odt-code-line">   },</span>
+</code></pre></div>
 
 
 
