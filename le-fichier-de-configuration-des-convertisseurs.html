@@ -945,7 +945,7 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 128-187 : cette configuration est utilisée pour les codes en « plain text » qui n’ont pas initialement de coloration syntaxique. Ces lignes visent à leur donner une selon le langage utilisé dans le bloc de code ;</li>
+<li>lignes 128-187 : cette configuration est utilisée pour les codes en « plain text » qui n’ont pas initialement de coloration syntaxique. Ces lignes visent à leur en donner une selon le langage utilisé dans le bloc de code. <strong>Il est à noter que si vos codes sont tous enrichis car provenant d’un IDE tels Eclipse, Visual Studio, ... et que vous n’avez pas de bloc de code « plain text » associé à un langage, alors vous n’avez rien à mettre dans cette partie de la configuration. Vous pouvez laisser vides les tableaux associés aux langages.</strong></li>
 <li>lignes 133-135 : les blocs de code sont repérés par leurs styles dans le document ODT / DOCX. Il peut y en avoir plusieurs. Ligne 134, on met tous les mots clés qui permettent de détecter un style de code. Dans mes documents, tous mes styles de code ont le mot « code » dans leur nom. Et aucun autre style n’a ce mot dans son nom. Donc je peux me contenter de mettre un unique mot clé. S’il y en a plusieurs on les met en les séparant par des virgules ligne 134 ;</li>
 <li>lignes 145-187 : les chaînes de caractères qui permettent d’identifier le langage d’un bloc de code.. Certains mots clés peuvent se retrouver dans divers langages. Le convertiseur sélectionne le langage pour lequel il a trouvé le plus de mots clés. Le principe est simple : vous regardez vos codes, sélectionnez des mots clés caractéristiques et vous les mettez dans ces lignes pour le bon langage. Notez que vous ne pouvez pas mettre n’importe quoi comme nom de langage : il faut utiliser les noms reconnus par MkDocs ;</li>
 <li>lignes 139-142 : ces lignes concernent les blocs de code enrichis (gras, italique, soukignage, surlignage, couleur des caractères). Ces blocs ne subissent pas le traitement des blocs de code « plain text ». Ils sont rendus à l’identique dans le HTML ;<ul>
@@ -982,8 +982,8 @@
 </ul>
 <p>Au final, lorsqu’on passe d’un Document ODT / DOCX à l’autre, on modifiera les lignes [6-20, 127-129, 201] et certaines lignes des chaînes clés des langages. Le reste ne change pas.</p>
 <p>D’autres éléments ont été ajoutés au fichier de configuration dans les dernières versions du convertisseur :</p>
-<p><u><strong>Bouton [copier]</strong></u></p>
-<p>Sur les blocs de code contenant un langage reconnu, il y a un bouton [Copier] :</p>
+<p><u><strong>Bouton [Copier]</strong></u></p>
+<p>Sur les blocs de code enrichi ainsi que sur les blocs de code « plain text » contenant un langage reconnu, il y a un bouton [Copier] :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007C200000267454E322A.png" style="display:inline-block; margin:4px;width:16.002cm;height:4.955cm;" class="odt-zoomable" data-zoom-src="images/10000000000007C200000267454E322A.png" /></td></tr></table>
 
 <p>Ce bouton permet de copier le bloc de code dans le presse-papier. Les numéros de ligne ne sont pas inclus. Le comportement de ce bouton est contrôlé par les lignes suivantes du fichier de configuration [config.py] :</p>
