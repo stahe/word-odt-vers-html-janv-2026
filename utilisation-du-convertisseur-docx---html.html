@@ -718,8 +718,10 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 7 : mettez ‘Titre’. C’est le style du document DOCX que vous allez convertir. Nous le verrons dans les lignes de débogage du convertisseur.</li>
+  <li>ligne 7 : mettez ‘Titre’. C’est le style du document DOCX que vous allez convertir. Nous le verrons dans les lignes de débogage du convertisseur.
+  </li>
 </ul>
+
 <p>Toujours dans le terminal PyCharm, tapez la commande suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line">PS C:\Data\st-2025\GitHub Pages\word-odt-vers-html\v2&gt; <span style="background-color:#fff5ce">python .\convert_docx_v18.py .\word-odt-vers-html-janv-2026.docx .\config.py</span></span>
@@ -758,14 +760,20 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 1 : la commande est la suivante : [<strong>python .\convert_docx_v18.py .\word-odt-vers-html-janv-2026.docx .\config.py</strong>] (Adaptez le numéro de version (ici 18) à la version que vous avez téléchargée.) :<ul>
-<li>le premier paramètre [<strong>.\convert_docx_v18.py</strong>] est le convertisseur DOCX → HTML</li>
-<li>le second paramètre [<strong>.\word-odt-vers-html-janv-2026.docx</strong>] est le nom du document DOCX à convertir ;</li>
-<li>le troisième paramètre [<strong>.\config.py</strong>] est le fichier de configuration ;</li>
+  <li>ligne 1 : la commande est la suivante : [<b>python .\convert_docx_v18.py .\word-odt-vers-html-janv-2026.docx .\config.py</b>] (Adaptez le numéro de version (ici 18) à la version que vous avez téléchargée.) :
+    <ul>
+      <li>le premier paramètre [<b>.\convert_docx_v18.py</b>] est le convertisseur DOCX → HTML
+      </li>
+      <li>le second paramètre [<b>.\word-odt-vers-html-janv-2026.docx</b>] est le nom du document DOCX à convertir ;
+      </li>
+      <li>le troisième paramètre [<b>.\config.py</b>] est le fichier de configuration ;
+      </li>
+    </ul>
+  </li>
+  <li>ligne 33 : le convertisseur signale que trois fichiers ont été générés :
+  </li>
 </ul>
-</li>
-<li>ligne 33 : le convertisseur signale que trois fichiers ont été générés :</li>
-</ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000324000003ECA9D639E7.png" style="display:inline-block; margin:4px;width:10.64cm;height:13.28cm;" class="odt-zoomable" data-zoom-src="images/1000000000000324000003ECA9D639E7.png" /></td></tr></table>
 
 <p>Le fichier [audit.txt] est le suivant :</p>
@@ -799,15 +807,22 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 2 : le nombre de paragraphes du document Word ;</li>
-<li>ligne 3 : le nombre de tables ;</li>
-<li>lignes 9-21 : les styles trouvés dans le document ;<ul>
-<li>lignes 10, 14, 15 : le style des blocs de code. Un seul style aurait probablement suffi ;</li>
-<li>lignes 11-12, 19 : le style des paragraphes standard. Un seul style aurait probablement suffi ;</li>
-<li>lignes 16-18, 21 : les styles des titres du document. Ligne 21, on voit qu’un seul paragraphe a le style ‘Titre’. C’est le titre du document qui précède le premier ‘Titre1’ ;</li>
+  <li>ligne 2 : le nombre de paragraphes du document Word ;
+  </li>
+  <li>ligne 3 : le nombre de tables ;
+  </li>
+  <li>lignes 9-21 : les styles trouvés dans le document ;
+    <ul>
+      <li>lignes 10, 14, 15 : le style des blocs de code. Un seul style aurait probablement suffi ;
+      </li>
+      <li>lignes 11-12, 19 : le style des paragraphes standard. Un seul style aurait probablement suffi ;
+      </li>
+      <li>lignes 16-18, 21 : les styles des titres du document. Ligne 21, on voit qu’un seul paragraphe a le style ‘Titre’. C’est le titre du document qui précède le premier ‘Titre1’ ;
+      </li>
+    </ul>
+  </li>
 </ul>
-</li>
-</ul>
+
 <p>Cet audit du document Word est un bon moyen de juger de la qualité du document. Là je vois que j’ai utilisé trop de styles différents pour la même chose dans mon document Word.</p>
 <p>Le fichier [audit.json] est identique au fichier [audit.txt] mais sous une forme jSON :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">

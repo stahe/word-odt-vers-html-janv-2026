@@ -702,6 +702,8 @@
 
 
 <h1 id="7-le-fichier-de-configuration-des-convertisseurs">7. <span style="color: #0f4761">Le fichier de configuration des convertisseurs</span></h1>
+<p></li>
+</ul></p>
 <p>Le fichier de configuration [config*.py] rassemble les informations qui peuvent changer d’un document à l’autre. Il commence ainsi :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line">config = {</span>
@@ -727,10 +729,14 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 1 : le fichier de configuration est un script Python. Il définit une unique variable [config]. Celle-ci est un dictionnaire qui va contenir toutes les valeurs de la configuration ;</li>
-<li>ligne 5 : le dictionnaire [mkdocs] va configurer le fichier [mkdocs.yml] généré par le convertissseur Gemini / ChatGPT. Ce fichier sert ensuite au script [build] pour construire un site HTML à partir du site MkDocs généré par le convertisseur ;</li>
-<li>lignes 5-20 : configurent le site GitHub qui va héberger le site HTML créé à partir du document ODT / DOCX (cf paragraphe <a href="heberger-le-site-html-sur-github.html#refheadingtoc55961226647236">12</a>)</li>
+  <li>ligne 1 : le fichier de configuration est un script Python. Il définit une unique variable [config]. Celle-ci est un dictionnaire qui va contenir toutes les valeurs de la configuration ;
+  </li>
+  <li>ligne 5 : le dictionnaire [mkdocs] va configurer le fichier [mkdocs.yml] généré par le convertissseur Gemini / ChatGPT. Ce fichier sert ensuite au script [build] pour construire un site HTML à partir du site MkDocs généré par le convertisseur ;
+  </li>
+  <li>lignes 5-20 : configurent le site GitHub qui va héberger le site HTML créé à partir du document ODT / DOCX (cf paragraphe <a href="heberger-le-site-html-sur-github.html#refheadingtoc55961226647236">12</a>)
+  </li>
 </ul>
+
 <p>Le fichier de configuration [config.py] se poursuit ainsi :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 20;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># Important : à False pour que les liens fonctionnent correctement sur GitHub Pages</span></span>
@@ -779,11 +785,16 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 23 : cette ligne est importante. Si elle est absente, au lieu d’afficher une page HTML, le navigateur ouvrira le dossier de cette page ;</li>
-<li>ligne 26 : MkDocs propose plusieurs thèmes pour un site MkDocs / HTML. Ici nous avons choisi le thème « material », ligne 27 ;</li>
-<li>lignes 31-38 : configuration de la navigation dans le site. Celle-ci se fera à l’aide d’une table des matières située dans la colonne de gauche de la page affichée (ligne 36) ;</li>
-<li>lignes 40-63 : définissent deux palettes de couleurs : le mode clair (lignes 43-49) ou le mode sombre (lignes 52-61). Une icône dans la barre supérieure des pages affichées permet de passer de l’un à l’autre ;</li>
+  <li>ligne 23 : cette ligne est importante. Si elle est absente, au lieu d’afficher une page HTML, le navigateur ouvrira le dossier de cette page ;
+  </li>
+  <li>ligne 26 : MkDocs propose plusieurs thèmes pour un site MkDocs / HTML. Ici nous avons choisi le thème « material », ligne 27 ;
+  </li>
+  <li>lignes 31-38 : configuration de la navigation dans le site. Celle-ci se fera à l’aide d’une table des matières située dans la colonne de gauche de la page affichée (ligne 36) ;
+  </li>
+  <li>lignes 40-63 : définissent deux palettes de couleurs : le mode clair (lignes 43-49) ou le mode sombre (lignes 52-61). Une icône dans la barre supérieure des pages affichées permet de passer de l’un à l’autre ;
+  </li>
 </ul>
+
 <p>La suite du fichier de configuration est la suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 63;"><pre><code class="language-markdown">
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># Extensions Markdown utilisées pour enrichir le contenu</span></span>
@@ -804,8 +815,10 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 64-78 : des extensions au langage MarkDown utilisé par MkDocs. Ces extensions ont été générées par Gemini à la suite de certaines de mes demandes ;</li>
+  <li>lignes 64-78 : des extensions au langage MarkDown utilisé par MkDocs. Ces extensions ont été générées par Gemini à la suite de certaines de mes demandes ;
+  </li>
 </ul>
+
 <p>La suite du fichier de configuration est la suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 78;"><pre><code class="language-markdown">
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># Scripts et CSS additionnels</span></span>
@@ -819,9 +832,12 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 81 : le script [focus.js] est un script Javascript généré par Gemini. Il est associé au bouton de la barre supérieure du site pour afficher ou cacher la table des matières ;</li>
-<li>ligne 84 : le CSS utilisé par ce bouton ;</li>
+  <li>ligne 81 : le script [focus.js] est un script Javascript généré par Gemini. Il est associé au bouton de la barre supérieure du site pour afficher ou cacher la table des matières ;
+  </li>
+  <li>ligne 84 : le CSS utilisé par ce bouton ;
+  </li>
 </ul>
+
 <p>La suite du fichier de configuration est la suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 86;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000"># -------------------------------------------------------------------------</span></span>
@@ -847,8 +863,10 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 87-106 : la définition du pied de page du site HTML. A été généré par Gemini à partir d’un exemple texte que je lui ai donné ;</li>
+  <li>lignes 87-106 : la définition du pied de page du site HTML. A été généré par Gemini à partir d’un exemple texte que je lui ai donné ;
+  </li>
 </ul>
+
 <p>La suite du fichier de configuration est la suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 106;"><pre><code class="language-markdown">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000"># -------------------------------------------------------------------------</span></span>
@@ -875,11 +893,16 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 110-115 : définition du marqueur Google Analytics (GA) qui va permettre de suivre les visites du site ;</li>
-<li>ligne 113 : mettez-là votre marqueur GA ;</li>
-<li>lignes 120-127 : le style du titre du document, celui qui est présent dans le document ODT /DOCX avant le premier titre de niveau 1. Le style indiqué ligne 123 change avec chaque Document ODT. En revanche il peut être constant (‘Titre’) pour les documents DOCX. Par défaut, le convertisseur logue les styles de tous les paragraphes du document ODT / DOCX qui précède le premier titre de niveau 1. Il faut donc faire une première exécution, repérer le style du paragraphe qu’on veut mettre en titre, puis mettre ce style ligne 123 ;</li>
-<li>ligne 126 : le style CSS que vous voulez donner au titre du document. Ce titre est dans la page « Accueil », la première page affichée lorsque le site s’ouvre ;</li>
+  <li>lignes 110-115 : définition du marqueur Google Analytics (GA) qui va permettre de suivre les visites du site ;
+  </li>
+  <li>ligne 113 : mettez-là votre marqueur GA ;
+  </li>
+  <li>lignes 120-127 : le style du titre du document, celui qui est présent dans le document ODT /DOCX avant le premier titre de niveau 1. Le style indiqué ligne 123 change avec chaque Document ODT. En revanche il peut être constant (‘Titre’) pour les documents DOCX. Par défaut, le convertisseur logue les styles de tous les paragraphes du document ODT / DOCX qui précède le premier titre de niveau 1. Il faut donc faire une première exécution, repérer le style du paragraphe qu’on veut mettre en titre, puis mettre ce style ligne 123 ;
+  </li>
+  <li>ligne 126 : le style CSS que vous voulez donner au titre du document. Ce titre est dans la page « Accueil », la première page affichée lorsque le site s’ouvre ;
+  </li>
 </ul>
+
 <p>La suite du fichier de configuration est la suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 127;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000"># -------------------------------------------------------------------------</span></span>
@@ -945,17 +968,26 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 128-187 : cette configuration est utilisée pour les codes en « plain text » qui n’ont pas initialement de coloration syntaxique. Ces lignes visent à leur en donner une selon le langage utilisé dans le bloc de code. <strong>Il est à noter que si vos codes sont tous enrichis car provenant d’un IDE tels Eclipse, Visual Studio, ... et que vous n’avez pas de bloc de code « plain text » associé à un langage, alors vous n’avez rien à mettre dans cette partie de la configuration. Vous pouvez laisser vides les tableaux associés aux langages.</strong></li>
-<li>lignes 133-135 : les blocs de code sont repérés par leurs styles dans le document ODT / DOCX. Il peut y en avoir plusieurs. Ligne 134, on met tous les mots clés qui permettent de détecter un style de code. Dans mes documents, tous mes styles de code ont le mot « code » dans leur nom. Et aucun autre style n’a ce mot dans son nom. Donc je peux me contenter de mettre un unique mot clé. S’il y en a plusieurs on les met en les séparant par des virgules ligne 134 ;</li>
-<li>lignes 145-187 : les chaînes de caractères qui permettent d’identifier le langage d’un bloc de code.. Certains mots clés peuvent se retrouver dans divers langages. Le convertiseur sélectionne le langage pour lequel il a trouvé le plus de mots clés. Le principe est simple : vous regardez vos codes, sélectionnez des mots clés caractéristiques et vous les mettez dans ces lignes pour le bon langage. Notez que vous ne pouvez pas mettre n’importe quoi comme nom de langage : il faut utiliser les noms reconnus par MkDocs ;</li>
-<li>lignes 139-142 : ces lignes concernent les blocs de code enrichis (gras, italique, soukignage, surlignage, couleur des caractères). Ces blocs ne subissent pas le traitement des blocs de code « plain text ». Ils sont rendus à l’identique dans le HTML ;<ul>
-<li>ligne 140 : fixe la hauteur de ligne des lignes de code ;</li>
-<li>ligne 141 : fixe la police CSS du bloc de code ;</li>
-<li>ligne 142 : fixe la taille des caractères ;</li>
+  <li>lignes 128-187 : cette configuration est utilisée pour les codes en « plain text » qui n’ont pas initialement de coloration syntaxique. Ces lignes visent à leur en donner une selon le langage utilisé dans le bloc de code. <b>Il est à noter que si vos codes sont tous enrichis car provenant d’un IDE tels Eclipse, Visual Studio, ... et que vous n’avez pas de bloc de code « plain text » associé à un langage, alors vous n’avez rien à mettre dans cette partie de la configuration. Vous pouvez laisser vides les tableaux associés aux langages.</b>
+  </li>
+  <li>lignes 133-135 : les blocs de code sont repérés par leurs styles dans le document ODT / DOCX. Il peut y en avoir plusieurs. Ligne 134, on met tous les mots clés qui permettent de détecter un style de code. Dans mes documents, tous mes styles de code ont le mot « code » dans leur nom. Et aucun autre style n’a ce mot dans son nom. Donc je peux me contenter de mettre un unique mot clé. S’il y en a plusieurs on les met en les séparant par des virgules ligne 134 ;
+  </li>
+  <li>lignes 145-187 : les chaînes de caractères qui permettent d’identifier le langage d’un bloc de code.. Certains mots clés peuvent se retrouver dans divers langages. Le convertiseur sélectionne le langage pour lequel il a trouvé le plus de mots clés. Le principe est simple : vous regardez vos codes, sélectionnez des mots clés caractéristiques et vous les mettez dans ces lignes pour le bon langage. Notez que vous ne pouvez pas mettre n’importe quoi comme nom de langage : il faut utiliser les noms reconnus par MkDocs ;
+  </li>
+  <li>lignes 139-142 : ces lignes concernent les blocs de code enrichis (gras, italique, soukignage, surlignage, couleur des caractères). Ces blocs ne subissent pas le traitement des blocs de code « plain text ». Ils sont rendus à l’identique dans le HTML ;
+    <ul>
+      <li>ligne 140 : fixe la hauteur de ligne des lignes de code ;
+      </li>
+      <li>ligne 141 : fixe la police CSS du bloc de code ;
+      </li>
+      <li>ligne 142 : fixe la taille des caractères ;
+      </li>
+    </ul>
+  </li>
+  <li>ligne 137 : fixe le langage par défaut. Dans le cas d’un bloc de code « plain text », si aucun langage n’est détecté, le langage par défaut sera « text ». Pour MkDocs, cela signifie un bloc de code sans coloration syntaxique. C’est par exemple, le cas de résultats d’exécution ;
+  </li>
 </ul>
-</li>
-<li>ligne 137 : fixe le langage par défaut. Dans le cas d’un bloc de code « plain text », si aucun langage n’est détecté, le langage par défaut sera « text ». Pour MkDocs, cela signifie un bloc de code sans coloration syntaxique. C’est par exemple, le cas de résultats d’exécution ;</li>
-</ul>
+
 <p>La configuration se termine de la façon suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 187;"><pre><code class="language-markdown">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000"># -------------------------------------------------------------------------</span></span>
@@ -973,13 +1005,18 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 191-195 : la liste des fichiers à copier à la racine du site HTML ;<ul>
-<li>lignes 192-193 : le marqueur Google Analytics du site et le fichier [robots.txt] qui autorise l’exploration du site par les moteurs de recherche ;</li>
-<li>ligne 194 : le PDF de ce document rendu disponible au téléchargement ;</li>
+  <li>lignes 191-195 : la liste des fichiers à copier à la racine du site HTML ;
+    <ul>
+      <li>lignes 192-193 : le marqueur Google Analytics du site et le fichier [robots.txt] qui autorise l’exploration du site par les moteurs de recherche ;
+      </li>
+      <li>ligne 194 : le PDF de ce document rendu disponible au téléchargement ;
+      </li>
+    </ul>
+  </li>
+  <li>ligne 198 : [debug] à True autorise les logs des styles des paragraphes qui précèdent le premier titre de niveau 1 du Document ODT / DOCX. Ce sont dans ces logs qu’on trouvera le style exact du paragraphe devant servir de titre dans la page d’accueil du site ;
+  </li>
 </ul>
-</li>
-<li>ligne 198 : [debug] à True autorise les logs des styles des paragraphes qui précèdent le premier titre de niveau 1 du Document ODT / DOCX. Ce sont dans ces logs qu’on trouvera le style exact du paragraphe devant servir de titre dans la page d’accueil du site ;</li>
-</ul>
+
 <p>Au final, lorsqu’on passe d’un Document ODT / DOCX à l’autre, on modifiera les lignes [6-20, 127-129, 201] et certaines lignes des chaînes clés des langages. Le reste ne change pas.</p>
 <p>D’autres éléments ont été ajoutés au fichier de configuration dans les dernières versions du convertisseur :</p>
 <p><u><strong>Bouton [Copier]</strong></u></p>
