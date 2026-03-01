@@ -330,14 +330,14 @@
   
   
     <li class="md-nav__item">
-      <a href="les-exemples-de-ce-document----.html" class="md-nav__link">
+      <a href="les-exemples-de-ce-document.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    2. Les exemples de ce document    
+    2. Les exemples de ce document
   
 
     
@@ -701,46 +701,52 @@
 
 
 
-<h1 id="10-construction-du-site-html-statique">10. <span style="color: #0f4761">Construction du site HTML statique</span></h1>
-<p>A partir de maintenant il n’y a plus de différence entre documents ODT et DOCX. On travaille sur le site MkDocs construit par l’un ou l’autre des convertisseurs.</p>
-<p>Maintenant construisons le site HTML. Cela se fait avec le script [build]. Toujours dans le terminal, tapez la commande suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line">PS C:\Data\st-2025\GitHub Pages\word-odt-vers-html\v2&gt; <span style="font-weight:bold;background-color:#fff5ce">python .\build.py</span></span>
-<span class="odt-code-line">Démarrage de la construction du site MkDocs...</span>
-<span class="odt-code-line">Construction réussie ! Le site est dans : C:\Data\st-2025\GitHub Pages\word-odt-vers-html\v2\site</span>
-<span class="odt-code-line">Ouverture de C:\Data\st-2025\GitHub Pages\word-odt-vers-html\v2\site\index.html dans le navigateur…</span>
+<h1 id="10-construction-du-site-html-statique">10. <span>Construction du site HTML statique</span></h1>
+<ul>
+<li><span>A partir de maintenant il n’y a plus de différence</span><span>s</span><span> entre documents ODT et DOCX. On travaille sur le site MkDocs construit par l’un ou l’autre des convertisseurs.</span></li>
+<li><span>Maintenant construisons le site HTML. Cela se fait avec le script &#91;build&#93;. Toujours dans le terminal, tapez la commande suivante :</span>
+<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-text">
+<span class="docx-code-line">PS C:\Data\st-2025\GitHub Pages\word-odt-vers-html\v2&gt; <span style="font-weight:bold;background-color:#FFF5CE">python .\build.py</span></span>
+<span class="docx-code-line">Démarrage de la construction du site MkDocs...</span>
+<span class="docx-code-line">Construction réussie ! Le site est dans : C:\Data\st-2025\GitHub Pages\word-odt-vers-html\v2\site</span>
+<span class="docx-code-line">Ouverture de C:\Data\st-2025\GitHub Pages\word-odt-vers-html\v2\site\index.html dans le navigateur…</span>
 </code></pre></div>
 
-<ul>
-  <li>ligne 1 : la commande [python build] crée le site HTML à partir du site MkDocs ;
-  </li>
-  <li>ligne 4 : le site est affiché dans un navigateur ;
-  </li>
+</li>
+<li><span>ligne 1 : la commande &#91;python build&#93; crée le site HTML à partir du site MkDocs ;</span></li>
+<li><span>ligne 4 : le site est affiché dans un navigateur ;</span></li>
 </ul>
 
-<p>Le résultat est le même que pour le site MkDocs :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000A7C000005DEBDC606C9.png" style="display:inline-block; margin:4px;width:16.002cm;height:8.939cm;" class="odt-zoomable" data-zoom-src="images/1000000000000A7C000005DEBDC606C9.png" /></td></tr></table>
+<p><span>Le résultat est le même que pour le site MkDocs :</span></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image24.png" class="docx-zoomable" style="width:605px;height:338px;" alt="Image" />
+</td>
+</tr>
+</table>
 
 <ul>
-  <li>En [1], on voit que c’est une page HTML qui est affichée ;
-  </li>
-  <li>En [2], cette page correspond à la page d’accueil du site ;
-  </li>
-  <li>En [3], la table des matières du document HTML ;
-  </li>
-  <li>En [4], le titre du document a été formaté selon sa configuration dans [config.py] ;
-  </li>
-  <li>En [5], la première page affichée est [Accueil]. Le contenu de cette page est le contenu du Document ODT / DOCX qui <b>précède le premier chapitre de niveau Titre 1</b> ;
-  </li>
+<li><span>En &#91;1&#93;, on voit que c’est une page HTML qui est affichée ;</span></li>
+<li><span>En &#91;2&#93;, cette page correspond à la page d’accueil du site ;</span></li>
+<li><span>En &#91;3&#93;, la table des matières du document HTML ;</span></li>
+<li><span>En &#91;4&#93;, le titre du document a été formaté selon sa configuration dans &#91;config.py&#93; ;</span></li>
+<li><span>En &#91;5&#93;, la première page affichée est &#91;Accueil&#93;. Le contenu de cette page est le contenu du Document ODT / DOCX qui </span><b>précède le premier chapitre de niveau Titre 1</b><span> ;</span></li>
 </ul>
 
-<p>L’exécution de [build] a modifié votre dossier de travail :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000353000003409C8A1BF2.png" style="display:inline-block; margin:4px;width:7.879cm;height:7.699cm;" class="odt-zoomable" data-zoom-src="images/1000000000000353000003409C8A1BF2.png" /></td></tr></table>
+<p><span>L’exécution de &#91;build&#93; a modifié votre dossier de travail :</span></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image25.png" class="docx-zoomable" style="width:298px;height:291px;" alt="Image" />
+</td>
+</tr>
+</table>
 
 <ul>
-  <li>En [1], un nouveau dossier [site] a été créé. Il contient votre site statique HTML ;
-  </li>
-  <li>En [2], les pages de votre site ;
+<li><span>En &#91;1&#93;, un nouveau dossier &#91;site&#93; a été créé. Il contient votre site statique HTML ;</span></li>
+<li><span>En &#91;2&#93;, les pages de votre site ;</span></li>
+</ul>
 
 
 

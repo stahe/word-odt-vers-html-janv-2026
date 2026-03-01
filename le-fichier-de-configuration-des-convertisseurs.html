@@ -330,14 +330,14 @@
   
   
     <li class="md-nav__item">
-      <a href="les-exemples-de-ce-document----.html" class="md-nav__link">
+      <a href="les-exemples-de-ce-document.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    2. Les exemples de ce document    
+    2. Les exemples de ce document
   
 
     
@@ -701,425 +701,400 @@
 
 
 
-<h1 id="7-le-fichier-de-configuration-des-convertisseurs">7. <span style="color: #0f4761">Le fichier de configuration des convertisseurs</span></h1>
-<p></li>
-</ul></p>
-<p>Le fichier de configuration [config*.py] rassemble les informations qui peuvent changer d’un document à l’autre. Il commence ainsi :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line">config = {</span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000"># -------------------------------------------------------------------------</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000"># Configuration MkDocs</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000"># -------------------------------------------------------------------------</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#a31515">&quot;mkdocs&quot;</span><span style="color:#000000">: {</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># Titre du site qui apparaîtra dans l&#x27;onglet du navigateur</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#a31515">&quot;site_name&quot;</span><span style="color:#000000">: </span><span style="color:#a31515">&quot;Convertir un document Word ou ODT vers un site statique HTML à l&#x27;aide de l&#x27;IA Gemini 3&quot;</span><span style="color:#000000">,</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># URL de publication du site (ex: GitHub Pages)</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#a31515">&quot;site_url&quot;</span><span style="color:#000000">: </span><span style="color:#a31515">&quot;https://stahe.github.io/word-odt-vers-html-janv-2026/&quot;</span><span style="color:#000000">,</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># Méta-description pour le référencement (SEO)</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#a31515">&quot;site_description&quot;</span><span style="color:#000000">: </span><span style="color:#a31515">&quot;Convertir un document Word ou ODT vers un site statique HTML à l&#x27;aide de l&#x27;IA Gemini 3&quot;</span><span style="color:#000000">,</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># Auteur du site</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#a31515">&quot;site_author&quot;</span><span style="color:#000000">: </span><span style="color:#a31515">&quot;Serge Tahé&quot;</span><span style="color:#000000">,</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># Lien vers le dépôt de code source (icône GitHub en haut à droite)</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#a31515">&quot;repo_url&quot;</span><span style="color:#000000">: </span><span style="color:#a31515">&quot;https://stahe.github.io/word-odt-vers-html-janv-2026&quot;</span><span style="color:#000000">,</span></span>
-<span class="odt-code-line">        <span style="color:#a31515">&quot;repo_name&quot;</span>: <span style="color:#a31515">&quot;GitHub&quot;</span>,</span>
+<h1 id="7-le-fichier-de-configuration-des-convertisseurs">7. <span>Le fichier de configuration des convertisseurs</span></h1>
+<p><span>Le fichier de configuration &#91;config&#42;.py&#93; rassemble les informations qui peuvent changer d’un document à l’autre. Il commence ainsi :</span></p>
+<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-javascript">
+<span class="docx-code-line">config = {</span>
+<span class="docx-code-line"><span style="color:#000000">    </span># -------------------------------------------------------------------------</span>
+<span class="docx-code-line"><span style="color:#000000">    </span># Configuration MkDocs</span>
+<span class="docx-code-line"><span style="color:#000000">    </span># -------------------------------------------------------------------------</span>
+<span class="docx-code-line"><span style="color:#000000">    </span>&quot;mkdocs&quot;<span style="color:#000000">: {</span></span>
+<span class="docx-code-line"><span style="color:#000000">        </span># Titre du site qui apparaîtra dans l&#x27;onglet du navigateur</span>
+<span class="docx-code-line"><span style="color:#000000">        </span>&quot;site_name&quot;<span style="color:#000000">: </span>&quot;Convertir un document Word ou ODT vers un site statique HTML à l&#x27;aide de l&#x27;IA Gemini 3&quot;<span style="color:#000000">,</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#000000">        </span># URL de publication du site (ex: GitHub Pages)</span>
+<span class="docx-code-line"><span style="color:#000000">        </span>&quot;site_url&quot;<span style="color:#000000">: </span>&quot;https://stahe.github.io/word-odt-vers-html-janv-2026/&quot;<span style="color:#000000">,</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#000000">        </span># Méta-description pour le référencement (SEO)</span>
+<span class="docx-code-line"><span style="color:#000000">        </span>&quot;site_description&quot;<span style="color:#000000">: </span>&quot;Convertir un document Word ou ODT vers un site statique HTML à l&#x27;aide de l&#x27;IA Gemini 3&quot;<span style="color:#000000">,</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#000000">        </span># Auteur du site</span>
+<span class="docx-code-line"><span style="color:#000000">        </span>&quot;site_author&quot;<span style="color:#000000">: </span>&quot;Serge Tahé&quot;<span style="color:#000000">,</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#000000">        </span># Lien vers le dépôt de code source (icône GitHub en haut à droite)</span>
+<span class="docx-code-line"><span style="color:#000000">        </span>&quot;repo_url&quot;<span style="color:#000000">: </span>&quot;https://stahe.github.io/word-odt-vers-html-janv-2026&quot;<span style="color:#000000">,</span></span>
+<span class="docx-code-line">        &quot;repo_name&quot;: &quot;GitHub&quot;,</span>
 </code></pre></div>
 
 <ul>
-  <li>ligne 1 : le fichier de configuration est un script Python. Il définit une unique variable [config]. Celle-ci est un dictionnaire qui va contenir toutes les valeurs de la configuration ;
-  </li>
-  <li>ligne 5 : le dictionnaire [mkdocs] va configurer le fichier [mkdocs.yml] généré par le convertissseur Gemini / ChatGPT. Ce fichier sert ensuite au script [build] pour construire un site HTML à partir du site MkDocs généré par le convertisseur ;
-  </li>
-  <li>lignes 5-20 : configurent le site GitHub qui va héberger le site HTML créé à partir du document ODT / DOCX (cf paragraphe <a href="heberger-le-site-html-sur-github.html#refheadingtoc55961226647236">12</a>)
-  </li>
+<li><span>ligne 1 : le fichier de configuration est un script Python. Il définit une unique variable &#91;config&#93;. Celle-ci est un dictionnaire qui va contenir toutes les valeurs de la configuration ;</span></li>
+<li><span>ligne 5 : le dictionnaire &#91;mkdocs&#93; va configurer le fichier &#91;mkdocs.yml&#93; généré par le convertissseur Gemini / ChatGPT. Ce fichier sert ensuite au script &#91;build&#93; pour construire un site HTML à partir du site MkDocs généré par le convertisseur ;</span></li>
+<li><span>lignes 5-20 : configurent le site GitHub qui va héberger le site HTML créé à partir du document ODT / DOCX (cf paragraphe 12)</span></li>
 </ul>
 
-<p>Le fichier de configuration [config.py] se poursuit ainsi :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 20;"><pre><code class="language-python">
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># Important : à False pour que les liens fonctionnent correctement sur GitHub Pages</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># (évite les liens du type dossier/ au lieu de dossier/index.html)</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#a31515">&quot;use_directory_urls&quot;</span><span style="color:#000000">: </span><span style="color:#0000ff">False</span><span style="color:#000000">,</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># Configuration du thème Material pour MkDocs</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#a31515">&quot;theme&quot;</span><span style="color:#000000">: {</span></span>
-<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#a31515">&quot;name&quot;</span><span style="color:#000000">: </span><span style="color:#a31515">&quot;material&quot;</span><span style="color:#000000">,</span></span>
-<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#008000"># Dossier contenant les surcharges (footer personnalisé, etc.)</span></span>
-<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#a31515">&quot;custom_dir&quot;</span><span style="color:#000000">: </span><span style="color:#a31515">&quot;overrides&quot;</span><span style="color:#000000">,</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#008000"># Fonctionnalités de navigation activées</span></span>
-<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#a31515">&quot;features&quot;</span><span style="color:#000000">: [</span></span>
-<span class="odt-code-line"><span style="color:#000000">                </span><span style="color:#a31515">&quot;navigation.sections&quot;</span><span style="color:#000000">,  </span><span style="color:#008000"># Regroupe les sections dans le menu</span></span>
-<span class="odt-code-line"><span style="color:#000000">                </span><span style="color:#a31515">&quot;navigation.indexes&quot;</span><span style="color:#000000">,  </span><span style="color:#008000"># Permet de cliquer sur le titre de section</span></span>
-<span class="odt-code-line"><span style="color:#000000">                </span><span style="color:#a31515">&quot;navigation.expand&quot;</span><span style="color:#000000">,  </span><span style="color:#008000"># Ouvre les menus par défaut</span></span>
-<span class="odt-code-line"><span style="color:#000000">                </span><span style="color:#a31515">&quot;toc.integrate&quot;</span><span style="color:#000000">,  </span><span style="color:#008000"># Intègre la table des matières à gauche (si supporté)</span></span>
-<span class="odt-code-line"><span style="color:#000000">                </span><span style="color:#a31515">&quot;navigation.top&quot;</span><span style="color:#000000">  </span><span style="color:#008000"># Bouton &quot;Retour en haut&quot;</span></span>
-<span class="odt-code-line">            ],</span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#008000"># Palette de couleurs (Mode Clair / Mode Sombre)</span></span>
-<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#a31515">&quot;palette&quot;</span><span style="color:#000000">: [</span></span>
-<span class="odt-code-line">                {</span>
-<span class="odt-code-line"><span style="color:#000000">                    </span><span style="color:#a31515">&quot;media&quot;</span><span style="color:#000000">: </span><span style="color:#a31515">&quot;(prefers-color-scheme: light)&quot;</span><span style="color:#000000">,</span></span>
-<span class="odt-code-line"><span style="color:#000000">                    </span><span style="color:#a31515">&quot;scheme&quot;</span><span style="color:#000000">: </span><span style="color:#a31515">&quot;default&quot;</span><span style="color:#000000">,</span></span>
-<span class="odt-code-line"><span style="color:#000000">                    </span><span style="color:#a31515">&quot;primary&quot;</span><span style="color:#000000">: </span><span style="color:#a31515">&quot;teal&quot;</span><span style="color:#000000">,</span></span>
-<span class="odt-code-line"><span style="color:#000000">                    </span><span style="color:#a31515">&quot;accent&quot;</span><span style="color:#000000">: </span><span style="color:#a31515">&quot;purple&quot;</span><span style="color:#000000">,</span></span>
-<span class="odt-code-line"><span style="color:#000000">                    </span><span style="color:#a31515">&quot;toggle&quot;</span><span style="color:#000000">: {</span></span>
-<span class="odt-code-line"><span style="color:#000000">                        </span><span style="color:#a31515">&quot;icon&quot;</span><span style="color:#000000">: </span><span style="color:#a31515">&quot;material/brightness-7&quot;</span><span style="color:#000000">,</span></span>
-<span class="odt-code-line"><span style="color:#000000">                        </span><span style="color:#a31515">&quot;name&quot;</span><span style="color:#000000">: </span><span style="color:#a31515">&quot;Passer au mode sombre&quot;</span></span>
-<span class="odt-code-line">                    }</span>
-<span class="odt-code-line">                },</span>
-<span class="odt-code-line">                {</span>
-<span class="odt-code-line"><span style="color:#000000">                    </span><span style="color:#a31515">&quot;media&quot;</span><span style="color:#000000">: </span><span style="color:#a31515">&quot;(prefers-color-scheme: dark)&quot;</span><span style="color:#000000">,</span></span>
-<span class="odt-code-line"><span style="color:#000000">                    </span><span style="color:#a31515">&quot;scheme&quot;</span><span style="color:#000000">: </span><span style="color:#a31515">&quot;slate&quot;</span><span style="color:#000000">,</span></span>
-<span class="odt-code-line"><span style="color:#000000">                    </span><span style="color:#a31515">&quot;primary&quot;</span><span style="color:#000000">: </span><span style="color:#a31515">&quot;teal&quot;</span><span style="color:#000000">,</span></span>
-<span class="odt-code-line"><span style="color:#000000">                    </span><span style="color:#a31515">&quot;accent&quot;</span><span style="color:#000000">: </span><span style="color:#a31515">&quot;purple&quot;</span><span style="color:#000000">,</span></span>
-<span class="odt-code-line"><span style="color:#000000">                    </span><span style="color:#a31515">&quot;toggle&quot;</span><span style="color:#000000">: {</span></span>
-<span class="odt-code-line"><span style="color:#000000">                        </span><span style="color:#a31515">&quot;icon&quot;</span><span style="color:#000000">: </span><span style="color:#a31515">&quot;material/brightness-4&quot;</span><span style="color:#000000">,</span></span>
-<span class="odt-code-line"><span style="color:#000000">                        </span><span style="color:#a31515">&quot;name&quot;</span><span style="color:#000000">: </span><span style="color:#a31515">&quot;Passer au mode clair&quot;</span></span>
-<span class="odt-code-line">                    }</span>
-<span class="odt-code-line">                }</span>
-<span class="odt-code-line">            ]</span>
-<span class="odt-code-line">        },</span>
+<p><span>Le fichier de configuration &#91;config.py&#93; se poursuit ainsi :</span></p>
+<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 20;"><pre><code class="language-python">
+<span class="docx-code-line"><span style="color:#000000">        </span># Important : à False pour que les liens fonctionnent correctement sur GitHub Pages</span>
+<span class="docx-code-line"><span style="color:#000000">        </span># (évite les liens du type dossier/ au lieu de dossier/index.html)</span>
+<span class="docx-code-line"><span style="color:#000000">        </span>&quot;use_directory_urls&quot;<span style="color:#000000">: </span><span style="color:#0000FF">False</span><span style="color:#000000">,</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#000000">        </span># Configuration du thème Material pour MkDocs</span>
+<span class="docx-code-line">        <span style="color:#A31515">&quot;theme&quot;</span>: {</span>
+<span class="docx-code-line"><span style="color:#000000">            </span>&quot;name&quot;<span style="color:#000000">: </span>&quot;material&quot;<span style="color:#000000">,</span></span>
+<span class="docx-code-line"><span style="color:#000000">            </span># Dossier contenant les surcharges (footer personnalisé, etc.)</span>
+<span class="docx-code-line"><span style="color:#000000">            </span>&quot;custom_dir&quot;<span style="color:#000000">: </span>&quot;overrides&quot;<span style="color:#000000">,</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#000000">            </span># Fonctionnalités de navigation activées</span>
+<span class="docx-code-line">            <span style="color:#A31515">&quot;features&quot;</span>: [</span>
+<span class="docx-code-line"><span style="color:#000000">                </span><span style="color:#A31515">&quot;navigation.sections&quot;</span><span style="color:#000000">,  </span># Regroupe les sections dans le menu</span>
+<span class="docx-code-line"><span style="color:#000000">                </span><span style="color:#A31515">&quot;navigation.indexes&quot;</span><span style="color:#000000">,  </span># Permet de cliquer sur le titre de section</span>
+<span class="docx-code-line"><span style="color:#000000">                </span><span style="color:#A31515">&quot;navigation.expand&quot;</span><span style="color:#000000">,  </span># Ouvre les menus par défaut</span>
+<span class="docx-code-line"><span style="color:#000000">                </span><span style="color:#A31515">&quot;toc.integrate&quot;</span><span style="color:#000000">,  </span># Intègre la table des matières à gauche (si supporté)</span>
+<span class="docx-code-line"><span style="color:#000000">                </span><span style="color:#A31515">&quot;navigation.top&quot;</span><span style="color:#000000">  </span># Bouton &quot;Retour en haut&quot;</span>
+<span class="docx-code-line">            ],</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#000000">            </span># Palette de couleurs (Mode Clair / Mode Sombre)</span>
+<span class="docx-code-line">            <span style="color:#A31515">&quot;palette&quot;</span>: [</span>
+<span class="docx-code-line">                {</span>
+<span class="docx-code-line"><span style="color:#000000">                    </span>&quot;media&quot;<span style="color:#000000">: </span>&quot;(prefers-color-scheme: light)&quot;<span style="color:#000000">,</span></span>
+<span class="docx-code-line">                    <span style="color:#A31515">&quot;scheme&quot;</span>: <span style="color:#A31515">&quot;default&quot;</span>,</span>
+<span class="docx-code-line">                    <span style="color:#A31515">&quot;primary&quot;</span>: <span style="color:#A31515">&quot;teal&quot;</span>,</span>
+<span class="docx-code-line">                    <span style="color:#A31515">&quot;accent&quot;</span>: <span style="color:#A31515">&quot;purple&quot;</span>,</span>
+<span class="docx-code-line">                    <span style="color:#A31515">&quot;toggle&quot;</span>: {</span>
+<span class="docx-code-line"><span style="color:#000000">                        </span>&quot;icon&quot;<span style="color:#000000">: </span>&quot;material/brightness-7&quot;<span style="color:#000000">,</span></span>
+<span class="docx-code-line"><span style="color:#000000">                        </span>&quot;name&quot;<span style="color:#000000">: </span>&quot;Passer au mode sombre&quot;</span>
+<span class="docx-code-line">                    }</span>
+<span class="docx-code-line">                },</span>
+<span class="docx-code-line">                {</span>
+<span class="docx-code-line"><span style="color:#000000">                    </span>&quot;media&quot;<span style="color:#000000">: </span>&quot;(prefers-color-scheme: dark)&quot;<span style="color:#000000">,</span></span>
+<span class="docx-code-line">                    <span style="color:#A31515">&quot;scheme&quot;</span>: <span style="color:#A31515">&quot;slate&quot;</span>,</span>
+<span class="docx-code-line">                    <span style="color:#A31515">&quot;primary&quot;</span>: <span style="color:#A31515">&quot;teal&quot;</span>,</span>
+<span class="docx-code-line">                    <span style="color:#A31515">&quot;accent&quot;</span>: <span style="color:#A31515">&quot;purple&quot;</span>,</span>
+<span class="docx-code-line">                    <span style="color:#A31515">&quot;toggle&quot;</span>: {</span>
+<span class="docx-code-line"><span style="color:#000000">                        </span>&quot;icon&quot;<span style="color:#000000">: </span>&quot;material/brightness-4&quot;<span style="color:#000000">,</span></span>
+<span class="docx-code-line"><span style="color:#000000">                        </span>&quot;name&quot;<span style="color:#000000">: </span>&quot;Passer au mode clair&quot;</span>
+<span class="docx-code-line">                    }</span>
+<span class="docx-code-line">                }</span>
+<span class="docx-code-line">            ]</span>
+<span class="docx-code-line">        },</span>
 </code></pre></div>
 
 <ul>
-  <li>ligne 23 : cette ligne est importante. Si elle est absente, au lieu d’afficher une page HTML, le navigateur ouvrira le dossier de cette page ;
-  </li>
-  <li>ligne 26 : MkDocs propose plusieurs thèmes pour un site MkDocs / HTML. Ici nous avons choisi le thème « material », ligne 27 ;
-  </li>
-  <li>lignes 31-38 : configuration de la navigation dans le site. Celle-ci se fera à l’aide d’une table des matières située dans la colonne de gauche de la page affichée (ligne 36) ;
-  </li>
-  <li>lignes 40-63 : définissent deux palettes de couleurs : le mode clair (lignes 43-49) ou le mode sombre (lignes 52-61). Une icône dans la barre supérieure des pages affichées permet de passer de l’un à l’autre ;
-  </li>
+<li><span>ligne 23 : cette ligne est importante. Si elle est absente, au lieu d’afficher une page HTML, le navigateur ouvrira le dossier de cette page ;</span></li>
+<li><span>ligne 26 : MkDocs propose plusieurs thèmes pour un site MkDocs / HTML. Ici nous avons choisi le thème « material », ligne 27 ;</span></li>
+<li><span>lignes 31-38 : configuration de la navigation dans le site. Celle-ci se fera à l’aide d’une table des matières située dans la colonne de gauche de la page affichée (ligne 36) ;</span></li>
+<li><span>lignes 40-63 : définissent deux palettes de couleurs : le mode clair (lignes 43-49) ou le mode sombre (lignes 52-61). Une icône dans la barre supérieure des pages affichées permet de passer de l’un à l’autre ;</span></li>
 </ul>
 
-<p>La suite du fichier de configuration est la suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 63;"><pre><code class="language-markdown">
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># Extensions Markdown utilisées pour enrichir le contenu</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#a31515">&quot;markdown_extensions&quot;</span><span style="color:#000000">: [</span></span>
-<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#a31515">&quot;admonition&quot;</span><span style="color:#000000">,  </span><span style="color:#008000"># Blocs d&#x27;avertissement/info</span></span>
-<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#a31515">&quot;attr_list&quot;</span><span style="color:#000000">,  </span><span style="color:#008000"># Attributs CSS personnalisés {: .class }</span></span>
-<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#a31515">&quot;pymdownx.superfences&quot;</span><span style="color:#000000">,  </span><span style="color:#008000"># Blocs de code avancés</span></span>
-<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#a31515">&quot;pymdownx.mark&quot;</span><span style="color:#000000">,  </span><span style="color:#008000"># Surlignage ==texte==</span></span>
-<span class="odt-code-line">            {</span>
-<span class="odt-code-line"><span style="color:#000000">                </span><span style="color:#a31515">&quot;pymdownx.highlight&quot;</span><span style="color:#000000">: {</span></span>
-<span class="odt-code-line"><span style="color:#000000">                    </span><span style="color:#a31515">&quot;anchor_linenums&quot;</span><span style="color:#000000">: </span><span style="color:#0000ff">True</span><span style="color:#000000">,</span></span>
-<span class="odt-code-line"><span style="color:#000000">                    </span><span style="color:#a31515">&quot;linenums&quot;</span><span style="color:#000000">: </span><span style="color:#0000ff">None</span><span style="color:#000000">  </span><span style="color:#008000"># La numérotation est gérée dynamiquement par le script</span></span>
-<span class="odt-code-line">                }</span>
-<span class="odt-code-line">            },</span>
-<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#a31515">&quot;md_in_html&quot;</span><span style="color:#000000">,  </span><span style="color:#008000"># Autorise le Markdown dans les balises HTML (crucial pour les listes et tableaux)</span></span>
-<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#a31515">&quot;footnotes&quot;</span><span style="color:#000000">  </span><span style="color:#008000"># Notes de bas de page [^1]</span></span>
-<span class="odt-code-line">        ],</span>
+<p><span>La suite du fichier de configuration est la suivante :</span></p>
+<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 63;"><pre><code class="language-markdown">
+<span class="docx-code-line"><span style="color:#000000">        </span># Extensions Markdown utilisées pour enrichir le contenu</span>
+<span class="docx-code-line"><span style="color:#000000">        </span>&quot;markdown_extensions&quot;<span style="color:#000000">: [</span></span>
+<span class="docx-code-line"><span style="color:#000000">            </span><span style="color:#A31515">&quot;admonition&quot;</span><span style="color:#000000">,  </span># Blocs d&#x27;avertissement/info</span>
+<span class="docx-code-line"><span style="color:#000000">            </span><span style="color:#A31515">&quot;attr_list&quot;</span><span style="color:#000000">,  </span># Attributs CSS personnalisés {: .class }</span>
+<span class="docx-code-line"><span style="color:#000000">            </span><span style="color:#A31515">&quot;pymdownx.superfences&quot;</span><span style="color:#000000">,  </span># Blocs de code avancés</span>
+<span class="docx-code-line"><span style="color:#000000">            </span><span style="color:#A31515">&quot;pymdownx.mark&quot;</span><span style="color:#000000">,  </span># Surlignage ==texte==</span>
+<span class="docx-code-line">            {</span>
+<span class="docx-code-line"><span style="color:#000000">                </span>&quot;pymdownx.highlight&quot;<span style="color:#000000">: {</span></span>
+<span class="docx-code-line">                    <span style="color:#A31515">&quot;anchor_linenums&quot;</span>: <span style="color:#0000FF">True</span>,</span>
+<span class="docx-code-line"><span style="color:#000000">                    </span><span style="color:#A31515">&quot;linenums&quot;</span><span style="color:#000000">: </span><span style="color:#0000FF">None</span><span style="color:#000000">  </span># La numérotation est gérée dynamiquement par le script</span>
+<span class="docx-code-line">                }</span>
+<span class="docx-code-line">            },</span>
+<span class="docx-code-line"><span style="color:#000000">            </span><span style="color:#A31515">&quot;md_in_html&quot;</span><span style="color:#000000">,  </span># Autorise le Markdown dans les balises HTML (crucial pour les listes et tableaux)</span>
+<span class="docx-code-line"><span style="color:#000000">            </span><span style="color:#A31515">&quot;footnotes&quot;</span><span style="color:#000000">  </span># Notes de bas de page [^1]</span>
+<span class="docx-code-line">        ],</span>
 </code></pre></div>
 
 <ul>
-  <li>lignes 64-78 : des extensions au langage MarkDown utilisé par MkDocs. Ces extensions ont été générées par Gemini à la suite de certaines de mes demandes ;
-  </li>
+<li><span>lignes 64-78 : des extensions au langage MarkDown utilisé par MkDocs. Ces extensions ont été générées par Gemini à la suite de certaines de mes demandes ;</span></li>
 </ul>
 
-<p>La suite du fichier de configuration est la suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 78;"><pre><code class="language-markdown">
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># Scripts et CSS additionnels</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#a31515">&quot;extra_javascript&quot;</span><span style="color:#000000">: [</span></span>
-<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#a31515">&quot;javascripts/focus.js&quot;</span><span style="color:#000000">  </span><span style="color:#008000"># Script pour le mode &quot;Focus&quot; (plein écran)</span></span>
-<span class="odt-code-line">        ],</span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#a31515">&quot;extra_css&quot;</span><span style="color:#000000">: [</span></span>
-<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#a31515">&quot;stylesheets/focus.css&quot;</span></span>
-<span class="odt-code-line">        ]</span>
-<span class="odt-code-line">    },</span>
+<p><span>La suite du fichier de configuration est la suivante :</span></p>
+<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 78;"><pre><code class="language-markdown">
+<span class="docx-code-line"><span style="color:#000000">        </span># Scripts et CSS additionnels</span>
+<span class="docx-code-line"><span style="color:#000000">        </span>&quot;extra_javascript&quot;<span style="color:#000000">: [</span></span>
+<span class="docx-code-line"><span style="color:#000000">            </span><span style="color:#A31515">&quot;javascripts/focus.js&quot;</span><span style="color:#000000">  </span># Script pour le mode &quot;Focus&quot; (plein écran)</span>
+<span class="docx-code-line">        ],</span>
+<span class="docx-code-line">        <span style="color:#A31515">&quot;extra_css&quot;</span>: [</span>
+<span class="docx-code-line"><span style="color:#000000">            </span>&quot;stylesheets/focus.css&quot;</span>
+<span class="docx-code-line">        ]</span>
+<span class="docx-code-line">    },</span>
 </code></pre></div>
 
 <ul>
-  <li>ligne 81 : le script [focus.js] est un script Javascript généré par Gemini. Il est associé au bouton de la barre supérieure du site pour afficher ou cacher la table des matières ;
-  </li>
-  <li>ligne 84 : le CSS utilisé par ce bouton ;
-  </li>
+<li><span>ligne 81 : le script &#91;focus.js&#93; est un script Javascript généré par Gemini. Il est associé au bouton de la barre supérieure du site pour afficher ou cacher la table des matières ;</span></li>
+<li><span>ligne 84 : le CSS utilisé par ce bouton ;</span></li>
 </ul>
 
-<p>La suite du fichier de configuration est la suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 86;"><pre><code class="language-html">
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000"># -------------------------------------------------------------------------</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000"># Pied de page (Footer)</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000"># -------------------------------------------------------------------------</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#a31515">&quot;footer&quot;</span><span style="color:#000000">: (</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#a31515">&quot;{% block footer %}\n&quot;</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#a31515">&quot;  &lt;div class=\&quot;md-footer-meta md-typeset\&quot;&gt;\n&quot;</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#a31515">&quot;    &lt;div class=\&quot;md-footer-meta__inner\&quot;&gt;\n\n&quot;</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#a31515">&quot;      &lt;div&gt;\n&quot;</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#a31515">&quot;        &lt;a href=\&quot;https://tahe.developpez.com\&quot; target=\&quot;_blank\&quot;&gt;\n&quot;</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#a31515">&quot;          https://tahe.developpez.com\n&quot;</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#a31515">&quot;        &lt;/a&gt;\n&quot;</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#a31515">&quot;        &lt;br&gt;\n&quot;</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#a31515">&quot;        Ce cours-tutoriel écrit par &lt;strong&gt;Serge Tahé&lt;/strong&gt; est mis à disposition du public selon les termes de la\n&quot;</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#a31515">&quot;        &lt;em&gt;Licence Creative Commons Attribution – Pas d’Utilisation Commerciale –\n&quot;</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#a31515">&quot;        Partage dans les Mêmes Conditions 3.0 non transposé&lt;/em&gt;.\n&quot;</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#a31515">&quot;      &lt;/div&gt;\n\n&quot;</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#a31515">&quot;    &lt;/div&gt;\n&quot;</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#a31515">&quot;  &lt;/div&gt;\n&quot;</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#a31515">&quot;{% endblock %}&quot;</span></span>
-<span class="odt-code-line">    ),</span>
+<p><span>La suite du fichier de configuration est la suivante :</span></p>
+<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 86;"><pre><code class="language-html">
+<span class="docx-code-line"><span style="color:#000000">    </span># -------------------------------------------------------------------------</span>
+<span class="docx-code-line"><span style="color:#000000">    </span># Pied de page (Footer)</span>
+<span class="docx-code-line"><span style="color:#000000">    </span># -------------------------------------------------------------------------</span>
+<span class="docx-code-line"><span style="color:#000000">    </span>&quot;footer&quot;<span style="color:#000000">: (</span></span>
+<span class="docx-code-line"><span style="color:#000000">        </span>&quot;{% block footer %}\n&quot;</span>
+<span class="docx-code-line"><span style="color:#000000">        </span>&quot;  &lt;div class=\&quot;md-footer-meta md-typeset\&quot;&gt;\n&quot;</span>
+<span class="docx-code-line"><span style="color:#000000">        </span>&quot;    &lt;div class=\&quot;md-footer-meta__inner\&quot;&gt;\n\n&quot;</span>
+<span class="docx-code-line"><span style="color:#000000">        </span>&quot;      &lt;div&gt;\n&quot;</span>
+<span class="docx-code-line"><span style="color:#000000">        </span>&quot;        &lt;a href=\&quot;https://tahe.developpez.com\&quot; target=\&quot;_blank\&quot;&gt;\n&quot;</span>
+<span class="docx-code-line"><span style="color:#000000">        </span>&quot;          https://tahe.developpez.com\n&quot;</span>
+<span class="docx-code-line"><span style="color:#000000">        </span>&quot;        &lt;/a&gt;\n&quot;</span>
+<span class="docx-code-line"><span style="color:#000000">        </span>&quot;        &lt;br&gt;\n&quot;</span>
+<span class="docx-code-line"><span style="color:#000000">        </span>&quot;        Ce cours-tutoriel écrit par &lt;strong&gt;Serge Tahé&lt;/strong&gt; est mis à disposition du public selon les termes de la\n&quot;</span>
+<span class="docx-code-line"><span style="color:#000000">        </span>&quot;        &lt;em&gt;Licence Creative Commons Attribution – Pas d’Utilisation Commerciale –\n&quot;</span>
+<span class="docx-code-line"><span style="color:#000000">        </span>&quot;        Partage dans les Mêmes Conditions 3.0 non transposé&lt;/em&gt;.\n&quot;</span>
+<span class="docx-code-line"><span style="color:#000000">        </span>&quot;      &lt;/div&gt;\n\n&quot;</span>
+<span class="docx-code-line"><span style="color:#000000">        </span>&quot;    &lt;/div&gt;\n&quot;</span>
+<span class="docx-code-line"><span style="color:#000000">        </span>&quot;  &lt;/div&gt;\n&quot;</span>
+<span class="docx-code-line"><span style="color:#000000">        </span>&quot;{% endblock %}&quot;</span>
+<span class="docx-code-line">    ),</span>
 </code></pre></div>
 
 <ul>
-  <li>lignes 87-106 : la définition du pied de page du site HTML. A été généré par Gemini à partir d’un exemple texte que je lui ai donné ;
-  </li>
+<li><span>lignes 87-106 : la définition du pied de page du site HTML. A été généré par Gemini à partir d’un exemple texte que je lui ai donné ;</span></li>
 </ul>
 
-<p>La suite du fichier de configuration est la suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 106;"><pre><code class="language-markdown">
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000"># -------------------------------------------------------------------------</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000"># Configuration supplémentaire (Analytics, etc.)</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000"># -------------------------------------------------------------------------</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#a31515">&quot;extra&quot;</span><span style="color:#000000">: {</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#a31515">&quot;analytics&quot;</span><span style="color:#000000">: {</span></span>
-<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#a31515">&quot;provider&quot;</span><span style="color:#000000">: </span><span style="color:#a31515">&quot;google&quot;</span><span style="color:#000000">,</span></span>
-<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#a31515">&quot;property&quot;</span><span style="color:#000000">: </span><span style="color:#a31515">&quot;G-</span><span style="color:#a31515">XXXXXXXX</span><span style="color:#a31515">&quot;</span></span>
-<span class="odt-code-line">        }</span>
-<span class="odt-code-line">    },</span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000"># -------------------------------------------------------------------------</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000"># Détection du Titre du Document</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000"># -------------------------------------------------------------------------</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#a31515">&quot;document_title&quot;</span><span style="color:#000000">: {</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># Styles ODT à considérer comme le titre principal du document (H1 global)</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#a31515">&quot;style_names&quot;</span><span style="color:#000000">: [</span></span>
-<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#a31515">&quot;P1&quot;</span></span>
-<span class="odt-code-line">        ],</span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># CSS appliqué à ce titre dans le Markdown généré</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#a31515">&quot;css&quot;</span><span style="color:#000000">: </span><span style="color:#a31515">&quot;font-size: 28px; font-weight: bold; margin-bottom: 1em; line-height: 1.2; color: #2c3e50;&quot;</span></span>
-<span class="odt-code-line">    },</span>
+<p><span>La suite du fichier de configuration est la suivante :</span></p>
+<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 106;"><pre><code class="language-markdown">
+<span class="docx-code-line"><span style="color:#000000">    </span># -------------------------------------------------------------------------</span>
+<span class="docx-code-line"><span style="color:#000000">    </span># Configuration supplémentaire (Analytics, etc.)</span>
+<span class="docx-code-line"><span style="color:#000000">    </span># -------------------------------------------------------------------------</span>
+<span class="docx-code-line">    <span style="color:#A31515">&quot;extra&quot;</span>: {</span>
+<span class="docx-code-line">        <span style="color:#A31515">&quot;analytics&quot;</span>: {</span>
+<span class="docx-code-line"><span style="color:#000000">            </span>&quot;provider&quot;<span style="color:#000000">: </span>&quot;google&quot;<span style="color:#000000">,</span></span>
+<span class="docx-code-line"><span style="color:#000000">            </span>&quot;property&quot;<span style="color:#000000">: </span>&quot;G-XXXXXXXX&quot;</span>
+<span class="docx-code-line">        }</span>
+<span class="docx-code-line">    },</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#000000">    </span># -------------------------------------------------------------------------</span>
+<span class="docx-code-line"><span style="color:#000000">    </span># Détection du Titre du Document</span>
+<span class="docx-code-line"><span style="color:#000000">    </span># -------------------------------------------------------------------------</span>
+<span class="docx-code-line"><span style="color:#000000">    </span>&quot;document_title&quot;<span style="color:#000000">: {</span></span>
+<span class="docx-code-line"><span style="color:#000000">        </span># Styles ODT à considérer comme le titre principal du document (H1 global)</span>
+<span class="docx-code-line"><span style="color:#000000">        </span>&quot;style_names&quot;<span style="color:#000000">: [</span></span>
+<span class="docx-code-line">            <span style="color:#A31515">&quot;P1&quot;</span></span>
+<span class="docx-code-line">        ],</span>
+<span class="docx-code-line"><span style="color:#000000">        </span># CSS appliqué à ce titre dans le Markdown généré</span>
+<span class="docx-code-line"><span style="color:#000000">        </span>&quot;css&quot;<span style="color:#000000">: </span>&quot;font-size: 28px; font-weight: bold; margin-bottom: 1em; line-height: 1.2; color: #2c3e50;&quot;</span>
+<span class="docx-code-line">    },</span>
 </code></pre></div>
 
 <ul>
-  <li>lignes 110-115 : définition du marqueur Google Analytics (GA) qui va permettre de suivre les visites du site ;
-  </li>
-  <li>ligne 113 : mettez-là votre marqueur GA ;
-  </li>
-  <li>lignes 120-127 : le style du titre du document, celui qui est présent dans le document ODT /DOCX avant le premier titre de niveau 1. Le style indiqué ligne 123 change avec chaque Document ODT. En revanche il peut être constant (‘Titre’) pour les documents DOCX. Par défaut, le convertisseur logue les styles de tous les paragraphes du document ODT / DOCX qui précède le premier titre de niveau 1. Il faut donc faire une première exécution, repérer le style du paragraphe qu’on veut mettre en titre, puis mettre ce style ligne 123 ;
-  </li>
-  <li>ligne 126 : le style CSS que vous voulez donner au titre du document. Ce titre est dans la page « Accueil », la première page affichée lorsque le site s’ouvre ;
-  </li>
+<li><span>lignes 110-115 : définition du marqueur Google Analytics (GA) qui va permettre de suivre les visites du site ;</span></li>
+<li><span>ligne 113 : mettez-là votre marqueur GA ;</span></li>
+<li><span>lignes 120-127 : le style du titre du document, celui qui est présent dans le document ODT /DOCX avant le premier titre de niveau 1. Le style indiqué ligne 123 change avec chaque Document ODT. En revanche il peut être constant (‘Titre’) pour les documents DOCX. Par défaut, le convertisseur logue les styles de tous les paragraphes du document ODT / DOCX qui précède le premier titre de niveau 1. Il faut donc faire une première exécution, repérer le style du paragraphe qu’on veut mettre en titre, puis mettre ce style ligne 123 ;</span></li>
+<li><span>ligne 126 : le style CSS que vous voulez donner au titre du document. Ce titre est dans la page « Accueil », la première page affichée lorsque le site s’ouvre ;</span></li>
 </ul>
 
-<p>La suite du fichier de configuration est la suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 127;"><pre><code class="language-java">
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000"># -------------------------------------------------------------------------</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000"># Gestion du Code Source</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000"># -------------------------------------------------------------------------</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#a31515">&quot;code&quot;</span><span style="color:#000000">: {</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># Mot-clé dans le style ODT pour identifier un bloc de code</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#a31515">&quot;style_keywords&quot;</span><span style="color:#000000">: [</span></span>
-<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#a31515">&quot;code&quot;</span></span>
-<span class="odt-code-line">        ],</span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># Langage par défaut si aucune détection ne fonctionne</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#a31515">&quot;default_language&quot;</span><span style="color:#000000">: </span><span style="color:#a31515">&quot;text&quot;</span><span style="color:#000000">,</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># Style visuel du code enrichi (gras/italique/couleur préservés depuis ODT)</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#a31515">&quot;rich_line_height&quot;</span><span style="color:#000000">: </span><span style="color:#a31515">&quot;20px&quot;</span><span style="color:#000000">,</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#a31515">&quot;rich_font_family&quot;</span><span style="color:#000000">: </span><span style="color:#a31515">&quot;Consolas, &#x27;Courier New&#x27;, monospace&quot;</span><span style="color:#000000">,</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#a31515">&quot;rich_font_size&quot;</span><span style="color:#000000">: </span><span style="color:#a31515">&quot;15px&quot;</span><span style="color:#000000">,</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># Règles de détection automatique du langage basé sur le contenu</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#a31515">&quot;detection_rules&quot;</span><span style="color:#000000">: {</span></span>
-<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#a31515">&quot;</span><span style="background-color:#fff5ce;color:#a31515">csharp</span><span style="color:#a31515">&quot;</span><span style="color:#000000">: [</span></span>
-<span class="odt-code-line"><span style="color:#000000">                </span><span style="color:#a31515">&quot;using&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;Console.WriteLine&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;public static void Main&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;WebMethod&quot;</span><span style="color:#000000">,</span></span>
-<span class="odt-code-line"><span style="color:#000000">                </span><span style="color:#a31515">&quot;TryParse&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;EventArgs&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;String.Format&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;System.Web.Services&quot;</span></span>
-<span class="odt-code-line">            ],</span>
-<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#a31515">&quot;</span><span style="background-color:#fff5ce;color:#a31515">java</span><span style="color:#a31515">&quot;</span><span style="color:#000000">: [</span></span>
-<span class="odt-code-line"><span style="color:#000000">                </span><span style="color:#a31515">&quot;System.out.println&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;public static void main(String&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;package&quot;</span><span style="color:#000000">,</span></span>
-<span class="odt-code-line"><span style="color:#000000">                </span><span style="color:#a31515">&quot;JUnitTest&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;Class.forName&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;PreparedStatement&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;private static void&quot;</span><span style="color:#000000">,</span></span>
-<span class="odt-code-line"><span style="color:#000000">                </span><span style="color:#a31515">&quot;private void&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;getAgendaMedecinJour&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;@PostConstruct&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;@ResponseBody&quot;</span><span style="color:#000000">,</span></span>
-<span class="odt-code-line"><span style="color:#000000">                </span><span style="color:#a31515">&quot;@RequestMapping&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;getMedecin&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;@Entity&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;@Autowired&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;@Bean&quot;</span><span style="color:#000000">,</span></span>
-<span class="odt-code-line"><span style="color:#000000">                </span><span style="color:#a31515">&quot;Serializable&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;getClient&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;getCreneau&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;getRv&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;PostAjouterRv&quot;</span><span style="color:#000000">,</span></span>
-<span class="odt-code-line"><span style="color:#000000">                </span><span style="color:#a31515">&quot;PostSupprimerRv&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;@EnableJpaRepositories&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;@Component&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;getAgendaMedecinJour&quot;</span><span style="color:#000000">,</span></span>
-<span class="odt-code-line"><span style="color:#000000">                </span><span style="color:#a31515">&quot;getResponse&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;getMessagesForException&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;getBase64&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;ajouterRv&quot;</span><span style="color:#000000">,</span></span>
-<span class="odt-code-line"><span style="color:#000000">                </span><span style="color:#a31515">&quot;Reponse&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;getPartialViewAgenda&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;setModelforAgenda&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;ActionContext&quot;</span><span style="color:#000000">,</span></span>
-<span class="odt-code-line"><span style="color:#000000">                </span><span style="color:#a31515">&quot;getActionContext&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;PostLang&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;PostUser&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;PostGetAgenda&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;@NotNull&quot;</span><span style="color:#000000">,</span></span>
-<span class="odt-code-line"><span style="color:#000000">                </span><span style="color:#a31515">&quot;@EnableAutoConfiguration&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;HttpSecurity&quot;</span></span>
-<span class="odt-code-line">            ],</span>
-<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#a31515">&quot;</span><span style="background-color:#fff5ce;color:#a31515">html</span><span style="color:#a31515">&quot;</span><span style="color:#000000">: [</span></span>
-<span class="odt-code-line"><span style="color:#000000">                </span><span style="color:#a31515">&quot;&lt;html&gt;&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;&lt;/div&gt;&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;&lt;body&gt;&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;&lt;script&gt;&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;href=&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;&lt;span&gt;&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;&lt;p&gt;&quot;</span><span style="color:#000000">,</span></span>
-<span class="odt-code-line"><span style="color:#000000">                </span><span style="color:#a31515">&quot;&lt;h2&gt;&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;&lt;form&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;&lt;table&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;&lt;input&quot;</span></span>
-<span class="odt-code-line">            ],</span>
-<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#a31515">&quot;</span><span style="background-color:#fff5ce;color:#a31515">sql</span><span style="color:#a31515">&quot;</span><span style="color:#000000">: [</span></span>
-<span class="odt-code-line"><span style="color:#000000">                </span><span style="color:#a31515">&quot;SELECT&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;INSERT INTO&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;UPDATE&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;DELETE FROM&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;WHERE&quot;</span><span style="color:#000000">,</span></span>
-<span class="odt-code-line"><span style="color:#000000">                </span><span style="color:#a31515">&quot;CREATE TABLE&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;AlTER TABLE&quot;</span></span>
-<span class="odt-code-line">            ],</span>
-<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#a31515">&quot;</span><span style="background-color:#fff5ce;color:#a31515">python</span><span style="color:#a31515">&quot;</span><span style="color:#000000">: [</span></span>
-<span class="odt-code-line"><span style="color:#000000">                </span><span style="color:#a31515">&quot;def&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;import&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;print(&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;from&quot;</span></span>
-<span class="odt-code-line">            ],</span>
-<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#a31515">&quot;</span><span style="background-color:#fff5ce;color:#a31515">xml</span><span style="color:#a31515">&quot;</span><span style="color:#000000">: [</span></span>
-<span class="odt-code-line"><span style="color:#000000">                </span><span style="color:#a31515">&quot;&lt;?xml&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;&lt;project&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;&lt;version&gt;&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;&lt;configuration&gt;&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;&lt;build&gt;&quot;</span><span style="color:#000000">,</span></span>
-<span class="odt-code-line"><span style="color:#000000">                </span><span style="color:#a31515">&quot;&lt;dependency&gt;&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;&lt;properties&gt;&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;&lt;configuration&gt;&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;&lt;start-class&gt;&quot;</span></span>
-<span class="odt-code-line">            ],</span>
-<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#a31515">&quot;</span><span style="background-color:#fff5ce;color:#a31515">javascript</span><span style="color:#a31515">&quot;</span><span style="color:#000000">: [</span></span>
-<span class="odt-code-line"><span style="color:#000000">                </span><span style="color:#a31515">&quot;use strict&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;console.log&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;let&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;constructor&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;async&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;export&quot;</span></span>
-<span class="odt-code-line">            ],</span>
-<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#a31515">&quot;</span><span style="background-color:#fff5ce;color:#a31515">php</span><span style="color:#a31515">&quot;</span><span style="color:#000000">: [</span></span>
-<span class="odt-code-line"><span style="color:#000000">                </span><span style="color:#a31515">&quot;&lt;?php&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;declare&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;require&quot;</span></span>
-<span class="odt-code-line">            ],</span>
-<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#a31515">&quot;</span><span style="background-color:#fff5ce;color:#a31515">vbscript</span><span style="color:#a31515">&quot;</span><span style="color:#000000">: [</span></span>
-<span class="odt-code-line"><span style="color:#000000">                </span><span style="color:#a31515">&quot;Option&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;Dim&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;Explicit&quot;</span></span>
-<span class="odt-code-line">            ]</span>
-<span class="odt-code-line">        }</span>
-<span class="odt-code-line">    },</span>
+<p><span>La suite du fichier de configuration est la suivante :</span></p>
+<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 127;"><pre><code class="language-java">
+<span class="docx-code-line"><span style="color:#000000">    </span># -------------------------------------------------------------------------</span>
+<span class="docx-code-line"><span style="color:#000000">    </span># Gestion du Code Source</span>
+<span class="docx-code-line"><span style="color:#000000">    </span># -------------------------------------------------------------------------</span>
+<span class="docx-code-line">    <span style="color:#A31515">&quot;code&quot;</span>: {</span>
+<span class="docx-code-line"><span style="color:#000000">        </span># Mot-clé dans le style ODT pour identifier un bloc de code</span>
+<span class="docx-code-line"><span style="color:#000000">        </span>&quot;style_keywords&quot;<span style="color:#000000">: [</span></span>
+<span class="docx-code-line">            <span style="color:#A31515">&quot;code&quot;</span></span>
+<span class="docx-code-line">        ],</span>
+<span class="docx-code-line"><span style="color:#000000">        </span># Langage par défaut si aucune détection ne fonctionne</span>
+<span class="docx-code-line"><span style="color:#000000">        </span>&quot;default_language&quot;<span style="color:#000000">: </span>&quot;text&quot;<span style="color:#000000">,</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#000000">        </span># Style visuel du code enrichi (gras/italique/couleur préservés depuis ODT)</span>
+<span class="docx-code-line"><span style="color:#000000">        </span>&quot;rich_line_height&quot;<span style="color:#000000">: </span>&quot;20px&quot;<span style="color:#000000">,</span></span>
+<span class="docx-code-line"><span style="color:#000000">        </span>&quot;rich_font_family&quot;<span style="color:#000000">: </span>&quot;Consolas, &#x27;Courier New&#x27;, monospace&quot;<span style="color:#000000">,</span></span>
+<span class="docx-code-line"><span style="color:#000000">        </span>&quot;rich_font_size&quot;<span style="color:#000000">: </span>&quot;15px&quot;<span style="color:#000000">,</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#000000">        </span># Règles de détection automatique du langage basé sur le contenu</span>
+<span class="docx-code-line"><span style="color:#000000">        </span>&quot;detection_rules&quot;<span style="color:#000000">: {</span></span>
+<span class="docx-code-line">            <span style="color:#A31515">&quot;</span><span style="color:#A31515;background-color:#FFF5CE">csharp</span><span style="color:#A31515">&quot;</span>: [</span>
+<span class="docx-code-line"><span style="color:#000000">                </span>&quot;using&quot;<span style="color:#000000">, </span>&quot;Console.WriteLine&quot;<span style="color:#000000">, </span>&quot;public static void Main&quot;<span style="color:#000000">, </span>&quot;WebMethod&quot;<span style="color:#000000">,</span></span>
+<span class="docx-code-line"><span style="color:#000000">                </span>&quot;TryParse&quot;<span style="color:#000000">, </span>&quot;EventArgs&quot;<span style="color:#000000">, </span>&quot;String.Format&quot;<span style="color:#000000">, </span>&quot;System.Web.Services&quot;</span>
+<span class="docx-code-line">            ],</span>
+<span class="docx-code-line">            <span style="color:#A31515">&quot;</span><span style="color:#A31515;background-color:#FFF5CE">java</span><span style="color:#A31515">&quot;</span>: [</span>
+<span class="docx-code-line"><span style="color:#000000">                </span>&quot;System.out.println&quot;<span style="color:#000000">, </span>&quot;public static void main(String&quot;<span style="color:#000000">, </span>&quot;package&quot;<span style="color:#000000">,</span></span>
+<span class="docx-code-line"><span style="color:#000000">                </span>&quot;JUnitTest&quot;<span style="color:#000000">, </span>&quot;Class.forName&quot;<span style="color:#000000">, </span>&quot;PreparedStatement&quot;<span style="color:#000000">, </span>&quot;private static void&quot;<span style="color:#000000">,</span></span>
+<span class="docx-code-line"><span style="color:#000000">                </span>&quot;private void&quot;<span style="color:#000000">, </span>&quot;getAgendaMedecinJour&quot;<span style="color:#000000">, </span>&quot;@PostConstruct&quot;<span style="color:#000000">, </span>&quot;@ResponseBody&quot;<span style="color:#000000">,</span></span>
+<span class="docx-code-line"><span style="color:#000000">                </span>&quot;@RequestMapping&quot;<span style="color:#000000">, </span>&quot;getMedecin&quot;<span style="color:#000000">, </span>&quot;@Entity&quot;<span style="color:#000000">, </span>&quot;@Autowired&quot;<span style="color:#000000">, </span>&quot;@Bean&quot;<span style="color:#000000">,</span></span>
+<span class="docx-code-line"><span style="color:#000000">                </span>&quot;Serializable&quot;<span style="color:#000000">, </span>&quot;getClient&quot;<span style="color:#000000">, </span>&quot;getCreneau&quot;<span style="color:#000000">, </span>&quot;getRv&quot;<span style="color:#000000">, </span>&quot;PostAjouterRv&quot;<span style="color:#000000">,</span></span>
+<span class="docx-code-line"><span style="color:#000000">                </span>&quot;PostSupprimerRv&quot;<span style="color:#000000">, </span>&quot;@EnableJpaRepositories&quot;<span style="color:#000000">, </span>&quot;@Component&quot;<span style="color:#000000">, </span>&quot;getAgendaMedecinJour&quot;<span style="color:#000000">,</span></span>
+<span class="docx-code-line"><span style="color:#000000">                </span>&quot;getResponse&quot;<span style="color:#000000">, </span>&quot;getMessagesForException&quot;<span style="color:#000000">, </span>&quot;getBase64&quot;<span style="color:#000000">, </span>&quot;ajouterRv&quot;<span style="color:#000000">,</span></span>
+<span class="docx-code-line"><span style="color:#000000">                </span>&quot;Reponse&quot;<span style="color:#000000">, </span>&quot;getPartialViewAgenda&quot;<span style="color:#000000">, </span>&quot;setModelforAgenda&quot;<span style="color:#000000">, </span>&quot;ActionContext&quot;<span style="color:#000000">,</span></span>
+<span class="docx-code-line"><span style="color:#000000">                </span>&quot;getActionContext&quot;<span style="color:#000000">, </span>&quot;PostLang&quot;<span style="color:#000000">, </span>&quot;PostUser&quot;<span style="color:#000000">, </span>&quot;PostGetAgenda&quot;<span style="color:#000000">, </span>&quot;@NotNull&quot;<span style="color:#000000">,</span></span>
+<span class="docx-code-line"><span style="color:#000000">                </span>&quot;@EnableAutoConfiguration&quot;<span style="color:#000000">, </span>&quot;HttpSecurity&quot;</span>
+<span class="docx-code-line">            ],</span>
+<span class="docx-code-line">            <span style="color:#A31515">&quot;</span><span style="color:#A31515;background-color:#FFF5CE">html</span><span style="color:#A31515">&quot;</span>: [</span>
+<span class="docx-code-line"><span style="color:#000000">                </span>&quot;&lt;html&gt;&quot;<span style="color:#000000">, </span>&quot;&lt;/div&gt;&quot;<span style="color:#000000">, </span>&quot;&lt;body&gt;&quot;<span style="color:#000000">, </span>&quot;&lt;script&gt;&quot;<span style="color:#000000">, </span>&quot;href=&quot;<span style="color:#000000">, </span>&quot;&lt;span&gt;&quot;<span style="color:#000000">, </span>&quot;&lt;p&gt;&quot;<span style="color:#000000">,</span></span>
+<span class="docx-code-line"><span style="color:#000000">                </span>&quot;&lt;h2&gt;&quot;<span style="color:#000000">, </span>&quot;&lt;form&quot;<span style="color:#000000">, </span>&quot;&lt;table&quot;<span style="color:#000000">, </span>&quot;&lt;input&quot;</span>
+<span class="docx-code-line">            ],</span>
+<span class="docx-code-line">            <span style="color:#A31515">&quot;</span><span style="color:#A31515;background-color:#FFF5CE">sql</span><span style="color:#A31515">&quot;</span>: [</span>
+<span class="docx-code-line"><span style="color:#000000">                </span>&quot;SELECT&quot;<span style="color:#000000">, </span>&quot;INSERT INTO&quot;<span style="color:#000000">, </span>&quot;UPDATE&quot;<span style="color:#000000">, </span>&quot;DELETE FROM&quot;<span style="color:#000000">, </span>&quot;WHERE&quot;<span style="color:#000000">,</span></span>
+<span class="docx-code-line"><span style="color:#000000">                </span>&quot;CREATE TABLE&quot;<span style="color:#000000">, </span>&quot;AlTER TABLE&quot;</span>
+<span class="docx-code-line">            ],</span>
+<span class="docx-code-line">            <span style="color:#A31515">&quot;</span><span style="color:#A31515;background-color:#FFF5CE">python</span><span style="color:#A31515">&quot;</span>: [</span>
+<span class="docx-code-line"><span style="color:#000000">                </span>&quot;def&quot;<span style="color:#000000">, </span>&quot;import&quot;<span style="color:#000000">, </span>&quot;print(&quot;<span style="color:#000000">, </span>&quot;from&quot;</span>
+<span class="docx-code-line">            ],</span>
+<span class="docx-code-line">            <span style="color:#A31515">&quot;</span><span style="color:#A31515;background-color:#FFF5CE">xml</span><span style="color:#A31515">&quot;</span>: [</span>
+<span class="docx-code-line"><span style="color:#000000">                </span>&quot;&lt;?xml&quot;<span style="color:#000000">, </span>&quot;&lt;project&quot;<span style="color:#000000">, </span>&quot;&lt;version&gt;&quot;<span style="color:#000000">, </span>&quot;&lt;configuration&gt;&quot;<span style="color:#000000">, </span>&quot;&lt;build&gt;&quot;<span style="color:#000000">,</span></span>
+<span class="docx-code-line"><span style="color:#000000">                </span>&quot;&lt;dependency&gt;&quot;<span style="color:#000000">, </span>&quot;&lt;properties&gt;&quot;<span style="color:#000000">, </span>&quot;&lt;configuration&gt;&quot;<span style="color:#000000">, </span>&quot;&lt;start-class&gt;&quot;</span>
+<span class="docx-code-line">            ],</span>
+<span class="docx-code-line">            <span style="color:#A31515">&quot;</span><span style="color:#A31515;background-color:#FFF5CE">javascript</span><span style="color:#A31515">&quot;</span>: [</span>
+<span class="docx-code-line"><span style="color:#000000">                </span>&quot;use strict&quot;<span style="color:#000000">, </span>&quot;console.log&quot;<span style="color:#000000">, </span>&quot;let&quot;<span style="color:#000000">, </span>&quot;constructor&quot;<span style="color:#000000">, </span>&quot;async&quot;<span style="color:#000000">, </span>&quot;export&quot;</span>
+<span class="docx-code-line">            ],</span>
+<span class="docx-code-line">            <span style="color:#A31515">&quot;</span><span style="color:#A31515;background-color:#FFF5CE">php</span><span style="color:#A31515">&quot;</span>: [</span>
+<span class="docx-code-line"><span style="color:#000000">                </span>&quot;&lt;?php&quot;<span style="color:#000000">, </span>&quot;declare&quot;<span style="color:#000000">, </span>&quot;require&quot;</span>
+<span class="docx-code-line">            ],</span>
+<span class="docx-code-line">            <span style="color:#A31515">&quot;</span><span style="color:#A31515;background-color:#FFF5CE">vbscript</span><span style="color:#A31515">&quot;</span>: [</span>
+<span class="docx-code-line"><span style="color:#000000">                </span>&quot;Option&quot;<span style="color:#000000">, </span>&quot;Dim&quot;<span style="color:#000000">, </span>&quot;Explicit&quot;</span>
+<span class="docx-code-line">            ]</span>
+<span class="docx-code-line">        }</span>
+<span class="docx-code-line">    },</span>
 </code></pre></div>
 
 <ul>
-  <li>lignes 128-187 : cette configuration est utilisée pour les codes en « plain text » qui n’ont pas initialement de coloration syntaxique. Ces lignes visent à leur en donner une selon le langage utilisé dans le bloc de code. <b>Il est à noter que si vos codes sont tous enrichis car provenant d’un IDE tels Eclipse, Visual Studio, ... et que vous n’avez pas de bloc de code « plain text » associé à un langage, alors vous n’avez rien à mettre dans cette partie de la configuration. Vous pouvez laisser vides les tableaux associés aux langages.</b>
-  </li>
-  <li>lignes 133-135 : les blocs de code sont repérés par leurs styles dans le document ODT / DOCX. Il peut y en avoir plusieurs. Ligne 134, on met tous les mots clés qui permettent de détecter un style de code. Dans mes documents, tous mes styles de code ont le mot « code » dans leur nom. Et aucun autre style n’a ce mot dans son nom. Donc je peux me contenter de mettre un unique mot clé. S’il y en a plusieurs on les met en les séparant par des virgules ligne 134 ;
-  </li>
-  <li>lignes 145-187 : les chaînes de caractères qui permettent d’identifier le langage d’un bloc de code.. Certains mots clés peuvent se retrouver dans divers langages. Le convertiseur sélectionne le langage pour lequel il a trouvé le plus de mots clés. Le principe est simple : vous regardez vos codes, sélectionnez des mots clés caractéristiques et vous les mettez dans ces lignes pour le bon langage. Notez que vous ne pouvez pas mettre n’importe quoi comme nom de langage : il faut utiliser les noms reconnus par MkDocs ;
-  </li>
-  <li>lignes 139-142 : ces lignes concernent les blocs de code enrichis (gras, italique, soukignage, surlignage, couleur des caractères). Ces blocs ne subissent pas le traitement des blocs de code « plain text ». Ils sont rendus à l’identique dans le HTML ;
-    <ul>
-      <li>ligne 140 : fixe la hauteur de ligne des lignes de code ;
-      </li>
-      <li>ligne 141 : fixe la police CSS du bloc de code ;
-      </li>
-      <li>ligne 142 : fixe la taille des caractères ;
-      </li>
-    </ul>
-  </li>
-  <li>ligne 137 : fixe le langage par défaut. Dans le cas d’un bloc de code « plain text », si aucun langage n’est détecté, le langage par défaut sera « text ». Pour MkDocs, cela signifie un bloc de code sans coloration syntaxique. C’est par exemple, le cas de résultats d’exécution ;
-  </li>
+<li><span>lignes 128-187 : cette configuration est utilisée pour les codes en « plain text » qui n’ont pas initialement de coloration syntaxique. Ces lignes visent à leur </span><span>en </span><span>donner une selon le langage utilisé dans le bloc de code</span><span>. </span><b>Il est à noter que si vos codes sont tous enrichis car provenant d’un IDE tels Eclipse, Visual Studio, ... et que vous n’avez pas de bloc de code « plain text » associé à un langage, alors vous n’avez rien à mettre dans cette partie de la configuration. Vous pouvez laisser vides les tableaux associés aux langages.</b></li>
+<li><span>lignes 133-135 : les blocs de code sont repérés par leurs styles dans le document ODT / DOCX. Il peut y en avoir plusieurs. Ligne 134, on met tous les mots clés qui permettent de détecter un style de code. Dans mes documents, tous mes styles de code ont le mot « code » dans leur nom. Et aucun autre style n’a ce mot dans son nom. Donc je peux me contenter de mettre un unique mot clé. S’il y en a plusieurs on les met en les séparant par des virgules ligne 134 ;</span></li>
+<li><span>lignes 145-187 : les chaînes de caractères qui permettent d’identifier le langage d’un bloc de code.. Certains mots clés peuvent se retrouver dans divers langages. Le convertiseur sélectionne le langage pour lequel il a trouvé le plus de mots clés. Le principe est simple : vous regardez vos codes, sélectionnez des mots clés caractéristiques et vous les mettez dans ces lignes pour le bon langage. Notez que vous ne pouvez pas mettre n’importe quoi comme nom de langage : il faut utiliser les noms reconnus par MkDocs ;</span></li>
+<li><span>lignes 139-142 : ces lignes concernent les blocs de code enrichis (gras, italique, soukignage, surlignage, couleur des caractères). Ces blocs ne subissent pas le traitement des blocs de code « plain text ». Ils sont rendus à l’identique dans le HTML ;</span><ul>
+<li><span>ligne 140 : fixe la hauteur de ligne des lignes de code ;</span></li>
+<li><span>ligne 141 : fixe la police CSS du bloc de code ;</span></li>
+<li><span>ligne 142 : fixe la taille des caractères ;</span></li>
+</ul>
+</li>
+<li><span>ligne 137 : fixe le langage par défaut. Dans le cas d’un bloc de code « plain text », si aucun langage n’est détecté, le langage par défaut sera « text ». Pour MkDocs, cela signifie un bloc de code sans coloration syntaxique. C’est par exemple, le cas de résultats d’exécution ;</span></li>
 </ul>
 
-<p>La configuration se termine de la façon suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 187;"><pre><code class="language-markdown">
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000"># -------------------------------------------------------------------------</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000"># Fichiers statiques à copier à la racine du site</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000"># -------------------------------------------------------------------------</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#a31515">&quot;files_to_copy&quot;</span><span style="color:#000000">: [</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#a31515">&quot;google</span><span style="color:#a31515">XXXXXX</span><span style="color:#a31515">.html&quot;</span><span style="color:#000000">,</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#a31515">&quot;robots.txt&quot;</span><span style="color:#000000">,</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#a31515">&quot;</span><span style="color:#a31515">word-odt-vers-html-janv-2026.pdf</span><span style="color:#a31515">&quot;</span></span>
-<span class="odt-code-line">    ],</span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000"># Mode debug : affiche les styles rencontrés avant le premier titre</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#a31515">&quot;debug&quot;</span><span style="color:#000000">: </span><span style="color:#0000ff">True</span></span>
-<span class="odt-code-line">}</span>
+<p><span>La configuration se termine de la façon suivante :</span></p>
+<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 187;"><pre><code class="language-markdown">
+<span class="docx-code-line"><span style="color:#000000">    </span># -------------------------------------------------------------------------</span>
+<span class="docx-code-line"><span style="color:#000000">    </span># Fichiers statiques à copier à la racine du site</span>
+<span class="docx-code-line"><span style="color:#000000">    </span># -------------------------------------------------------------------------</span>
+<span class="docx-code-line"><span style="color:#000000">    </span>&quot;files_to_copy&quot;<span style="color:#000000">: [</span></span>
+<span class="docx-code-line"><span style="color:#000000">        </span>&quot;googleXXXXXX.html&quot;<span style="color:#000000">,</span></span>
+<span class="docx-code-line"><span style="color:#000000">        </span>&quot;robots.txt&quot;<span style="color:#000000">,</span></span>
+<span class="docx-code-line"><span style="color:#000000">        </span>&quot;word-odt-vers-html-janv-2026.pdf&quot;</span>
+<span class="docx-code-line">    ],</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#000000">    </span># Mode debug : affiche les styles rencontrés avant le premier titre</span>
+<span class="docx-code-line"><span style="color:#000000">    </span>&quot;debug&quot;<span style="color:#000000">: </span><span style="color:#0000FF">True</span></span>
+<span class="docx-code-line">}</span>
 </code></pre></div>
 
 <ul>
-  <li>lignes 191-195 : la liste des fichiers à copier à la racine du site HTML ;
-    <ul>
-      <li>lignes 192-193 : le marqueur Google Analytics du site et le fichier [robots.txt] qui autorise l’exploration du site par les moteurs de recherche ;
-      </li>
-      <li>ligne 194 : le PDF de ce document rendu disponible au téléchargement ;
-      </li>
-    </ul>
-  </li>
-  <li>ligne 198 : [debug] à True autorise les logs des styles des paragraphes qui précèdent le premier titre de niveau 1 du Document ODT / DOCX. Ce sont dans ces logs qu’on trouvera le style exact du paragraphe devant servir de titre dans la page d’accueil du site ;
-  </li>
+<li><span>lignes 191-195 : la liste des fichiers à copier à la racine du site HTML ;</span><ul>
+<li><span>lignes 192-193 : le marqueur Google Analytics du site et le fichier &#91;robots.txt&#93; qui autorise l’exploration du site par les moteurs de recherche ;</span></li>
+<li><span>ligne 194 : le PDF de ce document rendu disponible au téléchargement ;</span></li>
+</ul>
+</li>
+<li><span>ligne 198 : &#91;debug&#93; à True autorise les logs des styles des paragraphes qui précèdent le premier titre de niveau 1 du Document ODT / DOCX. Ce sont dans ces logs qu’on trouvera le style exact du paragraphe devant servir de titre dans la page d’accueil du site ;</span></li>
 </ul>
 
-<p>Au final, lorsqu’on passe d’un Document ODT / DOCX à l’autre, on modifiera les lignes [6-20, 127-129, 201] et certaines lignes des chaînes clés des langages. Le reste ne change pas.</p>
-<p>D’autres éléments ont été ajoutés au fichier de configuration dans les dernières versions du convertisseur :</p>
-<p><u><strong>Bouton [Copier]</strong></u></p>
-<p>Sur les blocs de code enrichi ainsi que sur les blocs de code « plain text » contenant un langage reconnu, il y a un bouton [Copier] :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007C200000267454E322A.png" style="display:inline-block; margin:4px;width:16.002cm;height:4.955cm;" class="odt-zoomable" data-zoom-src="images/10000000000007C200000267454E322A.png" /></td></tr></table>
+<p><span>Au final, lorsqu’on passe d’un Document ODT / DOCX à l’autre, on modifiera les lignes &#91;6-20, 127-129, 201&#93; et certaines lignes des chaînes clés des langages. Le reste ne change pas.</span></p>
+<p><span>D’autres éléments ont été ajoutés au fichier de configuration dans les dernières versions du convertisseur :</span></p>
+<p><b><u>Bouton &#91;copier&#93;</u></b></p>
+<p><span>Sur les blocs de code enrichi ainsi que sur les blocs de code « plain text » contenant un langage reconnu, il y a un bouton &#91;Copier&#93; :</span></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image11.png" class="docx-zoomable" style="width:605px;height:187px;" alt="Image" />
+</td>
+</tr>
+</table>
 
-<p>Ce bouton permet de copier le bloc de code dans le presse-papier. Les numéros de ligne ne sont pas inclus. Le comportement de ce bouton est contrôlé par les lignes suivantes du fichier de configuration [config.py] :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># ---------------------------------------------------------------------</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># Bouton [Copier] dans les blocs de code (copie dans le presse-papier)</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># ---------------------------------------------------------------------</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># Active/désactive l&#x27;ajout du bouton [Copier] (True = activé)</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#a31515">&quot;copy_button&quot;</span><span style="color:#000000">: </span><span style="color:#0000ff">True</span><span style="color:#000000">,</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># Libellé du bouton avant copie</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#a31515">&quot;copy_label&quot;</span><span style="color:#000000">: </span><span style="color:#a31515">&quot;Copier&quot;</span><span style="color:#000000">,</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># Libellé temporaire après une copie réussie</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#a31515">&quot;copy_copied_label&quot;</span><span style="color:#000000">: </span><span style="color:#a31515">&quot;Copié&quot;</span><span style="color:#000000">,</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># Si True, le bouton n&#x27;apparaît que si le langage du bloc est &quot;reconnu&quot;</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># (par ex. language-java / language-python, etc.)</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#a31515">&quot;copy_only_recognized_language&quot;</span><span style="color:#000000">: </span><span style="color:#0000ff">True</span><span style="color:#000000">,</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># Seuil minimum de lignes pour afficher le bouton :</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># - 0  =&gt; pas de seuil (tous les blocs &quot;langage reconnu&quot; auront le bouton)</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># - &gt;0 =&gt; le bloc doit avoir au moins ce nombre de lignes</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#a31515">&quot;copy_min_lines&quot;</span><span style="color:#000000">: 0,</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># Si True, on autorise aussi le bouton sur les blocs Pygments &quot;colorés&quot;</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># même si la classe language-xxx n&#x27;est pas explicitement présente.</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># Utile pour certains rendus de code (highlighttable) où la coloration existe</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># mais où le langage n&#x27;apparaît pas dans une classe CSS.</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#a31515">&quot;copy_allow_pygments_heuristic&quot;</span><span style="color:#000000">: </span><span style="color:#0000ff">True</span><span style="color:#000000">,</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># Apparence du bouton [Copier] (CSS inline : uniquement des déclarations,</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># sans accolades). Permet de personnaliser facilement le look.</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># ---------------------------------------------------------------------</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># Style &quot;Material-like&quot; pour le bouton [Copier]</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># (CSS inline : uniquement des déclarations, sans accolades)</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># ---------------------------------------------------------------------</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#a31515">&quot;copy_style&quot;</span><span style="color:#000000">: {</span></span>
-<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#008000"># Conteneur du bloc de code : nécessaire pour positionner le bouton</span></span>
-<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#a31515">&quot;container&quot;</span><span style="color:#000000">: </span><span style="color:#a31515">&quot;position: relative;&quot;</span><span style="color:#000000">,</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#008000"># Style normal du bouton</span></span>
-<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#a31515">&quot;btn&quot;</span><span style="color:#000000">: (</span></span>
-<span class="odt-code-line"><span style="color:#000000">                </span><span style="color:#a31515">&quot;position:absolute; top:.5rem; right:.5rem; &quot;</span></span>
-<span class="odt-code-line"><span style="color:#000000">                </span><span style="color:#a31515">&quot;display:inline-flex; align-items:center; justify-content:center; &quot;</span></span>
-<span class="odt-code-line"><span style="color:#000000">                </span><span style="color:#a31515">&quot;gap:.35rem; &quot;</span></span>
-<span class="odt-code-line"><span style="color:#000000">                </span><span style="color:#a31515">&quot;padding:.25rem .6rem; &quot;</span></span>
-<span class="odt-code-line"><span style="color:#000000">                </span><span style="color:#a31515">&quot;font-size:.72rem; font-weight:600; letter-spacing:.01em; &quot;</span></span>
-<span class="odt-code-line"><span style="color:#000000">                </span><span style="color:#a31515">&quot;line-height:1.2; &quot;</span></span>
-<span class="odt-code-line"><span style="color:#000000">                </span><span style="color:#a31515">&quot;border-radius:999px; &quot;</span></span>
-<span class="odt-code-line"><span style="color:#000000">                </span><span style="color:#a31515">&quot;border:1px solid rgba(0,150,136,.45); &quot;</span></span>
-<span class="odt-code-line"><span style="color:#000000">                </span><span style="color:#a31515">&quot;background:rgba(0,150,136,.12); &quot;</span></span>
-<span class="odt-code-line"><span style="color:#000000">                </span><span style="color:#a31515">&quot;color:rgb(0,150,136); &quot;</span></span>
-<span class="odt-code-line"><span style="color:#000000">                </span><span style="color:#a31515">&quot;box-shadow:0 1px 2px rgba(0,0,0,.10); &quot;</span></span>
-<span class="odt-code-line"><span style="color:#000000">                </span><span style="color:#a31515">&quot;backdrop-filter:saturate(180%) blur(6px); &quot;</span></span>
-<span class="odt-code-line"><span style="color:#000000">                </span><span style="color:#a31515">&quot;cursor:pointer; user-select:none; &quot;</span></span>
-<span class="odt-code-line"><span style="color:#000000">                </span><span style="color:#a31515">&quot;transition:transform .08s ease, box-shadow .12s ease, background .12s ease;&quot;</span></span>
-<span class="odt-code-line"><span style="color:#000000">                </span><span style="color:#a31515">&quot;z-index:5;&quot;</span></span>
-<span class="odt-code-line">            ),</span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#008000"># Survol : un peu plus “élevé” (comme Material)</span></span>
-<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#a31515">&quot;btn_hover&quot;</span><span style="color:#000000">: (</span></span>
-<span class="odt-code-line"><span style="color:#000000">                </span><span style="color:#a31515">&quot;background:rgba(0,150,136,.20); &quot;</span></span>
-<span class="odt-code-line"><span style="color:#000000">                </span><span style="color:#a31515">&quot;box-shadow:0 3px 10px rgba(0,0,0,.18); &quot;</span></span>
-<span class="odt-code-line"><span style="color:#000000">                </span><span style="color:#a31515">&quot;transform:translateY(-1px);&quot;</span></span>
-<span class="odt-code-line">            ),</span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#008000"># État “copié” : léger fade</span></span>
-<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#a31515">&quot;btn_copied&quot;</span><span style="color:#000000">: </span><span style="color:#a31515">&quot;opacity:.85;&quot;</span></span>
-<span class="odt-code-line">        },</span>
-<span class="odt-code-line">    },</span>
+<p><span>Ce bouton permet de copier le bloc de code dans le presse-papier. Les numéros de ligne ne sont pas inclus. Le comportement de ce bouton est contrôlé par les lignes suivantes du fichier de configuration &#91;config.py&#93; :</span></p>
+<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-javascript">
+<span class="docx-code-line"><span style="color:#000000">        </span># ---------------------------------------------------------------------</span>
+<span class="docx-code-line"><span style="color:#000000">        </span># Bouton [Copier] dans les blocs de code (copie dans le presse-papier)</span>
+<span class="docx-code-line"><span style="color:#000000">        </span># ---------------------------------------------------------------------</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#000000">        </span># Active/désactive l&#x27;ajout du bouton [Copier] (True = activé)</span>
+<span class="docx-code-line"><span style="color:#000000">        </span>&quot;copy_button&quot;<span style="color:#000000">: </span><span style="color:#0000FF">True</span><span style="color:#000000">,</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#000000">        </span># Libellé du bouton avant copie</span>
+<span class="docx-code-line"><span style="color:#000000">        </span>&quot;copy_label&quot;<span style="color:#000000">: </span>&quot;Copier&quot;<span style="color:#000000">,</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#000000">        </span># Libellé temporaire après une copie réussie</span>
+<span class="docx-code-line"><span style="color:#000000">        </span>&quot;copy_copied_label&quot;<span style="color:#000000">: </span>&quot;Copié&quot;<span style="color:#000000">,</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#000000">        </span># Si True, le bouton n&#x27;apparaît que si le langage du bloc est &quot;reconnu&quot;</span>
+<span class="docx-code-line"><span style="color:#000000">        </span># (par ex. language-java / language-python, etc.)</span>
+<span class="docx-code-line"><span style="color:#000000">        </span>&quot;copy_only_recognized_language&quot;<span style="color:#000000">: </span><span style="color:#0000FF">True</span><span style="color:#000000">,</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#000000">        </span># Seuil minimum de lignes pour afficher le bouton :</span>
+<span class="docx-code-line"><span style="color:#000000">        </span># - 0  =&gt; pas de seuil (tous les blocs &quot;langage reconnu&quot; auront le bouton)</span>
+<span class="docx-code-line"><span style="color:#000000">        </span># - &gt;0 =&gt; le bloc doit avoir au moins ce nombre de lignes</span>
+<span class="docx-code-line"><span style="color:#000000">        </span>&quot;copy_min_lines&quot;<span style="color:#000000">: 0,</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#000000">        </span># Si True, on autorise aussi le bouton sur les blocs Pygments &quot;colorés&quot;</span>
+<span class="docx-code-line"><span style="color:#000000">        </span># même si la classe language-xxx n&#x27;est pas explicitement présente.</span>
+<span class="docx-code-line"><span style="color:#000000">        </span># Utile pour certains rendus de code (highlighttable) où la coloration existe</span>
+<span class="docx-code-line"><span style="color:#000000">        </span># mais où le langage n&#x27;apparaît pas dans une classe CSS.</span>
+<span class="docx-code-line"><span style="color:#000000">        </span>&quot;copy_allow_pygments_heuristic&quot;<span style="color:#000000">: </span><span style="color:#0000FF">True</span><span style="color:#000000">,</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#000000">        </span># Apparence du bouton [Copier] (CSS inline : uniquement des déclarations,</span>
+<span class="docx-code-line"><span style="color:#000000">        </span># sans accolades). Permet de personnaliser facilement le look.</span>
+<span class="docx-code-line"><span style="color:#000000">        </span># ---------------------------------------------------------------------</span>
+<span class="docx-code-line"><span style="color:#000000">        </span># Style &quot;Material-like&quot; pour le bouton [Copier]</span>
+<span class="docx-code-line"><span style="color:#000000">        </span># (CSS inline : uniquement des déclarations, sans accolades)</span>
+<span class="docx-code-line"><span style="color:#000000">        </span># ---------------------------------------------------------------------</span>
+<span class="docx-code-line">        <span style="color:#A31515">&quot;copy_style&quot;</span>: {</span>
+<span class="docx-code-line"><span style="color:#000000">            </span># Conteneur du bloc de code : nécessaire pour positionner le bouton</span>
+<span class="docx-code-line"><span style="color:#000000">            </span>&quot;container&quot;<span style="color:#000000">: </span>&quot;position: relative;&quot;<span style="color:#000000">,</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#000000">            </span># Style normal du bouton</span>
+<span class="docx-code-line">            <span style="color:#A31515">&quot;btn&quot;</span>: (</span>
+<span class="docx-code-line"><span style="color:#000000">                </span>&quot;position:absolute; top:.5rem; right:.5rem; &quot;</span>
+<span class="docx-code-line"><span style="color:#000000">                </span>&quot;display:inline-flex; align-items:center; justify-content:center; &quot;</span>
+<span class="docx-code-line">                <span style="color:#A31515">&quot;gap:.35rem; &quot;</span></span>
+<span class="docx-code-line"><span style="color:#000000">                </span>&quot;padding:.25rem .6rem; &quot;</span>
+<span class="docx-code-line"><span style="color:#000000">                </span>&quot;font-size:.72rem; font-weight:600; letter-spacing:.01em; &quot;</span>
+<span class="docx-code-line"><span style="color:#000000">                </span>&quot;line-height:1.2; &quot;</span>
+<span class="docx-code-line"><span style="color:#000000">                </span>&quot;border-radius:999px; &quot;</span>
+<span class="docx-code-line"><span style="color:#000000">                </span>&quot;border:1px solid rgba(0,150,136,.45); &quot;</span>
+<span class="docx-code-line"><span style="color:#000000">                </span>&quot;background:rgba(0,150,136,.12); &quot;</span>
+<span class="docx-code-line"><span style="color:#000000">                </span>&quot;color:rgb(0,150,136); &quot;</span>
+<span class="docx-code-line"><span style="color:#000000">                </span>&quot;box-shadow:0 1px 2px rgba(0,0,0,.10); &quot;</span>
+<span class="docx-code-line"><span style="color:#000000">                </span>&quot;backdrop-filter:saturate(180%) blur(6px); &quot;</span>
+<span class="docx-code-line"><span style="color:#000000">                </span>&quot;cursor:pointer; user-select:none; &quot;</span>
+<span class="docx-code-line"><span style="color:#000000">                </span>&quot;transition:transform .08s ease, box-shadow .12s ease, background .12s ease;&quot;</span>
+<span class="docx-code-line">                <span style="color:#A31515">&quot;z-index:5;&quot;</span></span>
+<span class="docx-code-line">            ),</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#000000">            </span># Survol : un peu plus “élevé” (comme Material)</span>
+<span class="docx-code-line">            <span style="color:#A31515">&quot;btn_hover&quot;</span>: (</span>
+<span class="docx-code-line"><span style="color:#000000">                </span>&quot;background:rgba(0,150,136,.20); &quot;</span>
+<span class="docx-code-line"><span style="color:#000000">                </span>&quot;box-shadow:0 3px 10px rgba(0,0,0,.18); &quot;</span>
+<span class="docx-code-line"><span style="color:#000000">                </span>&quot;transform:translateY(-1px);&quot;</span>
+<span class="docx-code-line">            ),</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#000000">            </span># État “copié” : léger fade</span>
+<span class="docx-code-line"><span style="color:#000000">            </span>&quot;btn_copied&quot;<span style="color:#000000">: </span>&quot;opacity:.85;&quot;</span>
+<span class="docx-code-line">        },</span>
 </code></pre></div>
 
-<p>Le lecteur suivra les commentaires pour contrôler le bouton.</p>
-<p><u><strong>Les images</strong></u></p>
-<p>De même le comportement des images cliquables est contrôlé par le lignes suivantes du fichier de configuration :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-markdown">
-<span class="odt-code-line"><span style="color:#000000">   </span><span style="color:#008000"># -------------------------------------------------------------------------</span></span>
-<span class="odt-code-line"><span style="color:#000000">   </span><span style="color:#008000"># Images : paramètres d&#x27;ombre (zoom / lightbox)</span></span>
-<span class="odt-code-line"><span style="color:#000000">   </span><span style="color:#008000"># -------------------------------------------------------------------------</span></span>
-<span class="odt-code-line"><span style="color:#000000">   </span><span style="color:#a31515">&quot;images&quot;</span><span style="color:#000000">: {</span></span>
-<span class="odt-code-line"><span style="color:#000000">       </span><span style="color:#a31515">&quot;shadow&quot;</span><span style="color:#000000">: {</span></span>
-<span class="odt-code-line"><span style="color:#000000">           </span><span style="color:#008000"># Active/désactive l&#x27;ombre autour des images</span></span>
-<span class="odt-code-line"><span style="color:#000000">           </span><span style="color:#a31515">&quot;enabled&quot;</span><span style="color:#000000">: </span><span style="color:#0000ff">True</span><span style="color:#000000">,</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">           </span><span style="color:#008000"># Rayon d&#x27;arrondi appliqué aux images (ex: &quot;0px&quot;, &quot;4px&quot;, &quot;8px&quot;, ...)</span></span>
-<span class="odt-code-line"><span style="color:#000000">           </span><span style="color:#a31515">&quot;border_radius&quot;</span><span style="color:#000000">: </span><span style="color:#a31515">&quot;8px&quot;</span><span style="color:#000000">,</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">           </span><span style="color:#008000"># Ombre par défaut sur les images &quot;zoomables&quot;</span></span>
-<span class="odt-code-line"><span style="color:#000000">           </span><span style="color:#a31515">&quot;zoomable&quot;</span><span style="color:#000000">: </span><span style="color:#a31515">&quot;0 8px 24px rgba(0,0,0,.28), 0 18px 60px rgba(0,0,0,.20)&quot;</span><span style="color:#000000">,</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">           </span><span style="color:#008000"># Ombre au survol (hover) des images &quot;zoomables&quot;</span></span>
-<span class="odt-code-line"><span style="color:#000000">           </span><span style="color:#a31515">&quot;zoomable_hover&quot;</span><span style="color:#000000">: </span><span style="color:#a31515">&quot;0 12px 30px rgba(0,0,0,.32), 0 26px 80px rgba(0,0,0,.22)&quot;</span><span style="color:#000000">,</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">           </span><span style="color:#008000"># Ombre lorsque l&#x27;image est affichée en grand (lightbox)</span></span>
-<span class="odt-code-line"><span style="color:#000000">           </span><span style="color:#a31515">&quot;lightbox&quot;</span><span style="color:#000000">: </span><span style="color:#a31515">&quot;0 24px 80px rgba(0,0,0,.65)&quot;</span><span style="color:#000000">,</span></span>
-<span class="odt-code-line">       }<span style="color:#000000"></span></span>
-<span class="odt-code-line">   },</span>
+<p><b><u>Les images</u></b></p>
+<p><span>De même le comportement des images cliquables est contrôlé par le lignes suivantes du fichier de configuration :</span></p>
+<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-markdown">
+<span class="docx-code-line"><span style="color:#000000">    </span># -------------------------------------------------------------------------</span>
+<span class="docx-code-line"><span style="color:#000000">    </span># Images : paramètres d&#x27;ombre (zoom / lightbox)</span>
+<span class="docx-code-line"><span style="color:#000000">    </span># -------------------------------------------------------------------------</span>
+<span class="docx-code-line">    <span style="color:#A31515">&quot;images&quot;</span>: {</span>
+<span class="docx-code-line">        <span style="color:#A31515">&quot;shadow&quot;</span>: {</span>
+<span class="docx-code-line"><span style="color:#000000">            </span># Active/désactive l&#x27;ombre autour des images</span>
+<span class="docx-code-line">            <span style="color:#A31515">&quot;enabled&quot;</span>: <span style="color:#0000FF">True</span>,</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#000000">            </span># Rayon d&#x27;arrondi appliqué aux images (ex: &quot;0px&quot;, &quot;4px&quot;, &quot;8px&quot;, ...)</span>
+<span class="docx-code-line"><span style="color:#000000">            </span>&quot;border_radius&quot;<span style="color:#000000">: </span>&quot;8px&quot;<span style="color:#000000">,</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#000000">            </span># Ombre par défaut sur les images &quot;zoomables&quot;</span>
+<span class="docx-code-line"><span style="color:#000000">            </span>&quot;zoomable&quot;<span style="color:#000000">: </span>&quot;0 8px 24px rgba(0,0,0,.28), 0 18px 60px rgba(0,0,0,.20)&quot;<span style="color:#000000">,</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#000000">            </span># Ombre au survol (hover) des images &quot;zoomables&quot;</span>
+<span class="docx-code-line"><span style="color:#000000">            </span>&quot;zoomable_hover&quot;<span style="color:#000000">: </span>&quot;0 12px 30px rgba(0,0,0,.32), 0 26px 80px rgba(0,0,0,.22)&quot;<span style="color:#000000">,</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#000000">            </span># Ombre lorsque l&#x27;image est affichée en grand (lightbox)</span>
+<span class="docx-code-line"><span style="color:#000000">            </span>&quot;lightbox&quot;<span style="color:#000000">: </span>&quot;0 24px 80px rgba(0,0,0,.65)&quot;<span style="color:#000000">,</span></span>
+<span class="docx-code-line">        }</span>
+<span class="docx-code-line">    },</span>
 </code></pre></div>
 
 

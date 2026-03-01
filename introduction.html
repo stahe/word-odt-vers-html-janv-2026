@@ -18,7 +18,7 @@
         <link rel="prev" href="index.html">
       
       
-        <link rel="next" href="les-exemples-de-ce-document----.html">
+        <link rel="next" href="les-exemples-de-ce-document.html">
       
       
         
@@ -340,14 +340,14 @@
   
   
     <li class="md-nav__item">
-      <a href="les-exemples-de-ce-document----.html" class="md-nav__link">
+      <a href="les-exemples-de-ce-document.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    2. Les exemples de ce document    
+    2. Les exemples de ce document
   
 
     
@@ -701,34 +701,38 @@
 
 
 
-<h1 id="1-introduction">1. <span style="color: #0f4761">Introduction</span></h1>
-<p>Le PDF de ce document est disponible |<a href="https://stahe.github.io/word-odt-vers-html-janv-2026/word-odt-vers-html-janv-2026.pdf">ICI</a>|.</p>
-<p>Les convertisseurs Gemini 3 / ChatGPT 5.2 [Word ou ODT → HTML] sont disponibles |<a href="https://stahe.github.io/word-odt-vers-html-janv-2026/word-odt-vers-html-janv-2026.zip">ICI</a>|.</p>
-<hr style="border:0; border-top:0.06pt solid #000000; margin:0.75em 0;" data-odt-border="top" />
-<p>Ce document vous donne deux convertisseurs :</p>
+<h1 id="1-introduction">1. <span>Introduction</span></h1>
+<p><span>Le PDF de ce document est disponible |</span><a href="https://stahe.github.io/word-odt-vers-html-janv-2026/word-odt-vers-html-janv-2026.pdf"><span>ICI</span></a><span>|.</span></p>
+<p><span>Les convertisseurs Gemini 3 / ChatGPT 5.2 &#91;Word ou ODT → HTML&#93; sont disponibles |</span><a href="https://stahe.github.io/word-odt-vers-html-janv-2026/word-odt-vers-html-janv-2026.zip"><span>ICI</span></a><span>|.</span></p>
+<div style="border-top:0.50pt solid #000000 ; padding:0.35em 0 ; margin:0.75em 0"><span>Ce document vous donne deux convertisseurs :</span></div>
+
 <ul>
-<li>un convertisseur LibreOffice ODT vers HTML ;</li>
-<li>un convertisseur Word DOCX vers HTML ;</li>
+<li><span>un convertisseur LibreOffice ODT vers HTML ;</span></li>
+<li><span>un convertisseur Word DOCX vers HTML ;</span></li>
 </ul>
-<hr style="border:0; border-top:0.06pt solid #000000; margin:0.75em 0;" data-odt-border="top" />
-<p>.</p>
-<p>On se propose dans cet article de mettre à disposition du lecteur un convertisseur Python de documents Word ou ODT vers un site statique HTML. Ce convertisseur a été construit initialement par l’IA <a href="https://gemini.google.com/app?hl=fr"><u><span style="color: #467886">Gemini 3</span></u></a> puis par <a href="https://chatgpt.com/">ChatGPT</a> 5.2. Il a fallu 356 itérations à ces deux IA pour produire le convertisseur de ce document. Cela a représenté un débogage de plusieurs semaines. Gemini 3 a fait tout le travail au début. Il a fallu d’abord plusieurs dizaines d’itérations pour obtenir une première version à peu près correcte. Puis régulièrement j’ajoutais un nouveau problème posé par de nouveaux documents ODT. Et là, Gemini a souvent régressé. C’est-à-dire que ce qui marchait à l’étape N ne marchait plus aux étapes suivantes. J’ai alors procédé ainsi : dès que Gemini produisait un convertisseur qui résolvait un de mes problèmes, j’en faisais une version de référence et je le disais à Gemini. Je sauvegardais cette référence localement. Puis lorsque je voyais Gemini régresser trop longtemps je lui demandais de revenir à la dernière version de référence connue en la lui donnant. C’est comme ça que peu à peu, on a construit ensemble ce convertisseur : moi en lui exprimant ce que je voulais, essentiellement en lui signalant les anomalies que je trouvais dans le site HTML produit, lui en produisant le code demandé.</p>
-<p>J’ai utilisé  <a href="https://gemini.google.com/app?hl=fr"><u><span style="color: #467886">Gemini 3</span></u></a> avec une licence pro à 22 euros /mois et <a href="https://chatgpt.com/">ChapGPT 5.2</a> de même.</p>
-<p>Gemini / ChatGPT va générer deux scripts Python :</p>
+
+<div style="border-top:0.50pt solid #000000 ; padding:0.35em 0 ; margin:0.75em 0"><span>.</span></div>
+
+<p><span>On se propose dans cet article de mettre à disposition du lecteur un convertisseur Python de documents Word ou ODT vers un site statique HTML. Ce convertisseur a été construit initialement par l’IA </span><a href="https://gemini.google.com/app?hl=fr"><span>Gemini 3</span></a><span> puis par </span><a href="https://chatgpt.com/"><span>ChatGPT</span></a><span> 5.2. Il a fallu 356 itérations à ces deux IA pour produire le convertisseur de ce document. Cela a représenté un débogage de plusieurs semaines. Gemini 3 a fait tout le travail au début. Il a fallu d’abord plusieurs dizaines d’itérations pour obtenir une première version à peu près correcte. Puis régulièrement j’ajoutais un nouveau problème posé par de nouveaux documents ODT. Et là, Gemini a souvent régressé. C’est-à-dire que ce qui marchait à l’étape N ne marchait plus aux étapes suivantes. J’ai alors procédé ainsi : dès que Gemini produisait un convertisseur qui résolvait un de mes problèmes, j’en faisais une version de référence et je le disais à Gemini. Je sauvegardais cette référence localement. Puis lorsque je voyais Gemini régresser trop longtemps je lui demandais de revenir à la dernière version de référence connue en la lui donnant. C’est comme ça que peu à peu, on a construit ensemble ce convertisseur : moi en lui exprimant ce que je voulais, essentiellement en lui signalant les anomalies que je trouvais dans le site HTML produit, lui en produisant le code demandé.</span></p>
+<p><span>J’ai utilisé  </span><a href="https://gemini.google.com/app?hl=fr"><span>Gemini 3</span></a><span> avec une licence pro à 22 euros /mois et </span><a href="https://chatgpt.com/"><span>ChapGPT 5.2</span></a><span> de même.</span></p>
+<p><span>Gemini / ChatGPT va générer deux scripts Python :</span></p>
 <ul>
-<li>[convert] pour convertir le document ODT de <a href="https://fr.libreoffice.org/download/telecharger-libreoffice/">LibreOffice</a> ou le document DOCX de Word en site <a href="https://www.mkdocs.org/">MkDocs</a> ;</li>
-<li>[build] pour convertir le site MkDocs en site HTML statique ; </li>
+<li><span>&#91;convert&#93; pour convertir le document ODT de </span><a href="https://fr.libreoffice.org/download/telecharger-libreoffice/"><span>LibreOffice</span></a><span> ou le document DOCX de Word en site </span><a href="https://www.mkdocs.org/"><span>MkDocs</span></a><span> ;</span></li>
+<li><span>&#91;build&#93; pour convertir le site MkDocs en site HTML statique ;</span></li>
 </ul>
-<p>Je n’ai jamais regardé le code généré. Je voulais les considérer comme des boîtes noires. Il n’y a pas besoin d’être un développeur Python pour suivre ce tutoriel ni même un développeur tout court.</p>
-<p>En proposant des améliorations du convertisseur à l’IA <a id="gemini-3"></a>Gemini 3, celle-ci s’est parfois bloquée. Elle n’arrivait pas à faire les améliorations demandées. On en était alors à la version stable V316. Pour pouvoir avancer, j’ai alors donné cette version opérationnelle à <a href="https://chatgpt.com/">ChatGPT 5.2</a> en lui demandant les améliorations désirées. ChatGPT a correctement modifié le code de Gemini pour satisfaire mes nouvelles demandes. C’est pourquoi je considère que ce sont ces deux IA qui ont généré le convertisseur.</p>
-<p>Par la suite j’ai continué à utiliser cette technique. Lorsqu’une IA bloquait sur une fonctionnalité, je donnais à l’autre IA la dernière version stable connue.</p>
-<p>Les deux IA ont des méthodes différentes pour délivrer le code Python demandé :</p>
+
+<p><span> </span></p>
+<p><span>Je n’ai jamais regardé le code généré. Je voulais les considérer comme des boîtes noires. Il n’y a pas besoin d’être un développeur Python pour suivre ce tutoriel ni même un développeur tout court.</span></p>
+<p><span>En proposant des améliorations du convertisseur à l’IA </span><a id="gemini3"></a><span>Gemini 3</span><span>, celle-ci s’est parfois bloquée. Elle n’arrivait pas à faire les améliorations demandées. On en était alors à la version stable V316. Pour pouvoir avancer, j’ai alors donné cette version opérationnelle à </span><a href="https://chatgpt.com/"><span>ChatGPT 5.2</span></a><span> en lui demandant les améliorations désirées. ChatGPT a correctement modifié le code de Gemini pour satisfaire mes nouvelles demandes. C’est pourquoi je considère que ce sont ces deux IA qui ont généré le convertisseur.</span></p>
+<p><span>Par la suite j’ai continué à utiliser cette technique. Lorsqu’une IA bloquait sur une fonctionnalité, je donnais à l’autre IA la dernière version stable connue.</span></p>
+<p><span>Les deux IA ont des méthodes différentes pour délivrer le code Python demandé :</span></p>
 <ul>
-<li>Gemini donne le code du script généré sur la page d’interrogation. Il faut ensuite copier / coller ce code ;</li>
-<li>ChatGPT propose un lien de téléchargement du script généré ;</li>
+<li><span>Gemini donne le code du script généré sur la page d’interrogation. Il faut ensuite copier / coller ce code ;</span></li>
+<li><span>ChatGPT propose un lien de téléchargement du script généré ;</span></li>
 </ul>
-<p>Au-delà de 1000 lignes de code généré Gemini a montré de sévères faiblesses. A cause de contraintes techniques propres à cette IA, celle-ci n’arrivait pas à afficher, dans la page d’interrogation, la totalité du code généré. Très souvent il manquait des lignes de code. A cause de cette contrainte, à partir d’un moment il n’a plus été possible d’utiliser Gemini 3. Et c’est donc ChatGPT 5.2 qui a terminé l’écriture du script.</p>
-<p>C’est également ChatGPT qui a généré le convertisseur Word vers HTML. Je lui ai donné le convertisseur ODT vers HTML qui marchait et lui ai demandé de l’adapter pour un document Word. Il l’a fait en 18 itérations. C’est une constante de ces deux IA : elles comprennent très bien les scripts Python qu’on leur donne et peuvent y apporter des améliorations. Pour moi c’est la meilleure façon de travailler avec elles.</p>
+
+<p><span>Au-delà de 1000 lignes de code généré Gemini a montré de sévères faiblesses. A cause de contraintes techniques propres à cette IA, celle-ci n’arrivait pas à afficher, dans la page d’interrogation, la totalité du code généré. Très souvent il manquait des lignes de code. A cause de cette contrainte, à partir d’un moment il n’a plus été possible d’utiliser Gemini 3. Et c’est donc ChatGPT 5.2 qui a terminé l’écriture du script.</span></p>
+<p><span>C’est également ChatGPT qui a généré le convertisseur Word vers HTML. Je lui ai donné le convertisseur ODT vers HTML qui marchait et lui ai demandé de l’adapter pour un document Word. Il l’a fait en 18 itérations. C’est une constante de ces deux IA : elles comprennent très bien les scripts Python qu’on leur donne et peuvent y apporter des améliorations. Pour moi c’est la meilleure façon de travailler avec elles.</span></p>
 
 
 
