@@ -1024,7 +1024,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007C200000267454E322A.png" style="display:inline-block; margin:4px;width:16.002cm;height:4.955cm;" class="odt-zoomable" data-zoom-src="images/10000000000007C200000267454E322A.png" /></td></tr></table>
 
 <p>Ce bouton permet de copier le bloc de code dans le presse-papier. Les numéros de ligne ne sont pas inclus. Le comportement de ce bouton est contrôlé par les lignes suivantes du fichier de configuration [config.py] :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-sql">
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># ---------------------------------------------------------------------</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># Bouton [Copier] dans les blocs de code (copie dans le presse-papier)</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># ---------------------------------------------------------------------</span></span>
@@ -1121,6 +1121,19 @@
 <span class="odt-code-line">       }<span style="color:#000000"></span></span>
 <span class="odt-code-line">   },</span>
 </code></pre></div>
+
+<p>La reconnaissance des langages des blocs de code non enrichis a été améliorée. Dans [config.py], le dictionnaire [code] se voit ajouté les lignes suivantes :</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-markdown">
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#a31515">&quot;code&quot;</span><span style="color:#000000">: {</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># langages insensibles à la casse</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#a31515">&quot;case_insensitive_languages&quot;</span><span style="color:#000000">: [</span></span>
+<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#a31515">&quot;sql&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;html&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;vbnet&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;vbscript&quot;</span></span>
+<span class="odt-code-line">        ],</span>
+</code></pre></div>
+
+<ul>
+  <li>les lignes 3-6 désignent les langages insensibles à la casse (majuscules / minuscules). Ainsi dans les expressions clés associés au langage HTML il est inutile de mettre à la fois &lt;body&gt; et &lt;BODY&gt; qui sont toutes deux des balises correctes du HTML. La balise &lt;body&gt; suffit.
 
 
 
