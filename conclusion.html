@@ -328,14 +328,14 @@
   
   
     <li class="md-nav__item">
-      <a href="les-exemples-de-ce-document----.html" class="md-nav__link">
+      <a href="les-exemples-de-ce-document.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    2. Les exemples de ce document    
+    2. Les exemples de ce document
   
 
     
@@ -699,12 +699,12 @@
 
 
 
-<h1 id="14-conclusion">14. <span style="color: #0f4761">Conclusion</span></h1>
-<p>Nous avons montré dans ce document un convertisseur de documents ODT produits par <a href="https://fr.libreoffice.org/download/telecharger-libreoffice/">LibreOffice</a> ou de documents DOCX de Word en un site statique HTML de très bonne qualité.</p>
-<p>Nous avons présenté dans le chapitre [<a href="https://stahe.github.io/word-odt-vers-html-janv-2026/les-exemples-de-ce-document.html">Les exemples de ce document</a>] les structures gérées correctement par le convertisseur Gemini / ChatGPT.</p>
-<p>Nous avons montré également comment exporter sur GitHub les sites HTML créés par les convertisseurs ODT et  DOCX (cf chapitre <a href="https://stahe.github.io/word-odt-vers-html-janv-2026/heberger-le-site-html-sur-github.html">Héberger le site HTML sur GitHub</a>)</p>
-<p>En dehors des structures du chapitre des exemples, rien n’est garanti. Il est probable que le convertisseur montrera des anomalies. Il faudra alors de nouveau commencer un chat avec Gemini ou ChatGPT pour résoudre ces anomalies. Le plus simple est de donner le convertisseur actuel à l’IA avec son fichier de configuration. Puis de demander à l’IA s’il comprend les codes qu’on lui a donnés. Cela la force à analyser le code. Elle répondra toujours qu’elle comprend parfaitement le code. Ce sera le moment de lui demander les changements désirés. Aussi bien pour Word que LibreOffice, vous pouvez aider l’IA avec des macros. L’IA ne « voit » pas le document ODT ou DOCX exploité. Il lui manque donc des informations. Ainsi le convertisseur DOCX -&gt; HTML n’arrivait pas à gérer correctement la numérotation des codes riches. Elle ne savait pas lire le numéro de la première ligne d’un bloc de code pour le rendre en HTML. Elle commençait toujours le code à 1 même si le code dans le DOCX commençait à 12. Je me suis alors aidé d’une macro. J’ai placé le curseur du document sur la ligne numérotée et j’ai demandé à ChatGPT de générer une macro VBA qui lui donnerait les caractéristiques de cette ligne, qui lui permettraient de générer correctement la numérotation HTML. ChatGPT l’a fait et je lui ai donné le résultat de sa macro. Ca l’a débloqué : les informations récupérées lui montraient que le numéro de la ligne était propagé par son style et non par l’icône de numérotation. Il a alors changé son algorithme qui a fonctionné. Donc on peut aider l’IA à avancer.</p>
-<p>Une autre voie plus simple est de changer son document. Quand le convertisseur produit une anomalie, essayez de modifier votre document pour qu’il n’utilise que les structures du chapitre des exemples.</p>
+<h1 id="14-conclusion">14. <span>Conclusion</span></h1>
+<p><span>Nous avons montré dans ce document un convertisseur de documents ODT produits par </span><a href="https://fr.libreoffice.org/download/telecharger-libreoffice/"><span>LibreOffice</span></a><span> ou de documents DOCX de Word en un site statique HTML de très bonne qualité.</span></p>
+<p><span>Nous avons présenté dans le chapitre &#91;</span><a href="https://stahe.github.io/word-odt-vers-html-janv-2026/les-exemples-de-ce-document.html"><span>Les exemples de ce document</span></a><span>&#93; les structures gérées correctement par le convertisseur Gemini / ChatGPT.</span></p>
+<p><span>Nous avons montré également comment exporter sur GitHub les sites HTML créés par les convertisseurs ODT et  DOCX (cf chapitre </span><a href="https://stahe.github.io/word-odt-vers-html-janv-2026/heberger-le-site-html-sur-github.html"><span>Héberger le site HTML sur GitHub</span></a><span>)</span></p>
+<p><span>En dehors des structures</span><span> du chapitre des exemples</span><span>, rien n’est garanti. Il est probable que le convertisseur montrera des anomalies. Il faudra alors de nouveau commencer un chat avec Gemini </span><span>ou ChatGPT </span><span>pour résoudre ces anomalies.</span><span> Le plus simple est de donner le convertisseur actuel à l’IA avec son fichier de configuration. Puis de demander à l’IA s’il comprend les codes qu’on lui a donnés. Cela la force à analyser le code. Elle répondra toujours qu’elle comprend parfaitement le code. Ce sera le moment de lui demander les changements désirés. Aussi bien pour Word que LibreOffice, vous pouvez aider l’IA avec des macros. L’IA ne « voit » pas le document ODT ou DOCX exploité. Il lui manque donc des informations. Ainsi le convertisseur DOCX -&gt; HTML n’arrivait pas à gérer correctement la numérotation des codes riches. Elle ne savait pas lire le numéro de la première ligne d’un bloc de code pour le rendre en HTML. Elle commençait toujours le code à 1 même si le code dans le DOCX commençait à 12. Je me suis alors aidé d’une macro. J’ai placé le curseur du document sur la ligne numérotée et j’ai demandé à ChatGPT de générer une macro VBA qui lui donnerait les caractéristiques de cette ligne</span><span>,</span><span> qui lui permettraient de générer correctement la </span><span>numérotation HTML. ChatGPT l’a fait et je lui ai donné le résultat de sa macro. Ca l’a débloqué : les informations récupérées lui montraient que le numéro de la ligne était propagé par son style et non par l’icône de numérotation. Il a alors changé son algorithme qui a fonctionné. Donc on peut aider l’IA à avancer.</span></p>
+<p><span>Une autre voie plus simple est de changer son document. Quand le convertisseur produit une anomalie, essayez de modifier votre document pour qu’il n’utilise que les structures du chapitre des exemples.</span></p>
 
 
 
