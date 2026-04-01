@@ -702,23 +702,17 @@
 
 
 <h1 id="9-utilisation-du-convertisseur-docx-html">9. <span style="color: #0f4761">Utilisation du convertisseur DOCX → HTML</span></h1>
-<p>La commande de conversion d’un document Word DOCX est très analogue à celle de la conversion d’un document LibreOffice ODT. Nous allons modifier le style du titre du document dans [config.py] :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-markdown">
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000"># -------------------------------------------------------------------------</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000"># Détection du Titre du Document</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000"># -------------------------------------------------------------------------</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#a31515">&quot;document_title&quot;</span><span style="color:#000000">: {</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># Styles ODT à considérer comme le titre principal du document (H1 global)</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#a31515">&quot;style_names&quot;</span><span style="color:#000000">: [</span></span>
-<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#a31515">&quot;</span><span style="background-color:#fff5ce;color:#a31515">Titre</span><span style="color:#a31515">&quot;</span></span>
-<span class="odt-code-line">        ],<span style="color:#000000"></span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># CSS appliqué à ce titre dans le Markdown généré</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#a31515">&quot;css&quot;</span><span style="color:#000000">: </span><span style="color:#a31515">&quot;font-size: 28px; font-weight: bold; margin-bottom: 1em; line-height: 1.2; color: #2c3e50;&quot;</span></span>
-<span class="odt-code-line">    },</span>
+<p>La commande de conversion d’un document Word DOCX est très analogue à celle de la conversion d’un document LibreOffice ODT. Nous allons modifier le style du titre du document dans [config_styles.py] :</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line">STYLES = {</span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#a31515">&quot;style_names&quot;</span><span style="color:#000000">: [</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#a31515">&quot;</span><span style="background-color:#fff5ce;color:#a31515">Titre</span><span style="color:#a31515">&quot;</span></span>
+<span class="odt-code-line">    ]</span>
+<span class="odt-code-line">}</span>
 </code></pre></div>
 
 <ul>
-  <li>ligne 7 : mettez ‘Titre’. C’est le style du document DOCX que vous allez convertir. Nous le verrons dans les lignes de débogage du convertisseur.
+  <li>ligne 3 : mettez ‘Titre’. C’est le style du document DOCX que vous allez convertir. Nous le verrons dans les lignes de débogage du convertisseur.
   </li>
 </ul>
 

@@ -896,22 +896,16 @@
   </li>
   <li>lignes 4-7 : les fichiers que le convertisseur copie à la racine du site MkDocs qu’il crée ;
   </li>
-  <li>lignes 10-34 : le débogage des styles des paragraphes qui précèdent le premier titre de niveau 1. Ces paragraphes vont constituer la page d’accueil. Un des paragraphes joue le rôle de titre de la page d’accueil et donc du site. C’est le paragraphe de la ligne 21. On note son style P1. On doit mettre ce style dans le fichier de configuration :
+  <li>lignes 10-34 : le débogage des styles des paragraphes qui précèdent le premier titre de niveau 1. Ces paragraphes vont constituer la page d’accueil. Un des paragraphes joue le rôle de titre de la page d’accueil et donc du site. C’est le paragraphe de la ligne 21. On note son style P1. On doit mettre ce style dans le fichier de configuration [config_styles] :
   </li>
 </ul>
 
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-markdown">
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000"># -------------------------------------------------------------------------</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000"># Détection du Titre du Document</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000"># -------------------------------------------------------------------------</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#a31515">&quot;document_title&quot;</span><span style="color:#000000">: {</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># Styles ODT à considérer comme le titre principal du document (H1 global)</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#a31515">&quot;style_names&quot;</span><span style="color:#000000">: [</span></span>
-<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#a31515">&quot;</span><span style="background-color:#fff5ce;color:#a31515">P1</span><span style="color:#a31515">&quot;</span></span>
-<span class="odt-code-line">        ],</span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000"># CSS appliqué à ce titre dans le Markdown généré</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#a31515">&quot;css&quot;</span><span style="color:#000000">: </span><span style="color:#a31515">&quot;font-size: 28px; font-weight: bold; margin-bottom: 1em; line-height: 1.2; color: #2c3e50;&quot;</span></span>
-<span class="odt-code-line">    },</span>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line">STYLES = {</span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#a31515">&quot;style_names&quot;</span><span style="color:#000000">: [</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#a31515">&quot;</span><span style="background-color:#fff5ce;color:#a31515">P1</span><span style="color:#a31515">&quot;</span></span>
+<span class="odt-code-line">    ]</span>
+<span class="odt-code-line">}</span>
 </code></pre></div>
 
 <ul>
